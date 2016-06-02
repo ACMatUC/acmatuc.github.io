@@ -1,0 +1,8 @@
+{
+  "database-configuration": {
+    "host": "localhost",
+    "user": "root",
+    "pass": "root",
+    "name": "db-here"
+  }
+}

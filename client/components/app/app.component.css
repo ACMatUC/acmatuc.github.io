@@ -1,0 +1,18 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
+  font-family: Roboto;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+.secondary {
+  color: rgba(0, 0, 0, .54);
+}

@@ -1,0 +1,13 @@
+# Mac OS X
+.DS_Store
+
+# Annoying tilde backup files
+*~
+
+# Others
+node_modules
+.vscode
+*.log
+client/components/*.js
+client/components/*.js.map
+config/production.json
