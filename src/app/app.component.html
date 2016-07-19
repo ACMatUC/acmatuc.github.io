@@ -1,0 +1,36 @@
+<md-sidenav-layout fullscreen>
+  <md-sidenav #sidenav>
+    <div id="user-profile">
+      <img [attr.src]="profile_picture">
+      <p>{{name}}</p>
+      <p>{{email}}</p>
+    </div>
+    
+    <md-nav-list (click)="sidenav.close()">
+      
+      <a md-list-item [routerLink]="['/']">
+        <md-icon md-list-icon class="secondary">home</md-icon>
+        <span md-line>Home</span>
+        <span md-line class="secondary">Take me home!</span>
+      </a>
+      <a md-list-item [routerLink]="['/executives']">
+        <md-icon md-list-icon class="secondary">people</md-icon>
+        <span md-line>Chapter Executives</span>
+        <span md-line class="secondary">ACM@UC executive members</span>
+      </a>
+      
+    </md-nav-list>
+  </md-sidenav>
+  
+  <md-toolbar color="primary">
+    <button md-icon-button (click)="sidenav.open()">
+      <md-icon>menu</md-icon>
+    </button>
+    ACM@UC
+  </md-toolbar>
+
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
+
+</md-sidenav-layout>

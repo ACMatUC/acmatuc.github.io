@@ -1,11 +1,33 @@
-# Mac OS X
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+/dist
+/tmp
+
+# dependencies
+/node_modules
+/bower_components
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+*.launch
+.settings/
+
+# misc
+/.sass-cache
+/connect.lock
+/coverage/*
+/libpeerconnection.log
+npm-debug.log
+testem.log
+/typings
+
+# e2e
+/e2e/*.js
+/e2e/*.map
+
+#System Files
 .DS_Store
-
-# Annoying tilde backup files
-*~
-
-# Others
-node_modules
-.vscode
-*.log
-config/production.json
+Thumbs.db

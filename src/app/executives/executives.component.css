@@ -1,0 +1,24 @@
+md-card+md-card {
+  margin-top:40px;
+}
+
+h1 {
+  text-align:center;
+}
+
+md-card {
+  margin:0 auto;
+  max-width:500px;
+}
+
+md-card.executive-card .executive-name {
+  text-align: center;
+}
+
+md-card.executive-card .exec-image{
+  display:block;
+  margin:0 auto;
+  width:150px;
+  height:150px;
+  border-radius: 50%;
+}

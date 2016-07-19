@@ -1,0 +1,17 @@
+<h1>ACM at UC Executive Members</h1>
+
+<md-card class="executive-card" *ngFor="let exec of executives">
+  <md-card-title>{{exec.role}}</md-card-title>
+  <img class="exec-image" [attr.src]="exec.image" alt="Executive Picture">
+  <h2 class="executive-name">{{exec.name}}</h2>
+  {{exec.bio}}
+</md-card>
+
+<!--
+  major: computer science
+year: 2nd? Idk how year works on co-op
+fav language: javascript
+fav color: blue
+spirit animal: turtle
+currently at: siemens plm software
+-->

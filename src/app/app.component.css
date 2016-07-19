@@ -1,0 +1,64 @@
+
+md-sidenav-layout {
+  font-family: Roboto;
+  background-color:#ececec;
+}
+
+md-sidenav {
+  background-color:#f0f0f0 !important;
+}
+
+md-toolbar {
+  background-color: #2E66AD !important;
+}
+
+.secondary {
+  color: rgba(0, 0, 0, .54);
+}
+
+#user-profile{
+  width:100%;
+  max-width:100%;
+  height:200px;
+  padding-left:10px;
+  background-image:url('assets/img/menu_bg_small.jpg');
+  background-size:cover;
+  color:white;
+  box-sizing:border-box;
+}
+
+#user-profile p {
+  margin:5px 0 0 0;
+}
+
+#user-profile img {
+  margin-top:75px;
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  border:2px solid white;
+}
+
+.content {
+  padding:10px;
+}
+
+h2 {
+  color:grey;
+  color: #3F51E0;
+  color: #009688;
+}
+
+.repeat-fade-in {
+  animation: fadein 1s cubic-bezier(.27, 1.12, .49, .98);
+}
+
+@keyframes fadein {
+  from {
+    margin-left:40px;
+    opacity:0;
+  }
+  to {
+    opacity:1;
+  }
+}
