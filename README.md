@@ -3,4 +3,4 @@
 [![Dependency Status](https://david-dm.org/acmatuc/acm-website.svg)](https://david-dm.org/acmatuc/acm-website)
 [![devDependency Status](https://david-dm.org/acmatuc/acm-website/dev-status.svg)](https://david-dm.org/acmatuc/acm-website#info=devDependencies)
 
-Simple [site](https://acm-website.herokuapp.com) for ACM at UC
+Simple [site](https://acmatuc.github.io/acm-website) for ACM at UC
