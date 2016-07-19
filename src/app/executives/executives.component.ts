@@ -19,7 +19,7 @@ export class ExecutivesComponent implements OnInit {
       {
         role: "President",
         name: "Kurt Lewis",
-        image: "/images/president.jpg",
+        image: "/acm-website/images/president.jpg",
         bio: `My name is Kurt Lewis and I am a third year computer science major.
               I am involved in student organizations such as CEAS ambassadors and engineering
               tribunal. I've been involved with ACM for two years, previously serving as treasurer.
@@ -30,25 +30,25 @@ export class ExecutivesComponent implements OnInit {
       {
         role: "Vice President",
         name: "Juanita Dickhaus",
-        image: "/images/acm-website/vice-president.jpg",
+        image: "/acm-website/images/vice-president.jpg",
         bio: `Apparently this executive likes to keep an air of mystery about themselves...`
       },
       {
         role: "Treasurer",
         name: "Kyle Arens",
-        image: "/images/acm-website/treasurer.jpg",
+        image: "/acm-website/images/treasurer.jpg",
         bio: `Apparently this executive likes to keep an air of mystery about themselves...`
       },
       {
         role: "Secretary",
         name: "Noah Bass",
-        image: "/images/acm-website/secretary.jpg",
+        image: "/acm-website/images/secretary.jpg",
         bio: `Apparently this executive likes to keep an air of mystery about themselves...`
       },
       {
         role: "Web Master",
         name: "Dom Farolino",
-        image: "/images/acm-website/webmaster.jpg",
+        image: "/acm-website/images/webmaster.jpg",
         bio: `Apparently this executive likes to keep an air of mystery about themselves...`
       }
     ];
