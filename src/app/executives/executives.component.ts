@@ -30,25 +30,25 @@ export class ExecutivesComponent implements OnInit {
       {
         role: "Vice President",
         name: "Juanita Dickhaus",
-        image: "/images/vice-president.jpg",
+        image: "/images/acm-website/vice-president.jpg",
         bio: `Apparently this executive likes to keep an air of mystery about themselves...`
       },
       {
         role: "Treasurer",
         name: "Kyle Arens",
-        image: "/images/treasurer.jpg",
+        image: "/images/acm-website/treasurer.jpg",
         bio: `Apparently this executive likes to keep an air of mystery about themselves...`
       },
       {
         role: "Secretary",
         name: "Noah Bass",
-        image: "/images/secretary.jpg",
+        image: "/images/acm-website/secretary.jpg",
         bio: `Apparently this executive likes to keep an air of mystery about themselves...`
       },
       {
         role: "Web Master",
         name: "Dom Farolino",
-        image: "/images/webmaster.jpg",
+        image: "/images/acm-website/webmaster.jpg",
         bio: `Apparently this executive likes to keep an air of mystery about themselves...`
       }
     ];
