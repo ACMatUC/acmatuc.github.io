@@ -12,6 +12,7 @@ import { MD_CARD_DIRECTIVES } from '@angular2-material/card';
 })
 export class ExecutivesComponent implements OnInit {
   executives: Object[];
+  imgBaseURL: string = "assets/img/";
   constructor(private _router: Router) {}
 
   ngOnInit() {
@@ -19,7 +20,7 @@ export class ExecutivesComponent implements OnInit {
       {
         role: "President",
         name: "Kurt Lewis",
-        image: "/acm-website/images/president.jpg",
+        image: this.imgBaseURL + "president.jpg",
         bio: `My name is Kurt Lewis and I am a third year computer science major.
               I am involved in student organizations such as CEAS ambassadors and engineering
               tribunal. I've been involved with ACM for two years, previously serving as treasurer.
@@ -30,25 +31,25 @@ export class ExecutivesComponent implements OnInit {
       {
         role: "Vice President",
         name: "Juanita Dickhaus",
-        image: "/acm-website/images/vice-president.jpg",
+        image: this.imgBaseURL + "vice-president.jpg",
         bio: `Apparently this executive likes to keep an air of mystery about themselves...`
       },
       {
         role: "Treasurer",
         name: "Kyle Arens",
-        image: "/acm-website/images/treasurer.jpg",
+        image: this.imgBaseURL + "treasurer.jpg",
         bio: `Apparently this executive likes to keep an air of mystery about themselves...`
       },
       {
         role: "Secretary",
         name: "Noah Bass",
-        image: "/acm-website/images/secretary.jpg",
+        image: this.imgBaseURL + "secretary.jpg",
         bio: `Apparently this executive likes to keep an air of mystery about themselves...`
       },
       {
         role: "Web Master",
         name: "Dom Farolino",
-        image: "/acm-website/images/webmaster.jpg",
+        image: this.imgBaseURL + "webmaster.jpg",
         bio: `Apparently this executive likes to keep an air of mystery about themselves...`
       }
     ];
