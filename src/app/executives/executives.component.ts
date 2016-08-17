@@ -57,7 +57,7 @@ export class ExecutivesComponent implements OnInit {
         name: "Dom Farolino",
         image: this.imgBaseURL + "webmaster.jpg",
         bio: `I'm a 3rd year computer science major at UC. In my free time I like to study algorithms and math as well as build
-              progressive web apps and help people learn Angular2. My favorite languages are C++ and JavaScript. I'm a big advocate
+              progressive web apps and help people learn about the web. My favorite languages are C++ and JavaScript. I'm a big advocate
               of the modern open web platform and wish to work somewhere that allows me to make the web do everything native can on
               every platform.`
       }
