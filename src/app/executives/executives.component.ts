@@ -49,8 +49,7 @@ export class ExecutivesComponent implements OnInit {
         role: "Secretary",
         name: "Noah Bass",
         image: this.imgBaseURL + "secretary.jpg",
-        bio: `I'm a 2nd year computer science major at UC, and my favorite language is JavaScript. My spirit animal is a turtle,
-              my favorite color is blue, and I'm currently interning with Siemens PLM Software.`
+        bio: `I'm a 2nd year computer science major.`
       },
       {
         role: "Web Master",
