@@ -1,5 +1,9 @@
 # ACM@UC
 
+[![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
+[![Dependency Status](https://david-dm.org/acmatuc/acmatuc.github.io.svg)](https://david-dm.org/acmatuc/acmatuc.github.io)
+[![devDependency Status](https://david-dm.org/acmatuc/acmatuc.github.io/dev-status.svg)](https://david-dm.org/acmatuc/acmatuc.github.io#info=devDependencies)
+
 ## Development server
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
