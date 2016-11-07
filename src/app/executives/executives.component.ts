@@ -1,14 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { ROUTER_DIRECTIVES, Router } from '@angular/router';
-import { MdButton } from '@angular2-material/button';
-import { MD_CARD_DIRECTIVES } from '@angular2-material/card';
+import { Router } from '@angular/router';
 
 @Component({
-  moduleId: module.id,
   selector: 'executives',
   templateUrl: 'executives.component.html',
-  styleUrls: ['executives.component.css'],
-  directives: [ROUTER_DIRECTIVES, MdButton, MD_CARD_DIRECTIVES]
+  styleUrls: ['executives.component.css']
 })
 export class ExecutivesComponent implements OnInit {
   executives: Object[];

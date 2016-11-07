@@ -1,4 +1,6 @@
-export class DomfarolinoPage {
+import { browser, element, by } from 'protractor';
+
+export class MigrationProjectPage {
   navigateTo() {
     return browser.get('/');
   }
