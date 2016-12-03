@@ -9,11 +9,15 @@ button {
   background-color:#2E66AD !important;
 }
 
-md-card+md-card {
+md-card + md-card {
   margin-top:40px;
 }
 
 article {
   margin: 0 auto;
   max-width: 840px;
+}
+
+img {
+  width: 100%;
 }
