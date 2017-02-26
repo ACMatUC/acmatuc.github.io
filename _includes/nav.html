@@ -1,0 +1,11 @@
+<div class="nav nav--fixed">
+  <h1 class="nav__section nav__section--left nav__header">
+    <a href="/" title="ACM@UC">ACM@UC</a>
+  </h1>
+
+  <ul class="nav__section nav__section--right nav__list">
+    {% assign pages_list = site.pages | sort: 'order' %}
+    {% assign group = 'navigation' %}
+    {% include nav_list.html %}
+  </ul>
+</div>

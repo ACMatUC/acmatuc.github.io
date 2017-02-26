@@ -1,0 +1,32 @@
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1,maximum-scale=1">
+
+<meta property="og:locale" content="en_us">
+<meta property="og:title" content="{{ page.title }}">
+<meta property="og:url" content="https://acmatuc.org">
+<meta property="og:site_name" content="ACM@UC">
+<meta property="og:type" content="website">
+<meta property="og:description" content="{% if page.description %}{{ page.description }}{% elsif page.excerpt %}{{ page.excerpt }}{% else %}{{ site.meta.description }}{% endif %}">
+
+{% if page.path contains '_posts' %}
+    {% if page.img %}
+        <meta property="og:image" content="{{ page.img }}">
+    {% endif %}
+{% endif %}
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@{{ site.social.twitter }}">
+<meta name="twitter:domain" content="acmatuc.org">
+<meta name="twitter:creator" content="@{{ site.social.twitter }}">
+<meta name="twitter:title" content="{{ page.title }}">
+<meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% elsif page.excerpt %}{{ page.excerpt }}{% else %}{{ site.meta.description }}{% endif %}">
+
+{% if page.path contains '_posts' %}
+    {% if page.img %}
+        <meta name="twitter:image:src" content="{{ page.img }}">
+    {% else %}
+        <meta name="twitter:image" content="/logo.png">
+    {% endif %}
+{% endif %}
+
+<link rel="shortcut icon" href="{{ site.base_url }}/favicon.ico">
+<meta name="apple-mobile-web-app-title" content="ACM@UC">
