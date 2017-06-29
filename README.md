@@ -8,5 +8,5 @@
 git clone git@github.com:acmatuc/acmatuc.github.io.git
 
 gem install jekyll minima jekyll-feed
-jekyll serve (--no-watch if using Bash On Windows)
+jekyll serve #--no-watch if using Bash On Windows
 ```
