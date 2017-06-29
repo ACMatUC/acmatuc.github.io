@@ -7,5 +7,6 @@
 ```sh
 git clone git@github.com:acmatuc/acmatuc.github.io.git
 
-gem install jekyll minima # ...more?
+gem install jekyll minima jekyll-feed
+jekyll serve (--no-watch if using Bash On Windows)
 ```
