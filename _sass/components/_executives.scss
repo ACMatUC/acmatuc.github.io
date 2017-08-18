@@ -8,4 +8,16 @@ div.executive {
     width: 180px;
     height: 180px;
   }
+  img.icon {
+    position: relative;
+    top: 5px;
+    padding-right: 5px;
+    padding-left: 25px;
+    border-radius: 0;
+    width: auto;
+    height: auto;
+  }
+  span {
+    display:block;
+  }
 }
