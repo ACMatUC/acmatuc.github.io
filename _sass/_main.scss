@@ -5,3 +5,10 @@
 @import 'components/page';
 @import 'components/nav';
 @import 'components/executives';
+
+.notice {
+    width: 100%;
+    background-color: #fcf8e3;
+    border: 1px solid transparent;
+    padding: .75rem 1.25rem;
+}
