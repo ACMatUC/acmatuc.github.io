@@ -22,6 +22,9 @@
     a {
       color: $color-black;
     }
+    .active {
+      text-decoration: dashed underline red;
+    }
   }
 
   .nav__header {
