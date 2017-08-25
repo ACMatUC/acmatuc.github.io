@@ -4,7 +4,7 @@
 
         {% if page.url == node.url %}
             <li><a class="active" href="{{ node.url }}">{{ node.title }}</a></li>
-        {% else %}
+        {% elsif node.order != 0 %}
             <li><a href="{{ node.url }}">{{ node.title }}</a></li>
         {% endif %}
 
