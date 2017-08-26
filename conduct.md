@@ -3,7 +3,7 @@ layout: default
 group: "navigation"
 title: Code of Conduct
 permalink: /conduct/
-order: 4
+order: 0
 ---
 
 TL;DR. ACM@UC is dedicated to a harassment-free experience for everyone.
