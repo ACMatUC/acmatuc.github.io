@@ -93,3 +93,5 @@ We used the [Geek Feminism Conference anti-harassment policy](http://geekfeminis
 ---
 
 Version 1.0.0. Published August ?, 2017.
+
+[View History on GitHub](https://github.com/ACMatUC/acmatuc.github.io/commits/master/conduct.md)
