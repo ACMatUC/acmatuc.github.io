@@ -16,7 +16,7 @@ ACM@UC is dedicated to providing a harassment-free community experience for ever
 Harassment includes, but is not limited to:
 
 * Verbal comments that reinforce social structures of inequality related to gender, gender identity and expression, sexual orientation,       disability, physical appearance, body size, race, age, or religion
-  Sexual images in public spaces
+* Sexual images in public spaces
 * Deliberate intimidation, stalking, or following
 * Inappropriate photography or recording
 * Sustained disruption of talks or other events
