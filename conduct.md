@@ -48,7 +48,7 @@ This isn't to say you shouldn't help, offer advice, or join conversations. On th
 #### Let the learner drive
 At times it may be faster when you're helping someone to jump on their keyboard and just get the task done, but that's no way to learn.
 
-Although at times this takes a great deal of patience for both parties, in the end, one of the best ways to learn is by doing. So, unless someone offers their keys up, let them do the drivin
+Although at times this takes a great deal of patience for both parties, in the end, one of the best ways to learn is by doing. So, unless someone offers their keys up, let them do the driving.
 
 ## Moderation
 Participants asked to stop any harassing behavior or asked to respect the etiquette are expected to comply immediately.
