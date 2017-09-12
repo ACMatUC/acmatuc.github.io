@@ -1,0 +1,15 @@
+---
+layout: default
+group: "navigation"
+title: Class of 2018
+permalink: /members/class_of_2018
+order: 0
+---
+<div class="members">
+    <h1>ACM@UC Members - Class of 2018</h1>
+    <table>
+    {% for member in site.data._2018_members %}
+        {% include member_table.html %}        
+    {% endfor %}
+    </table>
+</div>

@@ -1,0 +1,10 @@
+- name: Isiah Lloyd
+  short_bio: Lorem ipsum I was too lazy to actualy generate fake text. What happens if I add more text though?
+  image_url: https://avatars1.githubusercontent.com/u/885544?v=4&s=460
+  github: isiah_lloyd
+  website: https://www.isiah.me
+- name: Noah Bass
+  short_bio: ok seriously should I just download a plugin to make fake text?
+  image_url: https://avatars2.githubusercontent.com/u/3453188?v=4&s=460
+  github: noah_bass
+  website: https://noahbass.com

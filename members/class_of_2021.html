@@ -1,0 +1,15 @@
+---
+layout: default
+group: "navigation"
+title: Class of 2021
+permalink: /members/class_of_2021
+order: 0
+---
+<div class="members">
+    <h1>ACM@UC Members - Class of 2021</h1>
+    <table>
+    {% for member in site.data._2021_members %}
+        {% include member_table.html %}    
+    {% endfor %}
+    </table>
+</div>

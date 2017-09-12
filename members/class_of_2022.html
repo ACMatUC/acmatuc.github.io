@@ -1,0 +1,15 @@
+---
+layout: default
+group: "navigation"
+title: Class of 2022
+permalink: /members/class_of_2022
+order: 0
+---
+<div class="members">
+    <h1>ACM@UC Members - Class of 2022</h1>
+    <table>
+    {% for member in site.data._2022_members %}
+        {% include member_table.html %}
+    {% endfor %}
+    </table>
+</div>
