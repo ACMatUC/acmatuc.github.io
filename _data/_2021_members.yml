@@ -1,3 +1,10 @@
+# -Example entry-
+# - If you don't want to add cetain information just omit the line - 
+#- name: <Insert your name>
+#  short_bio: <One or two sentance about yourself>
+#  image_url: <Direct link to a photo of yourself, I suggest copying a image link from social media (Github, Twitter)>
+#  github: <Your github username (without a @)>
+#  website: <A link to your website>
 - name: Isiah Lloyd
   short_bio: Lorem ipsum I was too lazy to actualy generate fake text. What happens if I add more text though?
   image_url: https://avatars1.githubusercontent.com/u/885544?v=4&s=460
