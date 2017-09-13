@@ -5,10 +5,10 @@ Adding yourself to the members directory
     * On Windows: install Git Bash using https://git-scm.com/downloads
     * On Linux: You probably already have it installed, otherwise use your package manager to install `git`
     * On Mac:
-    * Use Homebrew:
-      * Get Homebrew at https://brew.sh
-      * Then install with `brew install git`
-    * Or install using https://git-scm.com/downloads
+      * Use Homebrew:
+        * Get Homebrew at https://brew.sh
+        * Then install with `brew install git`
+      * Or install using https://git-scm.com/downloads
 2. Fork this repository by clicking the button at the top of this page
 3.  Paste or type this command into your Terminal or Git Bash window: `git clone https://github.com/<your_username>/acmatuc.github.io.git`
 4. You should now have a folder `acmatuc.github.io`,  navigate to the subfolder `_data`using a file explorer or these commands:
