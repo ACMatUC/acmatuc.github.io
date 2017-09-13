@@ -11,7 +11,7 @@ Adding yourself to the members directory
       * Or install using https://git-scm.com/downloads
 2. Fork this repository by clicking the button at the top of this page
 3.  Paste or type this command into your Terminal or Git Bash window: `git clone https://github.com/<your_username>/acmatuc.github.io.git`
-4. You should now have a folder `acmatuc.github.io`,  navigate to the subfolder `_data`using a file explorer or these commands:
+4. You should now have a folder `acmatuc.github.io`,  navigate to the subfolder `_data` using a file explorer or these commands:
     ```
     cd acmatuc.github.io
     cd _data
