@@ -38,9 +38,9 @@ Adding yourself to the members directory
  
  ```
 - name: Isiah Lloyd
-  short_bio: I'm a Sophomore studying Computer Science. I'm also the webmaster for ACM@UC and help organize RevolutionUC
-  image_url: https://avatars1.githubusercontent.com/u/885544?v=4&s=460
-  github: isiah_lloyd
-  website: https://www.isiah.me
+   short_bio: I'm a Sophomore studying Computer Science. I'm also the webmaster for ACM@UC and help organize RevolutionUC
+   image_url: https://avatars1.githubusercontent.com/u/885544?v=4&s=460
+   github: isiah_lloyd
+   website: https://www.isiah.me
 ```
  
