@@ -10,9 +10,13 @@ Adding yourself to the members directory
       * Then install with `brew install git`
     * Or install using https://git-scm.com/downloads
 2. Fork this repository by clicking the button at the top of this page
-    *  Paste or type this command into your Terminal or Git Bash window: `git clone https://github.com/<your_username>/acmatuc.github.io.git`
-4. Create and checkout a branch called `add-[your name]` using `git checkout -b add-[your name]`
-5. You should now have a folder `acmatuc.github.io`,  navigate to the subfolder `_data`
+3.  Paste or type this command into your Terminal or Git Bash window: `git clone https://github.com/<your_username>/acmatuc.github.io.git`
+4. You should now have a folder `acmatuc.github.io`,  navigate to the subfolder `_data`using a file explorer or these commands:
+    ```
+    cd acmatuc.github.io
+    cd _data
+    ```
+5. Create and checkout a branch called `add-[your name]` using `git checkout -b add-[your name]`
 6. Open the YAML(.yml) file that corresponds to your graduation date
 7. At the top of the file there is an example template to copy and paste (lines 3-7) at the end of the file
 8. Remove the `#` from each line
@@ -31,7 +35,7 @@ Adding yourself to the members directory
 12. You should see a box that looks like this, click `Compare & Pull Request`
 ![](https://help.github.com/assets/images/help/repository/repo-actions-pullrequest.png)
 13. Title and explain your pull request and click `Create Pull Request`
-14. All done! Once your pull request is approved, your changed will be on the website!
+14. All done! Once your pull request is approved, your changes will be on the website!
  ### Example
  
  Here is an example of what my addition would be:
