@@ -4,3 +4,9 @@
 #  image_url: <Direct link to a photo of yourself, I suggest copying a image link from social media (Github, Twitter)>
 #  github: <Your github username (without a @)>
 #  website: <A link to your website>
+
+- name: Kyle Arens
+  short_bio: I'm a fifth year with experience in Java, C++, Python, and C#. I'm interested in NLP, and I'm writing a Starcraft 2 AI for my senior design.
+  image_url: https://avatars1.githubusercontent.com/u/12465854?v=4&s=460
+  github: ArensKyle
+  website: http://kylearens.com
