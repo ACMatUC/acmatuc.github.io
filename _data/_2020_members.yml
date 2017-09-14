@@ -4,3 +4,8 @@
 #  image_url: <Direct link to a photo of yourself, I suggest copying a image link from social media (Github, Twitter)>
 #  github: <Your github username (without a @)>
 #  website: <A link to your website>
+- name: Kristian Snyder
+  short_bio: I'm a third-year CS major working in Go, C#, and Python, currently co-oping at Great American Insurance. I'm into learning more about network security and crypto.
+  image_url: https://avatars2.githubusercontent.com/u/14251689
+  github: snyderks
+  website: https://kristiansnyder.com
