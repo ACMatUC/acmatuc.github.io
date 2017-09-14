@@ -1,6 +1,6 @@
 # -Example entry-
-#- name: <Insert your name>
-#  short_bio: <One or two sentance about yourself>
-#  image_url: <Direct link to a photo of yourself, I suggest copying a image link from social media (Github, Twitter)>
-#  github: <Your github username (without a @)>
-#  website: <A link to your website>
+#- name: Devin McPherson
+#  short_bio: I am currently a 4th year CS major here at UC. I love programming and I have a lot experience with .NET web applications as well as experience with other technologies such as React, Angular, Mongo, and more. In my free time I love to stay active!
+#  image_url: https://avatars3.githubusercontent.com/u/18093745?v=4&u=7853eb935db26a43c5bff7b1da2f359df165a8a9&s=400
+#  github: devinmcpherson
+#  website: devinmcpherson.github.io
