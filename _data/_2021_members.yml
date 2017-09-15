@@ -5,9 +5,17 @@
 #  image_url: <Direct link to a photo of yourself, I suggest copying a image link from social media (Github, Twitter)>
 #  github: <Your github username (without a @)>
 #  website: <A link to your website>
-
-
-  name: Chris Messmer
+- name: Carisheila Cardano
+  github: cardanca
+- name: Chris Messmer
   short_bio: I'm a CS major at UC, and I am a member of ACM@UC and the Robotics team.
   github: messmecp
+- name: Korey Huskonen
+  short_bio: You can only see so far with your eyes open.
+  image_url: https://avatars1.githubusercontent.com/u/21250524?v=4&u=d3ee121b9c346bf75f91aac9d81219a537cdb841&s=400
+  github: koreyhuskonen
+  website: https://www.koreyhuskonen.com
+- name: William Cupp
+  short_bio: I am a second year computer science major at UC.  My favorite language is C++.
+  github: WillCPP
 
