@@ -7,6 +7,9 @@
 #  website: <A link to your website>
 - name: Carisheila Cardano
   github: cardanca
+- name: Chris Jantzen
+  image_url: https://scontent.fosu1-1.fna.fbcdn.net/v/t1.0-9/20767993_2029595040399658_9059016410200580882_n.jpg?oh=062160efc4619c761988477c99c0bb3f&oe=5A4EA353
+  github: jantzeca
 - name: Chris Messmer
   short_bio: I'm a CS major at UC, and I am a member of ACM@UC and the Robotics team.
   github: messmecp
