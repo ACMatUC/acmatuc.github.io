@@ -15,13 +15,18 @@
   github: messmecp
 - name: Korey Huskonen
   short_bio: You can only see so far with your eyes open.
-  image_url: https://avatars1.githubusercontent.com/u/21250524?v=4&u=d3ee121b9c346bf75f91aac9d81219a537cdb841&s=400
+  image_url: httpsavatars1.githubusercontent.com/u/21250524?v=4&u=d3ee121b9c346bf75f91aac9d81219a537cdb841&s=400
   github: koreyhuskonen
   website: https://www.koreyhuskonen.com
 - name: Matthew Kavanagh
   short_bio: I love coding, computers, and problem solving to help real people with technology.
   image_url: https://avatars2.githubusercontent.com/u/31973380?v=4&u=40d50d624795dd58df5e7ba8647153fc3f5221c3&s=400
   github: kavanamw
+- name: Nicholas Maltbie
+  short_bio: I'm a Computer Science student who enjoys python far too much for my own good.
+  image_url: https://avatars1.githubusercontent.com/u/3240136
+  github: nicholas-maltbie
+  website: nickmaltbie.com
 - name: Robert Bolgzds
   short_bio: Second year computer science major.
   image_url: https://avatars3.githubusercontent.com/u/31973394
