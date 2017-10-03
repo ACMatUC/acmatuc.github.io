@@ -22,6 +22,7 @@ Adding yourself to the members directory
 8. Remove the `#` from each line
 9. Edit each line with your information!
    * You can omit every line but the name if you don't want to share that information
+   * Try to write a bio that won't require updating, as you'll have to remember to create another pull request to update it.
    * Your profile image must be a direct link to an image already hosted somewhere on the web
       * I would suggest going to your Github and right clicking your profile image to get a direct link, but can also use imgur or another social media site.
 10. Once you are done adding your information, we need to commit and push your changes to your repo

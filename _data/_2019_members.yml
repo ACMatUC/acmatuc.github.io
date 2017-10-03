@@ -4,3 +4,18 @@
 #  image_url: <Direct link to a photo of yourself, I suggest copying a image link from social media (Github, Twitter)>
 #  github: <Your github username (without a @)>
 #  website: <A link to your website>
+- name: Devin McPherson
+  short_bio: I am currently a 4th year CS major here at UC. I love programming and I have a lot experience with .NET web applications as well as experience with other technologies such as React, Angular, Mongo, and more. In my free time I love to stay active!
+  image_url: https://avatars3.githubusercontent.com/u/18093745
+  github: devinmcpherson
+  website: https://devinmcpherson.github.io
+- name: Kurt Lewis
+  short_bio: I was the president of ACM@UC from 2016-2018. I love tech and tech communities, and coding in my free time! My go-to language is Python.
+  image_url: https://avatars1.githubusercontent.com/u/4043087
+  github: kurtlewis
+  website: https://kurtjlewis.com
+- name: Zachary Sang
+  short_bio: I am a 4th year CS major here at UC with a background mainly in Web. In my co-ops, I've worked a lot with Java and a little with Python. Although, in my free time, I usually use NodeJS!
+  image_url: https://avatars1.githubusercontent.com/u/17336621
+  github: zacharysang
+  website: zacharysang.com
