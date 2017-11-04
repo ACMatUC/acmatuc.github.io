@@ -19,4 +19,10 @@ div.members{
     p {
         margin: 0;
     }
+    table {
+        table-layout:fixed;
+    }
+    td {
+        padding-bottom: 1.5em;
+    }
 }

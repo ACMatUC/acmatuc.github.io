@@ -18,10 +18,11 @@ Adding yourself to the members directory
     ```
 5. Create and checkout a branch called `add-[your name]` using `git checkout -b add-[your name]`
 6. Open the YAML(.yml) file that corresponds to your graduation date
-7. At the top of the file there is an example template to copy and paste (lines 3-7) at the end of the file
+7. At the top of the file there is an example template to copy and paste (lines 2-6) at the end of the file
 8. Remove the `#` from each line
 9. Edit each line with your information!
    * You can omit every line but the name if you don't want to share that information
+   * Try to write a bio that won't require updating, as you'll have to remember to create another pull request to update it.
    * Your profile image must be a direct link to an image already hosted somewhere on the web
       * I would suggest going to your Github and right clicking your profile image to get a direct link, but can also use imgur or another social media site.
 10. Once you are done adding your information, we need to commit and push your changes to your repo
@@ -37,9 +38,9 @@ Adding yourself to the members directory
 13. Title and explain your pull request and click `Create Pull Request`
 14. All done! Once your pull request is approved, your changes will be on the website!
  ### Example
- 
+
  Here is an example of what my addition would be:
- 
+
  ```
 - name: Isiah Lloyd
    short_bio: I'm a Sophomore studying Computer Science. I'm also the webmaster for ACM@UC and help organize RevolutionUC
@@ -47,4 +48,3 @@ Adding yourself to the members directory
    github: isiah_lloyd
    website: https://www.isiah.me
 ```
- 
