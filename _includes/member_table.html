@@ -4,7 +4,16 @@
     </td>
     <td class="member">
         <h3 style="margin:0">{{ member.name }}</h3>
-        <span>{% if member.github %}<img class="icon" src="/assets/github-circle.png"><a href="https://github.com/{{member.github}}">@{{member.github}}</a>{% endif %}<span></span><span>{% if member.website %}<img class="icon" src="/assets/link-variant.png"><a href="{{member.website}}">{{member.website}}</a>{% endif %}</span>
+        <span>
+          {% if member.github %}
+            <img class="icon" src="/assets/github-circle.png"><a href="https://github.com/{{member.github}}">@{{member.github}}</a>
+          {% endif %}
+        </span>
+        <span>
+          {% if member.website %}
+            <img class="icon" src="/assets/link-variant.png"><a href="{{member.website}}">{{member.website}}</a>
+          {% endif %}
+        </span>
         <p>{{member.short_bio}}</p>
     </td>
 </tr>
