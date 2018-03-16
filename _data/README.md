@@ -9,15 +9,15 @@ Adding yourself to the members directory
         * Get Homebrew at https://brew.sh
         * Then install with `brew install git`
       * Or install using https://git-scm.com/downloads
-2. Fork this repository by clicking the button at the top of this page
-3.  Paste or type this command into your Terminal or Git Bash window: `git clone https://github.com/<your_username>/acmatuc.github.io.git`
+2. Create a GitHub account, then fork this repository by clicking the "Fork" button at the top of this page
+3.  Paste or type this command into your Terminal or Git Bash window (Don't forget to fill in your username): `git clone https://github.com/<your_username>/acmatuc.github.io.git`
 4. You should now have a folder `acmatuc.github.io`,  navigate to the subfolder `_data` using a file explorer or these commands:
     ```
     cd acmatuc.github.io
     cd _data
     ```
 5. Create and checkout a branch called `add-[your name]` using `git checkout -b add-[your name]`
-6. Open the YAML(.yml) file that corresponds to your graduation date
+6. Open the YAML(.yml) file that corresponds to your graduation year
 7. At the top of the file there is an example template to copy and paste (lines 2-6) at the end of the file
 8. Remove the `#` from each line
 9. Edit each line with your information!
@@ -43,7 +43,7 @@ Adding yourself to the members directory
 
  ```
 - name: Isiah Lloyd
-   short_bio: I'm a Sophomore studying Computer Science. I'm also the webmaster for ACM@UC and help organize RevolutionUC
+   short_bio: I'm an ACM Member studying Computer Science. I'm also the webmaster for ACM@UC and help organize RevolutionUC
    image_url: https://avatars1.githubusercontent.com/u/885544?v=4&s=460
    github: isiah_lloyd
    website: https://www.isiah.me
