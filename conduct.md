@@ -79,8 +79,8 @@ We can't follow up an anonymous report with you directly, but we will fully inve
 #### Personal report
 You can make a personal report by contacting the ACM@UC President or Vice President:
 
-* Kurt Lewis (President), [lewis2ku@mail.uc.edu](mailto:lewis2ku@mail.uc.edu), @capnkurt on Slack
-* Dominic Farolino (Vice President), [farolidm@mail.uc.edu](farolidm@mail.uc.edu), @domfarolino on Slack
+* Noah Bass (President), [bassnh@mail.uc.edu](mailto:bassnh@mail.uc.edu), @noah on Slack
+* Kristian Snyder (Vice President), [snyderks@mail.uc.edu](mailto:snyderks@mail.uc.edu), @kristian on Slack
 
 When taking a personal report in-person, an ACM@UC executive will ensure you are safe and cannot be overheard. They may involve other ACM@UC executives to ensure your report is managed properly. Once safe, we'll ask you to tell us about what happened. You won't be asked to confront anyone and we won't tell anyone who you are. We'll handle it as respectfully as possible.
 
@@ -92,6 +92,6 @@ We used the [Geek Feminism Conference anti-harassment policy](http://geekfeminis
 
 ---
 
-Version 1.0.0. Published August 28, 2017.
+Version 1.0.1. Published September 10, 2018.
 
 [View History on GitHub](https://github.com/ACMatUC/acmatuc.github.io/commits/master/conduct.md)
