@@ -37,7 +37,8 @@
   image_url: https://avatars3.githubusercontent.com/u/31973394
   github: Bolgzdrt
 - name: William Cupp
-  short_bio: I am a second year computer science major at UC.  My favorite language is C++.
+  short_bio: I am a computer science major at UC.  My favorite language is C++.
+  image_url: https://willcpp.github.io/images/me.jpg
   github: WillCPP
 - name: Evan Vujcec
   short_bio: I'm a CS major. My primary languages are C++, Dart, and Go.
