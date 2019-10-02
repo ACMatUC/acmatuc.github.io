@@ -1,0 +1,15 @@
+---
+layout: default
+group: "navigation"
+title: Class of 2024
+permalink: /members/class_of_2024
+order: 0
+---
+<div class="members">
+    <h1>ACM@UC Members - Class of 2024</h1>
+    <table>
+    {% for member in site.data._2024_members %}
+        {% include member_table.html %}
+    {% endfor %}
+    </table>
+</div>
