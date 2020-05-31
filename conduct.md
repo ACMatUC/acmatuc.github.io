@@ -9,13 +9,13 @@ order: 4
 TL;DR. ACM@UC is dedicated to a harassment-free experience for everyone.
 
 # Code of Conduct
-In addition to the University of [Cincinnati’s Student Code of Conduct](https://www.uc.edu/conduct/Code_of_Conduct.html), ACM@UC has it’s own code of conduct.
+In addition to the University of [Cincinnati’s Student Code of Conduct](https://www.uc.edu/conduct/Code_of_Conduct.html), ACM@UC has its own code of conduct.
 
 ACM@UC is dedicated to providing a harassment-free community experience for everyone regardless of gender, gender identity and expression, sexual orientation, disability, physical appearance, body size, race, ethnicity, age, religion, or computing experience or lack thereof. We do not tolerate harassment of community participants in any form. Participants violating these rules may be sanctioned or expelled from the community at the discretion of the organization executives.
 
 Harassment includes, but is not limited to:
 
-* Verbal comments that reinforce social structures of inequality related to gender, gender identity and expression, sexual orientation,       disability, physical appearance, body size, race, age, or religion
+* Verbal comments that reinforce social structures of inequality related to gender, gender identity and expression, sexual orientation, disability, physical appearance, body size, race, age, or religion
 * Sexual images in public spaces
 * Deliberate intimidation, stalking, or following
 * Inappropriate photography or recording
@@ -79,19 +79,20 @@ We can't follow up an anonymous report with you directly, but we will fully inve
 #### Personal report
 You can make a personal report by contacting the ACM@UC President or Vice President:
 
-* Noah Bass (President), [bassnh@mail.uc.edu](mailto:bassnh@mail.uc.edu), @noah on Slack
-* Kristian Snyder (Vice President), [snyderks@mail.uc.edu](mailto:snyderks@mail.uc.edu), @kristian on Slack
+* Brandon Starcheus (President), [starchbt@mail.uc.edu](mailto:starchbt@mail.uc.edu), @BStar on Slack
+* Lina Kaval (Vice President), [kavalla@mail.uc.edu](mailto:kavalla@mail.uc.edu), @Lina Kaval on Slack
 
 When taking a personal report in-person, an ACM@UC executive will ensure you are safe and cannot be overheard. They may involve other ACM@UC executives to ensure your report is managed properly. Once safe, we'll ask you to tell us about what happened. You won't be asked to confront anyone and we won't tell anyone who you are. We'll handle it as respectfully as possible.
 
 ## Questions and feedback
-Please direct any questions and feedback to an ACM@UC executive in-person, by email, or on Slack or by sending an email to [acmatuc@gmail.com](acmatuc@gmail.com).
+Please direct any questions and feedback to an ACM@UC executive in-person, by email, or on Slack or by sending an email to [acmatcinci@gmail.com](acmatcinci@gmail.com).
 
 ## License and attribution
 We used the [Geek Feminism Conference anti-harassment policy](http://geekfeminism.wikia.com/wiki/Conference_anti-harassment/Policy) and the [NodeSchool Cincinnati Code of Conduct](https://github.com/nodeschool/cincinnati/blob/master/resources/slides/index.html) as a starting point. This Code of Conduct is licensed Creative Commons Zero.
 
 ---
 
-Version 1.0.1. Published September 10, 2018.
+Version 1.0.1. Published September 10, 2018.  
+Version 1.0.2. Published May 22, 2020.  
 
 [View History on GitHub](https://github.com/ACMatUC/acmatuc.github.io/commits/master/conduct.md)
