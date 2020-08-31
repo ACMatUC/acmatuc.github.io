@@ -18,3 +18,15 @@
   image_url: https://devagrawal09.github.io/portfolio/img/dp.jpg
   github: devagrawal09
   website: https://devagrawal09.github.io/portfolio/
+
+- name: Mahesh Gowda
+  short_bio: Hello! I'm a creative IT student with considerable experience and motivation. I really like to experiment with APIs and open data.
+  image_url: https://ca.slack-edge.com/T09GUV7AB-UMP7C9MUY-eaa6f5a4cba9-512
+  github: MSG17
+  website: https://gowdam.com
+
+- name: Lina Kaval
+  short_bio: I am Lina Kaval, a CS student also minoring in Business Analytics. I enjoy working with data, singing, badly dancing, and occassionally doubting whether I like coding.
+  image_url: https://www.linakaval.com/uploads/1/2/4/4/124474097/img-8630_1_orig.jpg
+  github: linakaval
+  website: https://www.linakaval.com/
