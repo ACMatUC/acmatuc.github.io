@@ -31,10 +31,10 @@
   github: linakaval
   website: https://www.linakaval.com/
 
--name: Piyush Sahu
- short_bio: I'm a third year CS student.
+- name: Piyush Sahu
+  short_bio: I'm a third year CS student.
 
-  name: Daniel Hackney
+- name: Daniel Hackney
   short_bio: Hey there! I'm Daniel, and I'm a CS student also working on a minor in mathematics.  I love to rollerblade, dance, play Dungeons and Dragons, and code!
   github: corncob567
   image_url: https://twitter.com/DanielNHackney/photo
