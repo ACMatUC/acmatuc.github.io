@@ -9,8 +9,9 @@ thumbnail: /happy-people.jpg
 
 
 **Lorem ipsum** dolor sit amet, consectetur adipisicing elit. Unde dicta voluptatum alias nostrum earum,
-accusamus reprehenderit et vitae tenetur rerum nulla repellat harum. Quidem facere sequi voluptatem
-saepe exercitationem, maiores voluptas amet, necessitatibus ex corporis fugit illo. Optio molestias vero
+accusamus reprehenderit et vitae tenetur rerum nulla repellat harum.
+
+Quidem facere sequi voluptatem saepe exercitationem, maiores voluptas amet, necessitatibus ex corporis fugit illo. Optio molestias vero
 officiis impedit, rem tempore, doloremque dignissimos voluptatem omnis neque aspernatur. Assumenda, quis
 tenetur. Sit optio cum necessitatibus fuga ipsum at rem quo. Quisquam qui architecto cum itaque quae.
 Nemo, non incidunt aut atque quam, recusandae dignissimos doloremque temporibus totam expedita rerum,
