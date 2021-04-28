@@ -3,7 +3,5 @@ _site
 *.css
 .DS_Store
 .sass-cache/
-Gemfile
-Gemfile.lock
 .jekyll-cache
 node_modules
