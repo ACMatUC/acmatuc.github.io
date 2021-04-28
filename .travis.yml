@@ -1,5 +1,11 @@
 language: ruby
 rvm:
   - 2.6.3
+
 script:
-  - npm -v
+  - npm ci
+  - bundle exec jekyll build
+  - ls -al
+
+notifications:
+  email: false
