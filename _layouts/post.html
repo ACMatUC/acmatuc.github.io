@@ -1,0 +1,19 @@
+---
+layout: blog
+---
+
+<div class="back-arrow px-8 -mt-3 md:py-4 md:px-12">
+  <a class="inline-block text-6xl hover:text-red-700" href="/blog">&larr;</a>
+</div>
+<main class="md:px-12">
+  <article class="bg-white text-gray-900 p-8 md:p-12 h-auto">
+    <header class="h-auto">
+      <h1 class="my-4 text-3xl md:text-5xl font-bold">{{ page.title }}</h1>
+      <img src="/assets/{{ page.thumbnail }}" alt="Happy people" class="h-72 w-full object-cover opacity-75">
+      <p class="text-2xl py-4"><i>by {{ page.author }}</i></p>
+    </header>
+    <p>
+      {{content}}
+    </p>
+  </article>
+</main>

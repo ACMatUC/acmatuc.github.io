@@ -1,0 +1,20 @@
+---
+layout: blog
+title: Blog
+group: "navigation"
+permalink: /blog/
+order: 8
+---
+
+<main>
+  <section id="articles" class="articles-grid px-8 md:px-12 mt-12">
+    {% for post in site.posts %}
+      <article class="bg-white p-8 shadow-md rounded-md text-gray-900">
+        <a href="{{ post.url }}"><img src="/assets/{{ post.thumbnail }}" alt="Happy people" /></a>
+        <h1 class="mt-4 text-3xl font-bold">{{ post.title }}</h1>
+        <p><i>by {{ post.author }}</i></p>
+        <p>{{ post.excerpt }}</p>
+      </article>
+    {% endfor %}
+  </section>
+</main>

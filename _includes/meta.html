@@ -5,7 +5,7 @@
 <meta property="og:url" content="https://acmatuc.org">
 <meta property="og:site_name" content="ACM@UC">
 <meta property="og:type" content="website">
-<meta property="og:description" content="{% if page.description %}{{ page.description }}{% elsif page.excerpt %}{{ page.excerpt }}{% else %}{{ site.meta.description }}{% endif %}">
+<meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.meta.description }}{% endif %}">
 
 {% if page.path contains '_posts' %}
     {% if page.img %}
@@ -18,7 +18,7 @@
 <meta name="twitter:domain" content="acmatuc.org">
 <meta name="twitter:creator" content="@{{ site.social.twitter }}">
 <meta name="twitter:title" content="{{ page.title }}">
-<meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% elsif page.excerpt %}{{ page.excerpt }}{% else %}{{ site.meta.description }}{% endif %}">
+<meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.meta.description }}{% endif %}">
 
 {% if page.path contains '_posts' %}
     {% if page.img %}

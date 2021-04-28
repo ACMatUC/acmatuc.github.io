@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+  {% include meta.html %}
+
+  <title>{% if page.title %} {{ page.title }} - {{ site.title }} {% else %}{{ site.title }}{% endif %}</title>
+
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/blog.css">
+</head>
+
+<body class="bg-gray-900 h-screen text-white">
+  <header class="page-header h-1/4 lg:h-1/2 pt-12 flex flex-col justify-start items-center">
+    <h1 class="text-3xl md:text-5xl">ACM<span class="text-red-500">@UC</span> the <span class="text-red-500">blog</span>
+    </h1>
+    <nav class="mt-8">
+      <ul class="flex">
+        <li class="p-2 hover:text-red-600"><a href="/blog">Home</a></li>
+        <li class="p-2 hover:text-red-600"><a href="/">ACM@UC</a></li>
+      </ul>
+    </nav>
+  </header>
+  {{content}}
+</body>
+
+</html>
