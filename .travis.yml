@@ -1,14 +1,5 @@
-jobs:
-  include:
-    - stage: npm
-      language: node.js
-      node_js: "14.0"
-      script:
-        - npm install
-
-    - stage: jekyll
-      language: ruby
-      rvm:
-        - 2.6.3
-      script:
-        - ls -al
+language: ruby
+rvm:
+  - 2.6.3
+script:
+  - npm -v
