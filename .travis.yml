@@ -7,7 +7,7 @@ install:
   - bundle install
 
 script:
-  - JEKYLL_ENV=production bundle exec jekyll build --trace
+  - bundle exec jekyll build --trace
   - ls -al
 
 notifications:
