@@ -2,9 +2,12 @@ language: ruby
 rvm:
   - 2.6.3
 
-script:
+install:
   - npm ci
-  - bundle exec jekyll build
+  - bundle install
+
+script:
+  - JEKYLL_ENV=production bundle exec jekyll build
   - ls -al
 
 notifications:
