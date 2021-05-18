@@ -17,11 +17,7 @@ sass:
 
 plugins:
   - jekyll-feed
-  - jekyll-postcss
 
 exclude:
   - Gemfile
   - Gemfile.lock
-  - package.json
-  - package-lock.json
-  - node_modules/**
