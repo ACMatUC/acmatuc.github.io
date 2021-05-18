@@ -2,7 +2,7 @@
 layout: post
 title:  "API demystified"
 date:   2021-04-27 21:27:00 -0500
-categories: jekyll update
+categories: api web http
 author: Bao Huynh
 thumbnail: /happy-people.jpg
 ---
