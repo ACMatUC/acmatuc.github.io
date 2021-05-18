@@ -7,14 +7,14 @@ order: 8
 ---
 
 <main>
-  <section id="articles" class="articles-grid px-8 md:px-12 mt-12">
+  <section class="previews previews--grid">
     {% for post in site.posts %}
-      <article class="bg-white p-8 shadow-md rounded-md text-gray-900">
-        <a href="{{ post.url }}"><img src="/assets/{{ post.thumbnail }}" alt="Happy people" /></a>
-        <h1 class="mt-4 text-3xl font-bold">{{ post.title }}</h1>
-        <p><i>by {{ post.author }}</i></p>
-        <p>{{ post.excerpt }}</p>
-      </article>
+    <article class="preview">
+      <a href="{{ post.url }}"><img src="/assets/{{ post.thumbnail }}" alt="Happy people" /></a>
+      <h1>{{ post.title }}</h1>
+      <p><i>by {{ post.author }}</i></p>
+      <p class="preview__content">{{ post.excerpt }}</p>
+    </article>
     {% endfor %}
   </section>
 </main>
