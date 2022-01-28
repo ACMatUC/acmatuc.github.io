@@ -12,3 +12,4 @@ group :jekyll_plugins do
   gem 'minima'
   gem 'jekyll-feed'
 end
+gem "webrick", "~> 1.7"
