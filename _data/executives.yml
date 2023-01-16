@@ -1,0 +1,58 @@
+# -Example entry-
+#- name: <Insert name>
+#  role: president|vp|secretary|treasurer|webmaster|outreach-chair|education-chair|membership-chair
+#  email: <Email address>
+#  github: <Github username (without a @)>
+#  linkedin: <LinkedIn handle (not the entire http link)>
+#  twitter: <Twitter username>
+#  website: <A link to your website>
+#  bio: <A paragraph about yourself>
+
+- role: president
+  name: Bao Huynh
+  email: huynhlbg@mail.uc.edu
+  linkedin: bhuynhuc
+  github: bhuynhdev
+  twitter: bhuynhtweet
+  website: https://bhuynh.me
+  bio: Hi, this is Bao here. I'm an international student from Vietnam, and currently a 4th-year Computer Science student. I am passionate about web development and career growth, and hope to create applications that better our daily life experiences bit by bit. In my free time, I watch anime and sacrifice chess pieces.
+
+- role: vice-president
+  name: Samantha Shaw
+  email: shaws8@mail.uc.edu
+  linkedin: samantha--shaw
+  twitter: Samantha_2205
+  bio: Hi! I'm Samantha and I'm a fifth-year Computer Science student from Jakarta, Indonesia. I have been a member of ACM@UC since my freshman year and I have also participated in organizing RevolutionUC! In my downtime, I love to cook, travel and win board games!
+
+- role: secretary
+  name: Ayush Verma
+  email: vermaa5@mail.uc.edu
+  linkedin: vermayush
+  bio: Hey there! I'm Ayush, a second-year computer science student. I'm currently on co-op at 84.51 where I get to work with Java and Spring Boot on some cool software. In my free time I love to play and watch tournaments for Super Smash Bros Ultimate.
+
+- role: treasurer
+  name: Atharv Shete
+  email: sheteaa@mail.uc.edu
+  github: SheteUC
+  linkedin: atharvshete
+  bio: Hi! I'm Atharv, and I'm a sophomore studying computer science at UC. I was born in India, but I have lived in many countries. I like web dev and python. I love traveling and visiting new restaurants.
+
+- role: education-chair
+  name: Daniel Vennemeyer
+  email: vennemdp@mail.uc.edu
+  github: Daniel-Vennemeyer
+  linkedin: danielvennemeyer
+  bio: Hi I'm Daniel Vennemeyer! I'm a first-year CS student and I plan to add a major in Economics. I am very interested in algorithmic trading and quantitative finance, modeling the world's economies and financial systems. And unraveling the mysteries of money and how it makes the world go round.
+
+- role: outreach-chair
+  name: Quan Le
+  email: leqn@mail.uc.edu
+  github: lucasLe1709
+  linkedin: lennmquan
+  bio: Hi, my name is Quan and I am a 2nd-year student majoring in Computer Science. I am passionate about using technology to solve problems and create innovative solutions, and I am excited to be learning the skills and knowledge needed to succeed in this field. In my free time, I enjoy reading books of all genres, from science fiction and fantasy to non-fiction works on technology and programming. I find that reading provides a welcome escape from the demands of my coursework and helps me to stay curious and engaged in the world around me.
+
+- role: membership-chair
+  name: Rugved Myakal
+  email: myakalrm@mail.uc.edu
+  linkedin: rugvedmyakal
+  bio: Hello I am Rugved, I am a sophomore studying Computer Science. I am interested in data analysis, cybersecurity and blockchain. I like video games and sports.
