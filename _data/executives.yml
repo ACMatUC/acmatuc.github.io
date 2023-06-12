@@ -8,34 +8,25 @@
 #  website: <A link to your website>
 #  bio: <A paragraph about yourself>
 
+
 - role: president
-  name: Bao Huynh
-  email: huynhlbg@mail.uc.edu
-  linkedin: bhuynhuc
-  github: bhuynhdev
-  twitter: bhuynhtweet
-  website: https://bhuynh.me
-  bio: Hi, this is Bao here. I'm an international student from Vietnam, and currently a 4th-year Computer Science student. I am passionate about web development and career growth, and hope to create applications that better our daily life experiences bit by bit. In my free time, I watch anime and sacrifice chess pieces.
-
-- role: vice-president
-  name: Samantha Shaw
-  email: shaws8@mail.uc.edu
-  linkedin: samantha--shaw
-  twitter: Samantha_2205
-  bio: Hi! I'm Samantha and I'm a fifth-year Computer Science student from Jakarta, Indonesia. I have been a member of ACM@UC since my freshman year and I have also participated in organizing RevolutionUC! In my downtime, I love to cook, travel and win board games!
-
-- role: secretary
   name: Ayush Verma
   email: vermaa5@mail.uc.edu
   linkedin: vermayush
-  bio: Hey there! I'm Ayush, a second-year computer science student. I'm currently on co-op at 84.51 where I get to work with Java and Spring Boot on some cool software. In my free time I love to play and watch tournaments for Super Smash Bros Ultimate.
+  bio: Hey there! I'm Ayush, a third-year computer science student. I'm currently on co-op at 84.51 where I get to work with Java and Spring Boot on some cool software. In my free time I love to play and watch tournaments for Super Smash Bros Ultimate.
+
+- role: vice-president
+  name: Daniel Vennemeyer
+  email: vennemdp@mail.uc.edu
+  linkedin: danielvennemeyer
+  github: Daniel-Vennemeyer
+  bio: Hi! I'm Daniel Vennemeyer, a second-year student studying Computer Science and Economics. I am passionate about algorithmic trading and cryptoeconomics, and my ultimate goal is to use my knowledge to bring solutions to the world's most pressing financial problems. I'm intrigued by the complexities of the global economy and financial systems, and I want to unravel the mysteries of money and how it makes the world go round.
 
 - role: treasurer
-  name: Atharv Shete
-  email: sheteaa@mail.uc.edu
-  github: SheteUC
-  linkedin: atharvshete
-  bio: Hi! I'm Atharv, and I'm a sophomore studying computer science at UC. I was born in India, but I have lived in many countries. I like web dev and python. I love traveling and visiting new restaurants.
+  name: Alexander VanBibber
+  email: vanbibae@mail.uc.edu
+  linkedin: alexander-van-bibber-8a6420267
+  bio: Hi! I'm Alex and I'm a second-year computer science major. I enjoy doing a variety of things such as playing the piano, video games, and going to the gym. I am fascinated by technology, both modern and retro. I think that it's really cool to learn how problems are solved using computers.
 
 - role: education-chair
   name: Daniel Vennemeyer
