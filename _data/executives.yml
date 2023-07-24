@@ -8,51 +8,54 @@
 #  website: <A link to your website>
 #  bio: <A paragraph about yourself>
 
+
 - role: president
-  name: Bao Huynh
-  email: huynhlbg@mail.uc.edu
-  linkedin: bhuynhuc
-  github: bhuynhdev
-  twitter: bhuynhtweet
-  website: https://bhuynh.me
-  bio: Hi, this is Bao here. I'm an international student from Vietnam, and currently a 4th-year Computer Science student. I am passionate about web development and career growth, and hope to create applications that better our daily life experiences bit by bit. In my free time, I watch anime and sacrifice chess pieces.
-
-- role: vice-president
-  name: Samantha Shaw
-  email: shaws8@mail.uc.edu
-  linkedin: samantha--shaw
-  twitter: Samantha_2205
-  bio: Hi! I'm Samantha and I'm a fifth-year Computer Science student from Jakarta, Indonesia. I have been a member of ACM@UC since my freshman year and I have also participated in organizing RevolutionUC! In my downtime, I love to cook, travel and win board games!
-
-- role: secretary
   name: Ayush Verma
   email: vermaa5@mail.uc.edu
   linkedin: vermayush
-  bio: Hey there! I'm Ayush, a second-year computer science student. I'm currently on co-op at 84.51 where I get to work with Java and Spring Boot on some cool software. In my free time I love to play and watch tournaments for Super Smash Bros Ultimate.
+  bio: Hey there! I'm Ayush, a third-year computer science student. I'm currently on co-op at 84.51 where I get to work with Java and Spring Boot on some cool software. In my free time I love to play and watch tournaments for Super Smash Bros Ultimate.
 
-- role: treasurer
-  name: Atharv Shete
-  email: sheteaa@mail.uc.edu
-  github: SheteUC
-  linkedin: atharvshete
-  bio: Hi! I'm Atharv, and I'm a sophomore studying computer science at UC. I was born in India, but I have lived in many countries. I like web dev and python. I love traveling and visiting new restaurants.
-
-- role: education-chair
+- role: vice-president
   name: Daniel Vennemeyer
   email: vennemdp@mail.uc.edu
-  github: Daniel-Vennemeyer
   linkedin: danielvennemeyer
-  bio: Hi I'm Daniel Vennemeyer! I'm a first-year CS student and I plan to add a major in Economics. I am very interested in algorithmic trading and quantitative finance, modeling the world's economies and financial systems. And unraveling the mysteries of money and how it makes the world go round.
+  github: Daniel-Vennemeyer
+  bio: Hi! I'm Daniel Vennemeyer, a second-year student studying Computer Science and Economics. I am passionate about algorithmic trading and cryptoeconomics, and my ultimate goal is to use my knowledge to bring solutions to the world's most pressing financial problems. I'm intrigued by the complexities of the global economy and financial systems, and I want to unravel the mysteries of money and how it makes the world go round.
+
+- role: treasurer
+  name: Alexander VanBibber
+  email: vanbibae@mail.uc.edu
+  linkedin: alexander-van-bibber-8a6420267
+  bio: Hi! I'm Alex and I'm a second-year computer science major. I enjoy doing a variety of things such as playing the piano, video games, and going to the gym. I am fascinated by technology, both modern and retro. I think that it's really cool to learn how problems are solved using computers.
+
+- role: secretary
+  name: Ayush Keshari
+  email: kesharah@mail.uc.edu
+  linkedin: aayushkeshari
+  bio: I am passionate about programming and computers. I believe that every human has immeasurable potential, and I desire to add my little grain of sand to the world.
+
+- role: webmaster
+  name: Phan Anh Duong
+  email: duongap@mail.uc.edu
+  github: menamerai
+  linkedin: phananhduong
+  bio: Hi! I'm Phan Anh, but please call me Rai. I'm an international student entering my 3rd year in CS. My professional focus is on web development and data science. In my free time, I enjoy playing board games with friends and listening to music.
+
+- role: education-chair
+  name: Tucker Cook
+  email: cook2tc@mail.uc.edu
+  github: Cocinero3
+  linkedin: tucker-cook-b4687621b
+  bio: I'm Tucker, a third year studying computer science. I'm passionate about video games and cars, my favorite video game is Metroid Prime and my favorite car is a Civic Type R. I also love learning, and I hope to provide insightful opportunities in ACM as an education chair.
 
 - role: outreach-chair
-  name: Quan Le
-  email: leqn@mail.uc.edu
-  github: lucasLe1709
-  linkedin: lennmquan
-  bio: Hi, my name is Quan and I am a 2nd-year student majoring in Computer Science. I am passionate about using technology to solve problems and create innovative solutions, and I am excited to be learning the skills and knowledge needed to succeed in this field. In my free time, I enjoy reading books of all genres, from science fiction and fantasy to non-fiction works on technology and programming. I find that reading provides a welcome escape from the demands of my coursework and helps me to stay curious and engaged in the world around me.
+  name: Prateek Kharangate
+  email: kharanpv@mail.uc.edu
+  linkedin: prateek-kharangate
+  bio: Hi, my name is Prateek, I am a rising 4th year majoring in Computer Science. I am from Dubai and I enjoy weightlifting, running, cooking, and watching One Piece.
 
 - role: membership-chair
-  name: Rugved Myakal
-  email: myakalrm@mail.uc.edu
-  linkedin: rugvedmyakal
-  bio: Hello I am Rugved, I am a sophomore studying Computer Science. I am interested in data analysis, cybersecurity and blockchain. I like video games and sports.
+  name: Rakshana Venkat
+  email: venkatrs@mail.uc.edu
+  linkedin: rakshana-venkat-030a00230
+  bio: Hey! I'm Rakshana and I'm a third-year Computer Science major. I love to meet new people and hangout with my dog, Milo! Also, I'm into specifically into data science and am consistently trying to learn more about it!
