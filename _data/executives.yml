@@ -10,52 +10,53 @@
 
 
 - role: president
-  name: Ayush Verma
-  email: vermaa5@mail.uc.edu
-  linkedin: vermayush
-  bio: Hey there! I'm Ayush, a third-year computer science student. I'm currently on co-op at 84.51 where I get to work with Java and Spring Boot on some cool software. In my free time I love to play and watch tournaments for Super Smash Bros Ultimate.
-
-- role: vice-president
   name: Daniel Vennemeyer
-  email: vennemdp@mail.uc.edu
+  email: Vennemdp@mail.uc.edu
   linkedin: danielvennemeyer
   github: Daniel-Vennemeyer
-  bio: Hi! I'm Daniel Vennemeyer, a second-year student studying Computer Science and Economics. I am passionate about algorithmic trading and cryptoeconomics, and my ultimate goal is to use my knowledge to bring solutions to the world's most pressing financial problems. I'm intrigued by the complexities of the global economy and financial systems, and I want to unravel the mysteries of money and how it makes the world go round.
+  bio: Daniel Vennemeyer is a student majoring in CS, Math, and Economics, with an ACCEND Masters in AI. He is a Research Assistant at the Kautz-Uible Cryptoeconomics Lab and President or Vice President of several student organizations, including the UC AI Society and ACM@UC. He aims to drive innovation and ethical practices in AI for a better tomorrow.
 
-- role: treasurer
-  name: Alexander VanBibber
-  email: vanbibae@mail.uc.edu
-  linkedin: alexander-van-bibber-8a6420267
-  bio: Hi! I'm Alex and I'm a second-year computer science major. I enjoy doing a variety of things such as playing the piano, video games, and going to the gym. I am fascinated by technology, both modern and retro. I think that it's really cool to learn how problems are solved using computers.
-
-- role: secretary
-  name: Ayush Keshari
-  email: kesharah@mail.uc.edu
-  linkedin: aayushkeshari
-  bio: I am passionate about programming and computers. I believe that every human has immeasurable potential, and I desire to add my little grain of sand to the world.
-
-- role: webmaster
-  name: Phan Anh Duong
-  email: duongap@mail.uc.edu
-  github: menamerai
-  linkedin: phananhduong
-  bio: Hi! I'm Phan Anh, but please call me Rai. I'm an international student entering my 3rd year in CS. My professional focus is on web development and data science. In my free time, I enjoy playing board games with friends and listening to music.
-
-- role: education-chair
+- role: vice-president
   name: Tucker Cook
   email: cook2tc@mail.uc.edu
-  github: Cocinero3
   linkedin: tucker-cook-b4687621b
-  bio: I'm Tucker, a third year studying computer science. I'm passionate about video games and cars, my favorite video game is Metroid Prime and my favorite car is a Civic Type R. I also love learning, and I hope to provide insightful opportunities in ACM as an education chair.
+  github: Cocinero3
+  bio: I'm Tucker, a fourth year studying computer science. I'm passionate about video games and cars, I hope to bring my skills from studying computer science to automotive. Above all my biggest passion is learning, and I hope to provide insightful opportunities as ACM@UC Vice President.
+
+- role: treasurer
+  name: Quoc Huynh
+  email: huynhqk@mail.uc.edu
+  linkedin: quoc-huynh-uc
+  github: kiq2908
+  bio: I'm Quoc Huynh, a third-year Computer Science student. I enjoy hiking, engaging with nature, and photography. Despite my passion for technology in general, I'm a full-time flip phone user.
+
+- role: secretary
+  name: Maite Peña
+  email: penams@mail.uc.edu
+  bio: Hello! I’m Maite, a second-year international student from Peru majoring in Computer Science. My interests range from machine learning to artificial intelligence, but I’m always eager to explore different areas within the field of computer science. Outside of school, I enjoy playing tennis, going to the gym, and learning interesting things about neuroscience.
+
+- role: webmaster
+  name: Chau Nguyen
+  email: nguye2cu@mail.uc.edu
+  github: chaung844
+  linkedin: chaunguyen844
+  bio: Hi! I'm Chau, a third-year Computer Science major passionate about technology and software development. I love cafe hopping and discovering new spots. I'm a big matcha fan and also enjoy making it myself!
+
+- role: education-chair
+  name: Sharvi Arora
+  email: arorasv@mail.uc.edu
+  linkedin: sharvi-arora
+  bio: Hi! I'm Sharvi and I'm a sophomore student studying computer science. I like reading anything fiction and learning about data. I also like amusement parks and F1.
 
 - role: outreach-chair
-  name: Prateek Kharangate
-  email: kharanpv@mail.uc.edu
-  linkedin: prateek-kharangate
-  bio: Hi, my name is Prateek, I am a rising 4th year majoring in Computer Science. I am from Dubai and I enjoy weightlifting, running, cooking, and watching One Piece.
+  name: Jake Martin
+  email: Marti8j5@mail.uc.edu
+  linkedin: jacob-martin-12b41023b
+  bio: Hi I'm Jake a 3rd year computer science student. I have experience with web development mainly focused with angular. I'm also involved with CEAS Tribunal as with 6 semester in tech.
 
 - role: membership-chair
-  name: Rakshana Venkat
-  email: venkatrs@mail.uc.edu
-  linkedin: rakshana-venkat-030a00230
-  bio: Hey! I'm Rakshana and I'm a third-year Computer Science major. I love to meet new people and hangout with my dog, Milo! Also, I'm into specifically into data science and am consistently trying to learn more about it!
+  name: Salma Mohammad
+  email: mohamms4@mail.uc.edu
+  linkedin: salma-mohammad-aaa1b5157
+  github: mohamms4-uc
+  bio: Hello! My name is Salma and I'm a fourth year student in CS. I love all things design from art, to UI/UX programming to business branding, and I have experience in all of them. And fun fact, I'm a nationally rewarded poet!
