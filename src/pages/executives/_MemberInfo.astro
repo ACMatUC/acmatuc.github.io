@@ -1,0 +1,121 @@
+---
+import { Image } from "astro:assets";
+
+interface Props {
+  name: string;
+  bio: string;
+  imageUrl?: string | undefined;
+
+  email?: string | undefined;
+  website?: string | undefined;
+  github?: string | undefined;
+  linkedin?: string | undefined;
+}
+
+const { name, imageUrl, bio, email, website, github, linkedin } = Astro.props;
+
+const images = import.meta.glob<{ default: ImageMetadata }>("/src/assets/*.{jpeg,jpg,png,gif}");
+const image = imageUrl ? images[imageUrl] : undefined;
+---
+
+<div class="container">
+  {
+    image && (
+      <Image
+        src={image()}
+        alt={name}
+      />
+    )
+  }
+  <div class="text">
+    <h3>{name}</h3>
+    <ul class="socials">
+      {
+        email && (
+          <li>
+            <img src="/assets/email.svg" />
+            <a href={`mailto:${email}`}>{email}</a>
+          </li>
+        )
+      }
+      {
+        website && (
+          <li>
+            <img src="/assets/link.svg" />
+            <a
+              href={website}
+              target="_blank"
+              rel="noopener"
+            >
+              {website}
+            </a>
+          </li>
+        )
+      }
+      {
+        github && (
+          <li>
+            <img src="/assets/github.svg" />
+            <a href={github}>{github}</a>
+          </li>
+        )
+      }
+      {
+        linkedin && (
+          <li>
+            <img src="/assets/linkedin.svg" />
+            <a href={linkedin}>{name}</a>
+          </li>
+        )
+      }
+    </ul>
+    <p>{bio}</p>
+  </div>
+</div>
+
+<style lang="scss">
+  @use "../../styles/index.scss" as *;
+
+  .container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    > img {
+      width: 10rem;
+      height: 10rem;
+      border-radius: 50%;
+    }
+
+    .text {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+
+      .socials {
+        display: flex;
+        gap: 0.75rem;
+        margin: 0;
+        padding: 0;
+
+        li {
+          display: flex;
+          gap: 0.5rem;
+          align-content: center;
+          img {
+            height: 1.2em;
+            width: 1.2em;
+          }
+        }
+        li:not(:last-child)::after {
+          content: "•";
+          margin-left: 0.25rem;
+        }
+      }
+
+      p {
+        margin: 0;
+      }
+    }
+  }
+</style>
