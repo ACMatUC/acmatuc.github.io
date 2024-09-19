@@ -5,3 +5,6 @@ _site
 .sass-cache/
 .jekyll-cache
 node_modules
+
+.astro
+dist

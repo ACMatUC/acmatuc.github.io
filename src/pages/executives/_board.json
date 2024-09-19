@@ -1,0 +1,71 @@
+{
+  "members": [
+    {
+      "role": "President",
+      "name": "Daniel Vennemeyer",
+      "imageUrl": "/src/assets/president.jpg",
+      "email": "vennemdp@mail.uc.edu",
+      "linkedin": "danielvennemeyer",
+      "github": "Daniel-Vennemeyer",
+      "bio": "Daniel Vennemeyer is a student majoring in CS, Math, and Economics, with an ACCEND Masters in AI. He is a Research Assistant at the Kautz-Uible Cryptoeconomics Lab and President or Vice President of several student organizations, including the UC AI Society and ACM@UC. He aims to drive innovation and ethical practices in AI for a better tomorrow."
+    },
+    {
+      "role": "Vice President",
+      "name": "Tucker Cook",
+      "imageUrl": "/src/assets/vice-president.jpg",
+      "email": "cook2tc@mail.uc.edu",
+      "linkedin": "tucker-cook-b4687621b",
+      "github": "Cocinero3",
+      "bio": "I'm Tucker, a fourth year studying computer science. I'm passionate about video games and cars, I hope to bring my skills from studying computer science to automotive. Above all my biggest passion is learning, and I hope to provide insightful opportunities as ACM@UC Vice President."
+    },
+    {
+      "role": "Treasurer",
+      "name": "Quoc Huynh",
+      "imageUrl": "/src/assets/treasurer.jpg",
+      "email": "huynhqk@mail.uc.edu",
+      "linkedin": "quoc-huynh-uc",
+      "github": "kiq2908",
+      "bio": "I'm Quoc Huynh, a third-year Computer Science student. I enjoy hiking, engaging with nature, and photography. Despite my passion for technology in general, I'm a full-time flip phone user."
+    },
+    {
+      "role": "Secretary",
+      "name": "Maite Peña",
+      "imageUrl": "/src/assets/secretary.jpg",
+      "email": "penams@mail.uc.edu",
+      "bio": "Hello! I'm Maite, a second-year international student from Peru majoring in Computer Science. My interests range from machine learning to artificial intelligence, but I'm always eager to explore different areas within the field of computer science. Outside of school, I enjoy playing tennis, going to the gym, and learning interesting things about neuroscience."
+    },
+    {
+      "role": "Webmaster",
+      "name": "Chau Nguyen",
+      "imageUrl": "/src/assets/webmaster.jpg",
+      "email": "nguye2cu@mail.uc.edu",
+      "linkedin": "chaunguyen844",
+      "github": "chaung844",
+      "bio": "Hi! I'm Chau, a third-year Computer Science major passionate about technology and software development. I love cafe hopping and discovering new spots. I'm a big matcha fan and also enjoy making it myself!"
+    },
+    {
+      "role": "Education Chair",
+      "name": "Sharvi Arora",
+      "imageUrl": "/src/assets/education-chair.jpg",
+      "email": "arorasv@mail.uc.edu",
+      "linkedin": "sharvi-arora",
+      "bio": "Hi! I'm Sharvi and I'm a sophomore student studying computer science. I like reading anything fiction and learning about data. I also like amusement parks and F1."
+    },
+    {
+      "role": "Outreach Chair",
+      "name": "Jake Martin",
+      "imageUrl": "/src/assets/outreach-chair.jpg",
+      "email": "Marti8j5@mail.uc.edu",
+      "linkedin": "jacob-martin-12b41023b",
+      "bio": "Hi I'm Jake a 3rd year computer science student. I have experience with web development mainly focused with angular. I'm also involved with CEAS Tribunal as with 6 semester in tech."
+    },
+    {
+      "role": "Membership Chair",
+      "name": "Salma Mohammad",
+      "email": "mohamms4@mail.uc.edu",
+      "linkedin": "salma-mohammad-aaa1b5157",
+      "github": "mohamms4-uc",
+      "bio": "Hello! My name is Salma and I'm a fourth year student in CS. I love all things design from art, to UI/UX programming to business branding, and I have experience in all of them. And fun fact, I'm a nationally rewarded poet!"
+    }
+  ]
+}
