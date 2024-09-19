@@ -1,0 +1,205 @@
+<footer>
+  <div class="info">
+    <img
+      src="/assets/acm-wide-transparent.png"
+      alt="ACM@UC logo"
+    />
+    <ul class="socials">
+      <a
+        target="_blank"
+        rel="noopener"
+        href="https://instagram.com/acmatuc"
+        class="instagram"
+      >
+        <img
+          src="/assets/instagram.svg"
+          alt="instagram logo"
+        />
+      </a>
+      <a
+        target="_blank"
+        rel="noopener"
+        href="https://discord.gg/6aYBT6s"
+        class="discord"
+      >
+        <img
+          src="/assets/discord.svg"
+          alt="discord logo"
+        />
+      </a>
+      <a
+        target="_blank"
+        rel="noopener"
+        href="https://x.com/ACMatUCorg"
+        class="x"
+      >
+        <img
+          src="/assets/x.svg"
+          alt="x logo"
+        />
+      </a>
+      <a
+        target="_blank"
+        rel="noopener"
+        href="https://linkedin.com/company/acm-uc"
+        class="linkedin"
+      >
+        <img
+          src="/assets/linkedin.svg"
+          alt="linkedin logo"
+        />
+      </a>
+      <a
+        target="_blank"
+        rel="noopener"
+        href="https://github.com/ACMatUC"
+        class="github"
+      >
+        <img
+          src="/assets/github.svg"
+          alt="github logo"
+        />
+      </a>
+      <a
+        href="https://www.youtube.com/@acmuc2095"
+        target="_blank"
+        rel="noopener"
+        class="youtube"
+      >
+        <img
+          src="/assets/youtube.png"
+          alt="youtube logo"
+        /></a
+      >
+    </ul>
+    <p>Student Chapter of ACM at University of Cincinnati</p>
+    <p class="contact">
+      <img src="/assets/email.svg" />
+      <a href="mailto:acmatcinci@gmail.com">acmatcinci@gmail.com </a>
+    </p>
+  </div>
+  <div class="category">
+    <h4>About</h4>
+    <ul>
+      <li><a href="/about">About ACM@UC</a></li>
+      <li><a href="/executives">Executives</a></li>
+      <li><a href="/code-of-conduct">Code of Conduct</a></li>
+      <li><a href="/constitution">Constitution</a></li>
+      <li><a href="/members">Member Directory</a></li>
+    </ul>
+  </div>
+  <div class="category">
+    <h4>Meetings</h4>
+    <ul>
+      <li><a href="/meetings/[[TODO]]">Last Meeting</a></li>
+      <li><a href="/meetings">Meeting Archive</a></li>
+      <li><a href="/meetings/attendance">Attendance Form</a></li>
+    </ul>
+  </div>
+  <div class="category">
+    <h4>Friends</h4>
+    <ul>
+      <li>
+        <a
+          href="https://acmwuc.org"
+          target="_blank"
+          rel="noopener"
+          >ACM-W@UC</a
+        >
+      </li>
+      <li>
+        <a
+          href="https://revolutionuc.com/"
+          target="_blank"
+          rel="noopener"
+          >RevolutionUC</a
+        >
+      </li>
+      <li>
+        <a
+          href="https://makeuc.io"
+          target="_blank"
+          rel="noopener"
+          >MakeUC</a
+        >
+      </li>
+    </ul>
+  </div>
+
+  <style lang="scss">
+    @use "../styles/index.scss" as *;
+
+    footer {
+      margin-top: auto;
+      display: flex;
+      background: $gray-800;
+      width: 100%;
+      height: 20rem;
+      justify-content: space-evenly;
+
+      .info {
+        * {
+          margin: 0;
+        }
+        > :not(img) {
+          margin-left: 2rem;
+        }
+        > img {
+          width: 20rem;
+        }
+
+        .socials {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+          padding: 0;
+          margin-bottom: 1rem;
+
+          img {
+            transition: filter 100ms linear;
+            width: 2rem;
+          }
+
+          a:hover img {
+            filter: brightness(70%);
+          }
+        }
+
+        .contact {
+          display: flex;
+          align-items: center;
+          gap: 0.3rem;
+
+          img {
+            margin-top: 0.1rem;
+            width: 1.2em;
+            display: inline-block;
+          }
+        }
+      }
+
+      .category {
+        margin-top: 2rem;
+
+        ul {
+          padding: 0;
+          padding-left: 0.5rem;
+          li {
+            color: $gray-300;
+            margin-bottom: 0.2rem;
+            * {
+              color: inherit;
+              text-decoration: none;
+            }
+          }
+          li:hover {
+            color: $gray-100;
+          }
+          li::marker {
+            content: none;
+          }
+        }
+      }
+    }
+  </style>
+</footer>

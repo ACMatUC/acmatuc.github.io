@@ -33,6 +33,10 @@ body {
   box-sizing: border-box;
   background: $gray-900;
   color: $gray-100;
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 h1,
@@ -45,4 +49,17 @@ h6 {
   font-weight: 700;
   margin: 0;
   text-transform: uppercase;
+}
+
+:any-link {
+  color: $red-500;
+}
+:any-link:hover {
+  color: $red-400;
+}
+:any-link:visited {
+  color: $red-700;
+}
+:any-link:visited:hover {
+  color: $red-600;
 }
