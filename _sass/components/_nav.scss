@@ -39,6 +39,10 @@
           text-decoration: underline;
         }
     }
+    
+    .nav__image {
+      width: 130px;
+    }
 
     span {
       @media (min-width: $mobile-breakpoint) {
