@@ -1,62 +1,31 @@
 ---
-import Head from "../../components/Head.astro";
-import Navbar from "../../components/Navbar.astro";
-import Footer from "../../components/Footer.astro";
+import Layout from "../../layouts/Layout.astro";
 import MemberInfo from "../../components/Profile.astro";
 import { members } from "./_board.json";
 ---
 
-<html>
-  <head>
-    <Head
-      title="Executives"
-      description="Executive board of ACM@UC"
-    />
-  </head>
-  <body>
-    <Navbar />
-    <main>
-      <h1>ACM@UC Executive Board</h1>
-      <div class="container">
-        {
-          members.map(async ({ role, name, bio, imageUrl, email, github, linkedin }) => {
-            // todo - if an executive adds a website, add it to the MemberInfo component
-            return (
-              <>
-                <h2>{role}</h2>
-                <MemberInfo
-                  {name}
-                  {imageUrl}
-                  {email}
-                  {github}
-                  {linkedin}
-                  {bio}
-                />
-              </>
-            );
-          })
-        }
-      </div>
-    </main>
-    <Footer />
-  </body>
-</html>
-
-<style lang="scss">
-  @use "../../styles/index.scss" as *;
-
-  main {
-    margin: 0 3rem 0 3rem;
-    max-width: 85rem;
-  }
-  h1 {
-    margin: 2rem;
-    display: block;
-  }
-  h2 {
-    margin: 3rem 0 1rem;
-  }
-  .container {
-    margin: 0 6rem 4rem;
-  }
-</style>
+<Layout title="Executive Board | ACM@UC">
+  <main class="mx-12 max-w-screen-lg">
+    <h1 class="m-8 text-3xl">ACM@UC Executive Board</h1>
+    <div class="mx-20 mb-14">
+      {
+        members.map(async ({ role, name, bio, imageUrl, email, github, linkedin }) => {
+          // todo - if an executive adds a website, add it to the Profile component
+          return (
+            <>
+              <h2 class="mt-6 mb-4 text-xl">{role}</h2>
+              <MemberInfo
+                {name}
+                {imageUrl}
+                {email}
+                {github}
+                {linkedin}
+                {bio}
+              />
+            </>
+          );
+        })
+      }
+    </div>
+  </main>
+</Layout>

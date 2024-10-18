@@ -17,28 +17,52 @@ const images = import.meta.glob<{ default: ImageMetadata }>("/src/assets/*.{jpeg
 const image = imageUrl ? images[imageUrl] : undefined;
 ---
 
+<div class="flex items-center gap-4">
   {
       <Image
+        class="size-40 rounded-full"
         src={image()}
         alt={name}
       />
+    ) : imageUrl ? (
+      <img
+        src={imageUrl}
+        alt={name}
+        onerror="this.style.display='none'"
+        class="size-40 rounded-full"
+      />
+    ) : (
+      github && (
+        <img
+          src={`https://avatars.githubusercontent.com/${github}`}
+          alt={name}
+          onerror="this.style.display='none'"
+          class="size-40 rounded-full"
+        />
+      )
     )
   }
-  <div class="text">
-    <h3>{name}</h3>
-    <ul class="socials">
+  <div>
+    <h3 class="mb-2.5">{name}</h3>
+    <ul class="flex flex-row gap-2 mb-2.5">
       {
         email && (
-          <li>
-            <img src="/assets/email.svg" />
+          <li class="flex items-center gap-2 after:content-['•'] after:mr-1 last:after:content-none">
+            <img
+              src="/assets/email.svg"
+              class="size-5"
+            />
             <a href={`mailto:${email}`}>{email}</a>
           </li>
         )
       }
       {
         website && (
-          <li>
-            <img src="/assets/link.svg" />
+          <li class="flex items-center gap-2 after:content-['•'] after:mr-1 last:after:content-none">
+            <img
+              src="/assets/link.svg"
+              class="size-5"
+            />
             <a
               href={website}
               target="_blank"
@@ -51,15 +75,35 @@ const image = imageUrl ? images[imageUrl] : undefined;
       }
       {
         github && (
-          <li>
-            <img src="/assets/github.svg" />
+          <li class="flex items-center gap-2 after:content-['•'] after:mr-1 last:after:content-none">
+            <img
+              src="/assets/github.svg"
+              class="size-5"
+            />
+            <a
+              href={`https://github.com/${github}`}
+              target="_blank"
+              rel="noopener"
+            >
+              {github}
+            </a>
           </li>
         )
       }
       {
         linkedin && (
-          <li>
-            <img src="/assets/linkedin.svg" />
+          <li class="flex items-center gap-2 after:content-['•'] after:mr-1 last:after:content-none">
+            <img
+              src="/assets/linkedin.svg"
+              class="size-5"
+            />
+            <a
+              href={`https://linkedin.com/in/${linkedin}`}
+              target="_blank"
+              rel="noopener"
+            >
+              {name}
+            </a>
           </li>
         )
       }
@@ -67,49 +111,3 @@ const image = imageUrl ? images[imageUrl] : undefined;
     <p>{bio}</p>
   </div>
 </div>
-
-<style lang="scss">
-
-  .container {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-
-    > img {
-      width: 10rem;
-      height: 10rem;
-      border-radius: 50%;
-    }
-
-    .text {
-      display: flex;
-      flex-direction: column;
-      gap: 0.6rem;
-
-      .socials {
-        display: flex;
-        gap: 0.75rem;
-        margin: 0;
-        padding: 0;
-
-        li {
-          display: flex;
-          gap: 0.5rem;
-          align-content: center;
-          img {
-            height: 1.2em;
-            width: 1.2em;
-          }
-        }
-        li:not(:last-child)::after {
-          content: "•";
-          margin-left: 0.25rem;
-        }
-      }
-
-      p {
-        margin: 0;
-      }
-    }
-  }
-</style>
