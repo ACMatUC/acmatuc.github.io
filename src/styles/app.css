@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  :any-link {
+    @apply text-red-500;
+  }
+  :any-link:hover {
+    @apply text-red-600;
+  }
+  :any-link:visited {
+    @apply text-red-700;
+  }
+  :any-link:visited:hover {
+    @apply text-red-600;
+  }
+}
