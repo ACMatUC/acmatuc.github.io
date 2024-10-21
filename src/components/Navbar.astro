@@ -1,115 +1,104 @@
 ---
 import { getCollection } from "astro:content";
 
+import acmWideTransparent from "../assets/acm-wide-transparent.png";
+import acmWideTransparentBlack from "../assets/acm-wide-transparent-black.png";
+import { Image } from "astro:assets";
+
 const allClasses = await getCollection("members");
 ---
 
-<nav>
-  <span>
-    <a href="/"
-      ><img
-        src="/assets/acm-wide-transparent.png"
-        alt="ACMATUC Logo"
+<nav class="bg-neutral-800 flex justify-between h-16 px-2">
+  <span class="flex">
+    <a
+      href="/"
+      class="w-max hover:bg-red transition-colors"
+    >
+      <Image
+        src={acmWideTransparent}
+        alt="ACM@UC Logo"
+        class="h-16 w-auto hover:opacity-0 transition-opacity"
       />
-      <img
-        class="hover"
-        src="/assets/acm-wide-transparent-black.png"
-        alt="ACMATUC Logo"
+      <Image
+        src={acmWideTransparentBlack}
+        alt="ACM@UC Logo"
+        class="absolute top-0 h-16 w-auto opacity-0 hover:opacity-100 transition-opacity"
       />
     </a>
-    <menu class="links">
-      <div class="dropdown">
-        <li>
-          <a href="/about">About</a>
-          <img src="/assets/dropdown.svg" />
-        </li>
-        <menu>
-          <li><a href="/executives">Executives</a></li>
-          <li><a href="/code-of-conduct">Code of Conduct</a></li>
-          <li><a href="/constitution">Constitution</a></li>
-        </menu>
-      </div>
-      <div class="dropdown">
-        <li>
-          <a href="/meetings">Meetings</a>
-          <img src="/assets/dropdown.svg" />
-        </li>
-        <menu>
-          <li><a href="/meetings/[[TODO]]">Last Meeting</a></li>
-          <li><a href="/meetings/attendance">Attendance</a></li>
-        </menu>
-      </div>
-      <div class="dropdown">
-        <li>
-          <a href="/members">Members</a>
-          <img src="/assets/dropdown.svg" />
-        </li>
-        <menu>
-          {
-            allClasses
-              .filter(({ id }) => !id.startsWith("alumni/"))
-              .map(({ id }) => (
-                <li>
-                  <a href={`/members/${id}`}>Class of {id}</a>
-                </li>
-              ))
-          }
-          <li><a href="/members/#alumni">Alumni</a></li>
-        </menu>
-      </div>
-      <li><a href="/blog">Blog</a></li>
+    <menu class="flex gap-1">
+      {
+        [
+          ["Resources", "/resources"],
+          ["Executives", "/executives"],
+          ["Members", "/members"],
+          ["Blog", "/blog"],
+        ].map(([title, url]) => (
+          <li class="contents">
+            <a
+              href={url}
+              class="font-bold h-16 px-3 uppercase font-display flex justify-center items-center hover:bg-red transition-colors"
+            >
+              <span class="text-white">{title}</span>
+            </a>
+          </li>
+        ))
+      }
     </menu>
   </span>
-  <ul class="socials">
+  <ul class="flex gap-1">
     <a
       target="_blank"
       rel="noopener"
       href="https://instagram.com/acmatuc"
-      class="instagram"
+      class="h-16 w-16 grid place-items-center hover:bg-instagram transition-colors"
     >
       <img
         src="/assets/instagram.svg"
         alt="instagram logo"
+        class="h-5 w-auto"
       />
     </a>
     <a
       target="_blank"
       rel="noopener"
       href="https://discord.gg/6aYBT6s"
-      class="discord"
+      class="h-16 w-16 grid place-items-center hover:bg-discord transition-colors"
     >
       <img
         src="/assets/discord.svg"
         alt="discord logo"
+        class="h-5 w-auto"
       />
     </a>
     <a
       target="_blank"
       rel="noopener"
       href="https://x.com/ACMatUCorg"
-      class="x"
+      class="h-16 w-16 grid place-items-center hover:bg-white transition-all group"
     >
       <img
         src="/assets/x.svg"
         alt="x logo"
+        class="h-5 w-auto transition-all group-hover:invert"
       />
     </a>
     <a
       target="_blank"
       rel="noopener"
       href="https://linkedin.com/company/acm-uc"
-      class="linkedin"
+      class="h-16 w-16 grid place-items-center hover:bg-linkedin transition-colors"
     >
       <img
         src="/assets/linkedin.svg"
         alt="linkedin logo"
+        class="h-5 w-auto"
       />
     </a>
   </ul>
 </nav>
 
 <style lang="scss">
-  @use "../styles/theme.scss" as theme;
+  /*@use "../styles/theme.scss" as theme;
 
   a {
     font-family: theme.$font-display;
@@ -266,5 +255,5 @@ const allClasses = await getCollection("members");
       stroke: white;
       transition: filter 100ms linear;
     }
-  }
+  }*/
 </style>
