@@ -1,109 +1,126 @@
-<footer>
-  <div class="info">
-    <img
-      src="/assets/acm-wide-transparent.png"
+---
+import { Image } from "astro:assets";
+import logo from "../assets/acm-wide-transparent.png";
+---
+
+<footer class="mt-auto flex bg-neutral-800 w-full h-80 justify-evenly">
+  <div>
+    <Image
+      src={logo}
       alt="ACM@UC logo"
+      class="w-80 h-auto"
     />
-    <ul class="socials">
-      <a
-        target="_blank"
-        rel="noopener"
-        href="https://instagram.com/acmatuc"
-        class="instagram"
-      >
-        <img
-          src="/assets/instagram.svg"
-          alt="instagram logo"
-        />
-      </a>
-      <a
-        target="_blank"
-        rel="noopener"
-        href="https://discord.gg/6aYBT6s"
-        class="discord"
-      >
-        <img
-          src="/assets/discord.svg"
-          alt="discord logo"
-        />
-      </a>
-      <a
-        target="_blank"
-        rel="noopener"
-        href="https://x.com/ACMatUCorg"
-        class="x"
-      >
-        <img
-          src="/assets/x.svg"
-          alt="x logo"
-        />
-      </a>
-      <a
-        target="_blank"
-        rel="noopener"
-        href="https://linkedin.com/company/acm-uc"
-        class="linkedin"
-      >
-        <img
-          src="/assets/linkedin.svg"
-          alt="linkedin logo"
-        />
-      </a>
-      <a
-        target="_blank"
-        rel="noopener"
-        href="https://github.com/ACMatUC"
-        class="github"
-      >
-        <img
-          src="/assets/github.svg"
-          alt="github logo"
-        />
-      </a>
-      <a
-        href="https://www.youtube.com/@acmuc2095"
-        target="_blank"
-        rel="noopener"
-        class="youtube"
-      >
-        <img
-          src="/assets/youtube.png"
-          alt="youtube logo"
-        /></a
-      >
+    <ul class="socials ml-8 flex items-center gap-4 mb-4">
+      {
+        [
+          ["/assets/instagram.svg", "https://instagram.com/acmatuc", "instagram"],
+          ["/assets/discord.svg", "https://discord.gg/6aYBT6s", "discord"],
+          ["/assets/x.svg", "https://x.com/ACMatUCorg", "x"],
+          ["/assets/linkedin.svg", "https://linkedin.com/company/acm-uc", "linkedin"],
+          ["/assets/github.svg", "https://github.com/acmatuc", "github"],
+          ["/assets/youtube.png", "https://www.youtube.com/@acmuc2095", "youtube"],
+        ].map(([src, href, alt]) => (
+          <li class="contents">
+            <a
+              target="_blank"
+              rel="noopener"
+              href={href}
+              class="contents"
+            >
+              <img
+                src={src}
+                alt={alt + " logo"}
+                class="w-8 h-auto hover:brightness-75 transition-all"
+              />
+            </a>
+          </li>
+        ))
+      }
     </ul>
-    <p>Student Chapter of ACM at University of Cincinnati</p>
-    <p class="contact">
-      <img src="/assets/email.svg" />
+    <p class="ml-8">Student Chapter of ACM at University of Cincinnati</p>
+    <p class="flex items-center gap-1 ml-8 mt-2">
+      <img
+        src="/assets/email.svg"
+        class="mt-0.5 w-5 inline-block"
+      />
       <a href="mailto:acmatcinci@gmail.com">acmatcinci@gmail.com </a>
     </p>
   </div>
-  <div class="category">
+  <div class="mt-8">
     <h4>About</h4>
-    <ul>
-      <li><a href="/about">About ACM@UC</a></li>
-      <li><a href="/executives">Executives</a></li>
-      <li><a href="/code-of-conduct">Code of Conduct</a></li>
-      <li><a href="/constitution">Constitution</a></li>
-      <li><a href="/members">Member Directory</a></li>
+    <ul class="pl-1 mb-1">
+      <li>
+        <a
+          href="/about"
+          class="mb-2 !text-neutral-400 hover:!text-neutral-100"
+          >About ACM@UC</a
+        >
+      </li>
+      <li>
+        <a
+          href="/executives"
+          class="mb-2 !text-neutral-400 hover:!text-neutral-100"
+          >Executives</a
+        >
+      </li>
+      <li>
+        <a
+          href="/code-of-conduct"
+          class="mb-2 !text-neutral-400 hover:!text-neutral-100"
+          >Code of Conduct</a
+        >
+      </li>
+      <li>
+        <a
+          href="/constitution"
+          class="mb-2 !text-neutral-400 hover:!text-neutral-100"
+          >Constitution</a
+        >
+      </li>
+      <li>
+        <a
+          href="/members"
+          class="mb-2 !text-neutral-400 hover:!text-neutral-100"
+          >Member Directory</a
+        >
+      </li>
     </ul>
   </div>
-  <div class="category">
+  <div class="mt-8">
     <h4>Meetings</h4>
-    <ul>
-      <li><a href="/meetings/[[TODO]]">Last Meeting</a></li>
-      <li><a href="/meetings">Meeting Archive</a></li>
-      <li><a href="/meetings/attendance">Attendance Form</a></li>
+    <ul class="pl-1 mb-1">
+      <li>
+        <a
+          href="/meetings/[[TODO]]"
+          class="mb-2 !text-neutral-400 hover:!text-neutral-100"
+          >Last Meeting</a
+        >
+      </li>
+      <li>
+        <a
+          href="/meetings"
+          class="mb-2 !text-neutral-400 hover:!text-neutral-100"
+          >Meeting Archive</a
+        >
+      </li>
+      <li>
+        <a
+          href="/meetings/attendance"
+          class="mb-2 !text-neutral-400 hover:!text-neutral-100"
+          >Attendance Form</a
+        >
+      </li>
     </ul>
   </div>
-  <div class="category">
+  <div class="mt-8">
     <h4>Besties 😍❤️</h4>
-    <ul>
+    <ul class="pl-1 mb-1">
       <li>
         <a
           href="https://acmwuc.org"
           target="_blank"
           rel="noopener"
+          class="mb-2 !text-neutral-400 hover:!text-neutral-100"
           >ACM-W@UC</a
         >
       </li>
@@ -112,6 +129,7 @@
           href="https://revolutionuc.com/"
           target="_blank"
           rel="noopener"
+          class="mb-2 !text-neutral-400 hover:!text-neutral-100"
           >RevolutionUC</a
         >
       </li>
@@ -120,89 +138,13 @@
           href="https://makeuc.io"
           target="_blank"
           rel="noopener"
+          class="mb-2 !text-neutral-400 hover:!text-neutral-100"
           >MakeUC</a
         >
       </li>
       <li>
-        <a>IEEE</a>
+        <a class="mb-2 !text-neutral-400 hover:!text-neutral-100">IEEE</a>
       </li>
     </ul>
   </div>
-
-  <style lang="scss">
-    @use "../styles/theme.scss" as theme;
-
-    footer {
-      margin-top: auto;
-      display: flex;
-      background: theme.$gray-800;
-      width: 100%;
-      height: 20rem;
-      justify-content: space-evenly;
-
-      .info {
-        * {
-          margin: 0;
-        }
-        > :not(img) {
-          margin-left: 2rem;
-        }
-        > img {
-          width: 20rem;
-        }
-
-        .socials {
-          display: flex;
-          align-items: center;
-          gap: 1rem;
-          padding: 0;
-          margin-bottom: 1rem;
-
-          img {
-            transition: filter 100ms linear;
-            width: 2rem;
-          }
-
-          a:hover img {
-            filter: brightness(70%);
-          }
-        }
-
-        .contact {
-          display: flex;
-          align-items: center;
-          gap: 0.3rem;
-
-          img {
-            margin-top: 0.1rem;
-            width: 1.2em;
-            display: inline-block;
-          }
-        }
-      }
-
-      .category {
-        margin-top: 2rem;
-
-        ul {
-          padding: 0;
-          padding-left: 0.5rem;
-          li {
-            color: theme.$gray-300;
-            margin-bottom: 0.2rem;
-            * {
-              color: inherit;
-              text-decoration: none;
-            }
-            &:hover {
-              color: theme.$gray-100;
-            }
-            &::marker {
-              content: none;
-            }
-          }
-        }
-      }
-    }
-  </style>
 </footer>
