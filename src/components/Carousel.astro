@@ -1,0 +1,38 @@
+---
+import '@splidejs/splide/css';
+
+const slides = [
+  '/src/assets/president.jpg',
+  '/src/assets/vice-president.jpg',
+  '/src/assets/education-chair.jpg',
+  '/src/assets/secretary.jpg',
+  '/src/assets/treasurer.jpg',
+  '/src/assets/webmaster.jpg',
+  '/src/assets/outreach-chair.jpg',
+  '/src/assets/membership-chair.jpg',
+];
+---
+<div class="pb-20">
+  <h1 class="text-2xl pb-8 px-16">GALLERY</h1>
+  <section class="splide" role="group" aria-label="Simple Carousel">
+    <div class="splide__track">
+      <ul class="splide__list">
+        {slides.map((slide) => (
+          <li class="splide__slide">
+            <img src={slide} alt="Executive" class="w-auto h-80 px-2"/>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+</div>
+
+<script>
+  import Splide from '@splidejs/splide';
+  import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
+
+  new Splide( '.splide', {
+    type: "loop",
+    autoWidth: true,
+  } ).mount( { AutoScroll } );
+</script>
