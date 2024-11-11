@@ -11,8 +11,10 @@ const slides = [
   '/src/assets/outreach-chair.jpg',
   '/src/assets/membership-chair.jpg',
 ];
+
+const { dir } = Astro.props;
 ---
-<div class="pb-20">
+<div class="pb-20" data-dir={dir} id="carousel">
   <h1 class="text-2xl pb-8 px-16">GALLERY</h1>
   <section class="splide" role="group" aria-label="Simple Carousel">
     <div class="splide__track">
@@ -31,8 +33,13 @@ const slides = [
   import Splide from '@splidejs/splide';
   import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
 
+  let dir = document.getElementById('carousel')?.dataset.dir;
+  dir = (dir === "ltr" || dir === "rtl") ? dir : "ltr";
+
   new Splide( '.splide', {
     type: "loop",
     autoWidth: true,
+    direction: dir as "rtl" | "ltr",
   } ).mount( { AutoScroll } );
+
 </script>
