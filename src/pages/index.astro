@@ -1,7 +1,5 @@
 ---
-import Head from "../components/Head.astro";
-import Navbar from "../components/Navbar.astro";
-import Footer from "../components/Footer.astro";
+import Layout from "../layouts/Layout.astro";
 import Hero from "../components/Hero.astro";
 import AboutACM from "../components/AboutACM.astro";
 import MainInfoBoxes from "../components/MainInfoBoxes.astro";
@@ -9,25 +7,14 @@ import Carousel from "../components/Carousel.astro";
 
 import "../styles/index.scss";
 
-// const { frontmatter } = Astro.props;
-const title = "ACM@UC - Home";
-const description = "Hello, world!";
-
 ---
 
-<html>
-  <head>
-    <Head
-      title={title}
-      description={description}
-    />
-  </head>
-  <body>
-    <Navbar />
+<Layout
+  title="ACM@UC - Home"
+  description="ACM@UC Home Page"
+>
     <!-- <Hero /> -->
     <AboutACM />
     <MainInfoBoxes />
     <Carousel dir="ltr" />
-    <Footer />
-  </body>
-</html>
+</Layout>
