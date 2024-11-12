@@ -1,0 +1,86 @@
+[
+    {
+        "sectionName": "Hackathons",
+        "sectionDescription": "Hackathons description",
+        "resourcesInfo": [
+            {
+                "image": "/src/assets/president.jpg",
+                "link": "https://revolutionuc.com",
+                "resourceName": "RevolutionUC",
+                "resourceDescription": "Hackathons description"
+            },
+            {
+                "image": "/src/assets/vice-president.jpg",
+                "link": "https://revolutionuc.com",
+                "resourceName": "RevolutionUC",
+                "resourceDescription": "Hackathons description"
+            },
+            {
+                "image": "/src/assets/secretary.jpg",
+                "link": "https://revolutionuc.com",
+                "resourceName": "RevolutionUC",
+                "resourceDescription": "Hackathons description"
+            },
+            {
+                "image": "/src/assets/webmaster.jpg",
+                "link": "https://revolutionuc.com",
+                "resourceName": "RevolutionUC",
+                "resourceDescription": "Hackathons description"
+            }
+        ]
+    },
+    {
+        "sectionName": "ICPC",
+        "sectionDescription": "ICPC description",
+        "resourcesInfo": [
+            {
+                "image": "/src/assets/vice-president.jpg",
+                "link": "https://revolutionuc.com",
+                "resourceName": "RevolutionUC",
+                "resourceDescription": "Hackathons description"
+            },
+            {
+                "image": "/src/assets/membership-chair.jpg",
+                "link": "https://revolutionuc.com",
+                "resourceName": "RevolutionUC",
+                "resourceDescription": "Hackathons description"
+            }
+        ]
+    },
+    {
+        "sectionName": "Interviews",
+        "sectionDescription": "Interviews description",
+        "resourcesInfo": [
+            {
+                "image": "/src/assets/president.jpg",
+                "link": "https://revolutionuc.com",
+                "resourceName": "RevolutionUC",
+                "resourceDescription": "Hackathons description"
+            },
+            {
+                "image": "/src/assets/secretary.jpg",
+                "link": "https://revolutionuc.com",
+                "resourceName": "RevolutionUC",
+                "resourceDescription": "Hackathons description"
+            },
+            {
+                "image": "/src/assets/education-chair.jpg",
+                "link": "https://revolutionuc.com",
+                "resourceName": "RevolutionUC",
+                "resourceDescription": "Hackathons description"
+            },
+            {
+                "image": "/src/assets/treasurer.jpg",
+                "link": "https://revolutionuc.com",
+                "resourceName": "RevolutionUC",
+                "resourceDescription": "Hackathons description"
+            },
+            {
+                "image": "/src/assets/membership-chair.jpg",
+                "link": "https://revolutionuc.com",
+                "resourceName": "RevolutionUC",
+                "resourceDescription": "Hackathons description"
+            }
+        ]
+    }
+]

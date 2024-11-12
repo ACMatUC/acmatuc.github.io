@@ -26,7 +26,10 @@ export default {
 				linkedin: "#0072b1",
 			},
 			transitionTimingFunction: "linear",
-			transitionDuration: "100ms"
+			transitionDuration: "100ms",
+			aspectRatio: {
+				'3/2': '3 / 2',
+			},
 		},
 		fontFamily: {
 			sans: ['Open Sans', 'sans-serif'],

@@ -1,0 +1,48 @@
+---
+import '@splidejs/splide/css';
+import resourcesData from "../data/resources.json";
+
+---
+
+{resourcesData.map((resource, index) => (
+    <div class="px-32 py-8" class="carousel-container">
+        <h2 class="text-2xl text-red-500">{resource.sectionName}</h2>
+        <p class="text-lg italic pb-4">{resource.sectionDescription}</p>
+        <section id={`splide-${index}`} class="splide" role="group" aria-label={`${resource.sectionName} Carousel`}>
+            <div class="splide__track">
+                <ul class="splide__list">
+                    {resource.resourcesInfo.map((item) => (
+                        <a class="splide__slide w-full aspect-[3/2] rounded-lg overflow-hidden transform transition-transform duration-200 hover:scale-105" href={item.link} target="_blank" rel="noopener noreferrer">
+                            <img src={item.image} alt="Slide" class="w-full h-full object-cover"/>
+                            <div class="absolute inset-0 flex flex-col justify-end bg-black bg-opacity-50 text-white pl-4 pb-4">
+                                <div class="font-semibold text-lg">{item.resourceName}</div>
+                                <div class="text-sm italic">{item.resourceDescription}</div>
+                            </div>
+                        </a>
+                    ))}
+                </ul>
+            </div>
+        </section>
+    </div>
+))}
+
+<script>
+    import Splide from '@splidejs/splide';
+    const numSplides = 3;
+
+    document.addEventListener('DOMContentLoaded', () => {
+        for (var i = 0; i < numSplides; i++) {
+            new Splide(`#splide-${i}`, {
+                // autoWidth: true,
+                perPage: 3,
+                breakpoints: {
+                    640: {
+                        perPage: 2,
+                    }
+                },
+                gap: "2em", 
+            }).mount();
+        }
+    });
+
+</script>
