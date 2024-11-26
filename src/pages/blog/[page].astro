@@ -23,6 +23,15 @@ export const getStaticPaths: GetStaticPaths = async () => {
     pages[page].push(posts[i].slug);
   }
 
+  if (pages.length == 0) {
+    return [
+      {
+        params: { page: "1" },
+        props: { page: 1, posts: [], lastPage: 1 },
+      },
+    ];
+  }
+
   return pages.map((posts, i) => ({
     params: { page: (i + 1).toString() },
     props: {
@@ -42,20 +51,28 @@ const posts = await getEntries<"blog">(postSlugs.map((slug) => ({ collection: "b
 <Layout title={page === 1 ? "Blog" : `Page ${page} - Blog`}>
   <main class="mx-12">
     <h1 class="text-4xl mt-8 mb-4">ACM@UC Blog</h1>
-    <Pagination
-      baseURL="/blog"
-      page={page}
-      maxPage={lastPage}
-      classList="mb-4 ml-4"
-    />
-    <section>
-      {posts.map((post) => <BlogPostCard post={post} />)}
-    </section>
-    <Pagination
-      baseURL="/blog"
-      page={page}
-      maxPage={lastPage}
-      classList="mb-4 ml-4"
-    />
+    {
+      posts.length === 0 ? (
+        <p>No posts have been added yet.</p>
+      ) : (
+        <>
+          <Pagination
+            baseURL="/blog"
+            page={page}
+            maxPage={lastPage}
+            classList="mb-4 ml-4"
+          />
+          {posts.map((post) => (
+            <BlogPostCard post={post} />
+          ))}
+          <Pagination
+            baseURL="/blog"
+            page={page}
+            maxPage={lastPage}
+            classList="mb-4 ml-4"
+          />
+        </>
+      )
+    }
   </main>
 </Layout>
