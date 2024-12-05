@@ -7,6 +7,12 @@ tags: api web http
 synopsis: |
   Learn about what an API is, why they exist, and how you can use them to make
   your own applications.
+
+aboutAuthor:
+  class: 2024
+  github: bhuynhdev
+  website: https://bhuynh.me
+  bio: Hi! My name is Bao Huynh
 ---
 
 ## What is an API
