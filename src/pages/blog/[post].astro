@@ -1,7 +1,72 @@
 ---
-export async function getStaticPaths() {
-  return [{ params: { post: "new-website" } }];
+import { getCollection, getEntry } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+import BlogTag from "../../components/BlogTag.astro";
+import Profile from "../../components/Profile.astro";
+
+interface Props {
+  slug: string;
 }
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog");
+  return posts.map(({ slug }) => ({
+    params: { post: slug },
+    props: { slug },
+  }));
+}
+
+const post = await getEntry("blog", Astro.props.slug);
+const { Content } = await post!.render();
+
+const aboutAuthor = post?.data.aboutAuthor;
 ---
 
-<p>blog post!</p>
+<Layout title={post!.data.title}>
+  {
+    post!.data.imageURL && (
+      <div class="grid place-items-center w-screen h-[50vh] overflow-clip">
+        <img
+          src={post!.data.imageURL}
+          alt={post!.data.title}
+          class="object-cover object-bottom min-h-full min-w-full"
+        />
+      </div>
+    )
+  }
+  <header class="ml-12 mb-8 mt-8">
+    <button
+      class="text-red text-lg font-display uppercase flex items-center gap-2"
+      onclick="history.back()"
+    >
+      Back
+    </button>
+    <h1 class="mt-2 text-3xl text-red">{post!.data.title}</h1>
+    <p class="text-lg my-1 font-display uppercase">
+      {post!.data.date.toLocaleDateString("en-US", { timeZone: "UTC" })} &bull; BY {post!.data.author}
+    </p>
+    <span>
+      {post!.data.tags.map((tag: string) => <BlogTag tag={tag} />)}
+    </span>
+  </header>
+  <main class="mb-8 lg:ml-24 ml-8 prose prose-invert prose-neutral prose-p:indent-8 prose-li:marker:text-neutral-400">
+    <Content />
+  </main>
+  {
+    aboutAuthor && (
+      <aside class="ml-12 xl:ml-16 mb-8 max-w-4xl">
+        <h2 class="text-2xl mb-2">About the Author</h2>
+        <Profile
+          name={`${post?.data.author}`}
+          imageUrl={aboutAuthor.photo}
+          email={aboutAuthor.email}
+          website={aboutAuthor.website}
+          github={aboutAuthor.github}
+          linkedin={aboutAuthor.linkedin}
+          bio={aboutAuthor.bio}
+          classOf={aboutAuthor.class}
+        />
+      </aside>
+    )
+  }
+</Layout>

@@ -4,6 +4,7 @@ import { Image } from "astro:assets";
 interface Props {
   name: string;
   imageUrl?: string | undefined;
+  classOf?: string | undefined;
 
   email?: string | undefined;
   website?: string | undefined;
@@ -11,7 +12,7 @@ interface Props {
   linkedin?: string | undefined;
 }
 
-const { name, imageUrl, bio, email, website, github, linkedin } = Astro.props;
+const { name, imageUrl, bio, classOf, email, website, github, linkedin } = Astro.props;
 
 const images = import.meta.glob<{ default: ImageMetadata }>("/src/assets/*.{jpeg,jpg,png,gif}");
 const image = imageUrl ? images[imageUrl] : undefined;
@@ -43,8 +44,8 @@ const image = imageUrl ? images[imageUrl] : undefined;
     )
   }
   <div>
-    <h3 class="mb-2.5">{name}</h3>
-    <ul class="flex flex-row gap-2 mb-2.5">
+    <h3 class="mb-2.5">{name}{classOf && ` • Class of ${classOf}`}</h3>
+    <ul class="flex flex-row gap-2 mb-2.5 flex-wrap">
       {
         email && (
           <li class="flex items-center gap-2 after:content-['•'] after:mr-1 last:after:content-none">

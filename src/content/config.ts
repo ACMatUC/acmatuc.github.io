@@ -7,10 +7,21 @@ const blogCollection = defineCollection({
     title: z.string(),
     date: z.date(),
     author: z.string(),
-    authorPhoto: z.optional(z.string()),
     imageURL: z.optional(z.string()),
     tags: z.string().transform((val) => val.split(" ")),
     synopsis: z.string(),
+
+    aboutAuthor: z.optional(
+      z.object({
+        class: z.optional(z.number().transform((val) => val.toString())),
+        photo: z.optional(z.string()),
+        github: z.optional(z.string()),
+        email: z.optional(z.string()),
+        website: z.optional(z.string()),
+        linkedin: z.optional(z.string()),
+        bio: z.optional(z.string()),
+      })
+    ),
   }),
 });
 const membersCollection = defineCollection({
