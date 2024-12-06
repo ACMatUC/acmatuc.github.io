@@ -1,6 +1,8 @@
 ---
 import { Image } from "astro:assets";
 import logo from "../assets/acm-wide-transparent.png";
+
+import { InstagramOutlined, DiscordOutlined, XOutlined, LinkedinFilled, GithubFilled, YoutubeFilled, MailOutlined } from "@ant-design/icons";
 ---
 
 <footer class="mt-auto flex bg-neutral-800 w-full h-80 justify-evenly">
@@ -11,38 +13,70 @@ import logo from "../assets/acm-wide-transparent.png";
       class="w-80 h-auto"
     />
     <ul class="socials ml-8 flex items-center gap-4 mb-4">
-      {
-        [
-          ["/assets/instagram.svg", "https://instagram.com/acmatuc", "instagram"],
-          ["/assets/discord.svg", "https://discord.gg/6aYBT6s", "discord"],
-          ["/assets/x.svg", "https://x.com/ACMatUCorg", "x"],
-          ["/assets/linkedin.svg", "https://linkedin.com/company/acm-uc", "linkedin"],
-          ["/assets/github.svg", "https://github.com/acmatuc", "github"],
-          ["/assets/youtube.png", "https://www.youtube.com/@acmuc2095", "youtube"],
-        ].map(([src, href, alt]) => (
-          <li class="contents">
-            <a
-              target="_blank"
-              rel="noopener"
-              href={href}
-              class="contents"
-            >
-              <img
-                src={src}
-                alt={alt + " logo"}
-                class="w-8 h-auto hover:brightness-75 transition-all"
-              />
-            </a>
-          </li>
-        ))
-      }
+      <li class="contents">
+        <a
+          target="_blank"
+          rel="noopener"
+          href="https://instagram.com/acmatuc"
+          class="contents"
+        >
+          <InstagramOutlined className="text-4xl text-white hover:brightness-75 transition-all" />
+        </a>
+      </li>
+      <li class="contents">
+        <a
+          target="_blank"
+          rel="noopener"
+          href="https://discord.gg/6aYBT6s"
+          class="contents"
+        >
+          <DiscordOutlined className="text-4xl text-white hover:brightness-75 transition-all" />
+        </a>
+      </li>
+      <li class="contents">
+        <a
+          target="_blank"
+          rel="noopener"
+          href="https://x.com/ACMatUCorg"
+          class="contents"
+        >
+          <XOutlined className="text-4xl text-white hover:brightness-75 transition-all" />
+        </a>
+      </li>
+      <li class="contents">
+        <a
+          target="_blank"
+          rel="noopener"
+          href="https://linkedin.com/company/acm-uc"
+          class="contents"
+        >
+          <LinkedinFilled className="text-4xl text-white hover:brightness-75 transition-all" />
+        </a>
+      </li>
+      <li class="contents">
+        <a
+          target="_blank"
+          rel="noopener"
+          href="https://github.com/acmatuc"
+          class="contents"
+        >
+          <GithubFilled className="text-4xl text-white hover:brightness-75 transition-all" />
+        </a>
+      </li>
+      <li class="contents">
+        <a
+          target="_blank"
+          rel="noopener"
+          href="https://www.youtube.com/@acmuc2095"
+          class="contents"
+        >
+          <YoutubeFilled className="text-4xl text-white hover:brightness-75 transition-all" />
+        </a>
+      </li>
     </ul>
     <p class="ml-8">Student Chapter of ACM at University of Cincinnati</p>
     <p class="flex items-center gap-1 ml-8 mt-2">
-      <img
-        src="/assets/email.svg"
-        class="mt-0.5 w-5 inline-block"
-      />
+      <MailOutlined />
       <a href="mailto:acmatcinci@gmail.com">acmatcinci@gmail.com </a>
     </p>
   </div>

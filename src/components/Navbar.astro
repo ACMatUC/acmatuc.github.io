@@ -5,6 +5,8 @@ import acmWideTransparent from "../assets/acm-wide-transparent.png";
 import acmWideTransparentBlack from "../assets/acm-wide-transparent-black.png";
 import { Image } from "astro:assets";
 
+import { InstagramOutlined, DiscordOutlined, XOutlined, LinkedinFilled } from "@ant-design/icons";
+
 const allClasses = await getCollection("members");
 ---
 
@@ -31,6 +33,7 @@ const allClasses = await getCollection("members");
           ["Resources", "/resources"],
           ["Executives", "/executives"],
           ["Members", "/members"],
+          ["Meetings", "/meetings"],
           ["Blog", "/blog"],
         ].map(([title, url]) => (
           <li class="contents">
@@ -52,11 +55,7 @@ const allClasses = await getCollection("members");
       href="https://instagram.com/acmatuc"
       class="h-16 w-16 grid place-items-center hover:bg-instagram transition-colors"
     >
-      <img
-        src="/assets/instagram.svg"
-        alt="instagram logo"
-        class="h-5 w-auto"
-      />
+      <InstagramOutlined className="text-2xl text-white" />
     </a>
     <a
       target="_blank"
@@ -64,11 +63,7 @@ const allClasses = await getCollection("members");
       href="https://discord.gg/6aYBT6s"
       class="h-16 w-16 grid place-items-center hover:bg-discord transition-colors"
     >
-      <img
-        src="/assets/discord.svg"
-        alt="discord logo"
-        class="h-5 w-auto"
-      />
+      <DiscordOutlined className="text-2xl text-white" />
     </a>
     <a
       target="_blank"
@@ -76,11 +71,7 @@ const allClasses = await getCollection("members");
       href="https://x.com/ACMatUCorg"
       class="h-16 w-16 grid place-items-center hover:bg-white transition-all group"
     >
-      <img
-        src="/assets/x.svg"
-        alt="x logo"
-        class="h-5 w-auto transition-all group-hover:invert"
-      />
+      <XOutlined className="text-2xl text-white group-hover:text-black transition-colors" />
     </a>
     <a
       target="_blank"
@@ -88,11 +79,7 @@ const allClasses = await getCollection("members");
       href="https://linkedin.com/company/acm-uc"
       class="h-16 w-16 grid place-items-center hover:bg-linkedin transition-colors"
     >
-      <img
-        src="/assets/linkedin.svg"
-        alt="linkedin logo"
-        class="h-5 w-auto"
-      />
+      <LinkedinFilled className="text-2xl text-white" />
     </a>
   </ul>
 </nav>

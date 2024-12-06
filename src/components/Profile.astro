@@ -1,6 +1,8 @@
 ---
 import { Image } from "astro:assets";
 
+import { MailOutlined, LinkOutlined, GithubFilled, LinkedinFilled } from "@ant-design/icons";
+
 interface Props {
   name: string;
   imageUrl?: string | undefined;
@@ -49,10 +51,7 @@ const image = imageUrl ? images[imageUrl] : undefined;
       {
         email && (
           <li class="flex items-center gap-2 after:content-['•'] after:mr-1 last:after:content-none">
-            <img
-              src="/assets/email.svg"
-              class="size-5"
-            />
+            <MailOutlined />
             <a href={`mailto:${email}`}>{email}</a>
           </li>
         )
@@ -60,10 +59,7 @@ const image = imageUrl ? images[imageUrl] : undefined;
       {
         website && (
           <li class="flex items-center gap-2 after:content-['•'] after:mr-1 last:after:content-none">
-            <img
-              src="/assets/link.svg"
-              class="size-5"
-            />
+            <LinkOutlined />
             <a
               href={website}
               target="_blank"
@@ -77,10 +73,7 @@ const image = imageUrl ? images[imageUrl] : undefined;
       {
         github && (
           <li class="flex items-center gap-2 after:content-['•'] after:mr-1 last:after:content-none">
-            <img
-              src="/assets/github.svg"
-              class="size-5"
-            />
+            <GithubFilled className="text-lg" />
             <a
               href={`https://github.com/${github}`}
               target="_blank"
@@ -94,10 +87,7 @@ const image = imageUrl ? images[imageUrl] : undefined;
       {
         linkedin && (
           <li class="flex items-center gap-2 after:content-['•'] after:mr-1 last:after:content-none">
-            <img
-              src="/assets/linkedin.svg"
-              class="size-5"
-            />
+            <LinkedinFilled className="text-lg" />
             <a
               href={`https://linkedin.com/in/${linkedin}`}
               target="_blank"
