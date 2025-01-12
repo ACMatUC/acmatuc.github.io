@@ -12,9 +12,9 @@ import resourcesData from "../data/resources.json";
             <div class="splide__track">
                 <ul class="splide__list">
                     {resource.resourcesInfo.map((item) => (
-                        <a class="splide__slide w-full aspect-[3/2] rounded-lg overflow-hidden transform transition-transform duration-200 hover:scale-105" href={item.link} target="_blank" rel="noopener noreferrer">
+                        <a class="splide__slide w-full aspect-[3/2] rounded-lg overflow-hidden" href={item.link} target="_blank" rel="noopener noreferrer">
                             <img src={item.image} alt="Slide" class="w-full h-full object-cover"/>
-                            <div class="absolute inset-0 flex flex-col justify-end bg-black bg-opacity-50 text-white pl-4 pb-4">
+                            <div class="absolute inset-0 flex flex-col justify-end bg-black bg-opacity-45 hover:bg-opacity-35 text-white pl-4 pb-4">
                                 <div class="font-semibold text-lg">{item.resourceName}</div>
                                 <div class="text-sm italic">{item.resourceDescription}</div>
                             </div>
@@ -36,11 +36,15 @@ import resourcesData from "../data/resources.json";
                 // autoWidth: true,
                 perPage: 3,
                 breakpoints: {
-                    640: {
+                    768: {
                         perPage: 2,
-                    }
+                    },
+                    640: {
+                        perPage: 1,
+                    },
                 },
                 gap: "2em", 
+                pagination: false,
             }).mount();
         }
     });
