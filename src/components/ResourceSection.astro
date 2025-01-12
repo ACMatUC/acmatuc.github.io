@@ -28,23 +28,28 @@ import resourcesData from "../data/resources.json";
 
 <script>
     import Splide from '@splidejs/splide';
+    import resources from "../data/resources.json";
+    
     const numSplides = 3;
 
     document.addEventListener('DOMContentLoaded', () => {
         for (var i = 0; i < numSplides; i++) {
+            const numResources = resources[i].resourcesInfo.length;
             new Splide(`#splide-${i}`, {
-                // autoWidth: true,
                 perPage: 3,
                 breakpoints: {
                     768: {
                         perPage: 2,
+                        arrows: numResources > 2,
                     },
                     640: {
                         perPage: 1,
+                        arrows: numResources > 1,
                     },
                 },
                 gap: "2em", 
                 pagination: false,
+                arrows: numResources > 3,
             }).mount();
         }
     });
