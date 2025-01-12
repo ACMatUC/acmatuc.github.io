@@ -40,6 +40,8 @@ const { dir } = Astro.props;
     type: "loop",
     autoWidth: true,
     direction: dir as "rtl" | "ltr",
+    pagination: false,
+    arrows: false,
   } ).mount( { AutoScroll } );
 
 </script>
