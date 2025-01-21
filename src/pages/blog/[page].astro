@@ -56,12 +56,12 @@ const posts = await getEntries<"blog">(postSlugs.map((slug) => ({ collection: "b
         <p>No posts have been added yet.</p>
       ) : (
         <>
-          <Pagination
+          {/* <Pagination
             baseURL="/blog"
             page={page}
             maxPage={lastPage}
             classList="mb-4 ml-4"
-          />
+          /> */}
           {posts.map((post) => (
             <BlogPostCard post={post} />
           ))}

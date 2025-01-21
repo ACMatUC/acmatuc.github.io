@@ -11,58 +11,56 @@ interface Props {
 const { page, maxPage, baseURL, classList } = Astro.props;
 ---
 
-<div class:list={["flex items-center gap-1 h-10", classList]}>
-  <a
-    href={`${baseURL}/1`}
-    class="rounded-full bg-neutral-800 h-10 w-10 grid place-items-center group hover:bg-red transition-colors"
-    ><DoubleLeftOutlined className="text-red transition-colors group-hover:text-white" /></a
-  >
-  <span class="h-10 rounded-lg flex overflow-clip">
-    {
-      page > 2 && (
-        <a
-          href={`${baseURL}/${page - 2}`}
-          class="font-display w-10 h-full grid place-items-center transition-colors bg-neutral-800 mr-0.5 !text-white hover:bg-red"
-        >
-          {page - 2}
-        </a>
-      )
-    }
-    {
-      page > 1 && (
-        <a
-          href={`${baseURL}/${page - 1}`}
-          class="font-display w-10 h-full rounded-r-lg grid place-items-center transition-colors bg-neutral-800 mr-0.5 !text-white hover:bg-red"
-        >
-          {page - 1}
-        </a>
-      )
-    }
-    <p class="font-display font-bold w-10 h-full grid place-items-center">{page}</p>
-    {
-      page < maxPage && (
-        <a
-          href={`${baseURL}/${page + 1}`}
-          class="font-display w-10 h-full rounded-l-lg grid place-items-center transition-colors bg-neutral-800 ml-0.5 !text-white hover:bg-red"
-        >
-          {page + 1}
-        </a>
-      )
-    }
-    {
-      page < maxPage - 1 && (
-        <a
-          href={`${baseURL}/${page + 2}`}
-          class="font-display w-10 h-full grid place-items-center transition-colors bg-neutral-800 ml-0.5 !text-white hover:bg-red"
-        >
-          {page + 2}
-        </a>
-      )
-    }
-  </span>
-  <a
-    href={`${baseURL}/${maxPage}`}
-    class="rounded-full bg-neutral-800 h-10 w-10 grid place-items-center group hover:bg-red transition-colors"
-    ><DoubleRightOutlined className="text-red transition-colors group-hover:text-white" /></a
-  >
-</div>
+{
+  maxPage > 1 ? (
+    <div class:list={["flex items-center gap-1 h-10", classList]}>
+      <a
+        href={`${baseURL}/1`}
+        class="rounded-full bg-neutral-800 h-10 w-10 grid place-items-center group hover:bg-red transition-colors"
+      >
+        <DoubleLeftOutlined className="text-red transition-colors group-hover:text-white" />
+      </a>
+      <span class="h-10 rounded-lg flex overflow-clip">
+        {page > 2 && (
+          <a
+            href={`${baseURL}/${page - 2}`}
+            class="font-display w-10 h-full grid place-items-center transition-colors bg-neutral-800 mr-0.5 !text-white hover:bg-red"
+          >
+            {page - 2}
+          </a>
+        )}
+        {page > 1 && (
+          <a
+            href={`${baseURL}/${page - 1}`}
+            class="font-display w-10 h-full rounded-r-lg grid place-items-center transition-colors bg-neutral-800 mr-0.5 !text-white hover:bg-red"
+          >
+            {page - 1}
+          </a>
+        )}
+        <p class="font-display font-bold w-10 h-full grid place-items-center">{page}</p>
+        {page < maxPage && (
+          <a
+            href={`${baseURL}/${page + 1}`}
+            class="font-display w-10 h-full rounded-l-lg grid place-items-center transition-colors bg-neutral-800 ml-0.5 !text-white hover:bg-red"
+          >
+            {page + 1}
+          </a>
+        )}
+        {page < maxPage - 1 && (
+          <a
+            href={`${baseURL}/${page + 2}`}
+            class="font-display w-10 h-full grid place-items-center transition-colors bg-neutral-800 ml-0.5 !text-white hover:bg-red"
+          >
+            {page + 2}
+          </a>
+        )}
+      </span>
+      <a
+        href={`${baseURL}/${maxPage}`}
+        class="rounded-full bg-neutral-800 h-10 w-10 grid place-items-center group hover:bg-red transition-colors"
+      >
+        <DoubleRightOutlined className="text-red transition-colors group-hover:text-white" />
+      </a>
+    </div>
+  ) : null
+}

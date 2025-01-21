@@ -87,12 +87,12 @@ const posts = await getEntries<"blog">(postSlugs.map((slug) => ({ collection: "b
       All posts
     </a>
     <h1 class="text-4xl mt-2 mb-4">Posts tagged "{tag}"</h1>
-    <Pagination
+    <!-- <Pagination
       baseURL={`/blog/tags/${tag}`}
       page={page}
       maxPage={lastPage}
       classList="mb-4 ml-4"
-    />
+    /> -->
     {posts.map((post) => <BlogPostCard post={post} />)}
     <Pagination
       baseURL={`/blog/tags/${tag}`}
