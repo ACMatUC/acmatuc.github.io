@@ -6,6 +6,9 @@ export default {
 	],
 	theme: {
 		extend: {
+			screens: {
+				"lg": "1050px",
+			},
 			colors: {
 				red: {
 					'50': '#fff2f1',
