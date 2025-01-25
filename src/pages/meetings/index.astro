@@ -1,0 +1,27 @@
+---
+import Layout from "../../layouts/Layout.astro";
+
+---
+
+<Layout
+  title="ACM@UC - Meetings"
+  description="ACM@UC Meetings Page"
+>
+    <div class="mt-12 px-10 pb-10 space-y-4 max-w-full w-[800px] self-center">
+        <h1 class="text-2xl">Meetings</h1>
+        <div class="space-y-4 justify-self-center">
+            <div class="flex space-x-4 items-center">
+                <p class="font-semibold">At a meeting right now? </p>
+                <a class="border border-r-2 border-red-500 p-2 rounded-xl bg-white bg-opacity-10 font-bold" href="/checkin">Check In</a>
+            </div>
+            <p>
+                With a talented exec board, and great speakers from the local community we provide great tech talks and workshops to help the computing community at the University of Cincinnati grow.
+                See <a href="https://github.com/acmatuc/archive" class="underline">acmatuc/archive</a> on GitHub for links to slides and other resources from our meetings!
+            </p>
+            <iframe src="https://calendar.google.com/calendar/embed?src=acmatcinci%40gmail.com&ctz=America%2FNew_York" class="max-w-full w-[800px] h-[600px] rounded-lg"></iframe>
+        </div>
+
+        <h2 class="text-lg pt-10">Meeting Archive</h2>
+
+    </div>
+</Layout>
