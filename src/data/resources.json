@@ -4,28 +4,22 @@
         "sectionDescription": "Hackathons description",
         "resourcesInfo": [
             {
-                "image": "/src/assets/president.jpg",
+                "image": "/src/assets/revuc.jpg",
                 "link": "https://revolutionuc.com",
                 "resourceName": "RevolutionUC",
-                "resourceDescription": "Hackathons description"
+                "resourceDescription": "RevUC description"
             },
             {
-                "image": "/src/assets/vice-president.jpg",
-                "link": "https://revolutionuc.com",
-                "resourceName": "RevolutionUC",
-                "resourceDescription": "Hackathons description"
+                "image": "/src/assets/mlh-logo.jpg",
+                "link": "https://mlh.io/",
+                "resourceName": "Major League Hacking",
+                "resourceDescription": "MLH description"
             },
             {
-                "image": "/src/assets/secretary.jpg",
-                "link": "https://revolutionuc.com",
-                "resourceName": "RevolutionUC",
-                "resourceDescription": "Hackathons description"
-            },
-            {
-                "image": "/src/assets/webmaster.jpg",
-                "link": "https://revolutionuc.com",
-                "resourceName": "RevolutionUC",
-                "resourceDescription": "Hackathons description"
+                "image": "/src/assets/devpost.jpg",
+                "link": "https://devpost.com/",
+                "resourceName": "Devpost",
+                "resourceDescription": "Devpost description"
             }
         ]
     },

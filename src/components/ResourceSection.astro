@@ -5,17 +5,17 @@ import resourcesData from "../data/resources.json";
 ---
 
 {resourcesData.map((resource, index) => (
-    <div class="px-32 py-8" class="carousel-container">
-        <h2 class="text-2xl text-red-500">{resource.sectionName}</h2>
+    <div class="pb-10" class="carousel-container">
+        <h2 class="text-xl text-red-500">{resource.sectionName}</h2>
         <p class="text-lg italic pb-4">{resource.sectionDescription}</p>
         <section id={`splide-${index}`} class="splide" role="group" aria-label={`${resource.sectionName} Carousel`}>
             <div class="splide__track">
                 <ul class="splide__list">
                     {resource.resourcesInfo.map((item) => (
-                        <a class="splide__slide w-full aspect-[3/2] rounded-lg overflow-hidden" href={item.link} target="_blank" rel="noopener noreferrer">
-                            <img src={item.image} alt="Slide" class="w-full h-full object-cover"/>
+                        <a class="splide__slide overflow-hidden rounded-xl" href={item.link} target="_blank" rel="noopener noreferrer">
+                            <img src={item.image} alt="Slide" class="aspect-3/2 object-cover"/>
                             <div class="absolute inset-0 flex flex-col justify-end bg-black bg-opacity-45 hover:bg-opacity-35 text-white pl-4 pb-4">
-                                <div class="font-semibold text-lg">{item.resourceName}</div>
+                                <div class="font-semibold">{item.resourceName}</div>
                                 <div class="text-sm italic">{item.resourceDescription}</div>
                             </div>
                         </a>
