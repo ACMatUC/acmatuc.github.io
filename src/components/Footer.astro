@@ -5,14 +5,14 @@ import logo from "../assets/acm-wide-transparent.png";
 import { InstagramOutlined, DiscordOutlined, XOutlined, LinkedinFilled, GithubFilled, YoutubeFilled, MailOutlined } from "@ant-design/icons";
 ---
 
-<footer class="mt-auto flex bg-neutral-800 w-full h-80 justify-evenly">
-  <div>
+<footer class="mt-auto flex max-lg:flex-col bg-neutral-800 w-full min-h-80 h-fit justify-evenly px-12 pb-12 pt-4">
+  <div class="mt-8">
     <Image
       src={logo}
       alt="ACM@UC logo"
-      class="w-80 h-auto"
+      class="w-80 h-auto mb-8"
     />
-    <ul class="socials ml-8 flex items-center gap-4 mb-4">
+    <ul class="flex items-center gap-4 mb-4">
       <li class="contents">
         <a
           target="_blank"
@@ -74,8 +74,8 @@ import { InstagramOutlined, DiscordOutlined, XOutlined, LinkedinFilled, GithubFi
         </a>
       </li>
     </ul>
-    <p class="ml-8">Student Chapter of ACM at University of Cincinnati</p>
-    <p class="flex items-center gap-1 ml-8 mt-2">
+    <p>Student Chapter of ACM at University of Cincinnati</p>
+    <p class="flex items-center gap-1 mt-2">
       <MailOutlined />
       <a href="mailto:acmatcinci@gmail.com">acmatcinci@gmail.com </a>
     </p>
