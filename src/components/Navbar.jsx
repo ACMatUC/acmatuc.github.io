@@ -56,7 +56,7 @@ export default function MobileNavbar() {
   </nav>
 
   {/* Mobile Navbar Dropdown */}
-  <div className={`${isOpen ? "h-[calc(100vh-4rem)]" : "h-0"} lg:hidden transition-[height] duration-300 absolute top-16 overflow-clip`}>
+  <div className={`${isOpen ? "h-[calc(100vh-4rem)]" : "h-0"} lg:hidden z-10 transition-[height] duration-300 absolute top-16 overflow-clip`}>
     <menu className={`w-screen bg-neutral-900 h-[calc(100vh-4rem)] flex flex-col transition-transform duration-300 justify-between pb-4`}>
       <div className="flex flex-col">
         {links.map(([name, link], i) =>
