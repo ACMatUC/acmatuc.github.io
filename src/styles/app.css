@@ -1,25 +1,54 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
-@layer base {
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-display;
-    font-weight: 700;
-    text-transform: uppercase;
-  }
+@theme {
+  --breakpoint-lg: 1050px;
 
-  :any-link {
-    @apply text-red-500;
-  }
-  :any-link:hover {
-    @apply text-red-600;
-  }
-  :any-link:visited {
-    @apply text-red-700;
-  }
-  :any-link:visited:hover {
-    @apply text-red-600;
-  }
+  --color-red-50: #fff2f1;
+  --color-red-100: #ffe2e0;
+  --color-red-200: #ffcbc7;
+  --color-red-300: #ffa7a0;
+  --color-red-400: #ff7469;
+  --color-red-500: #f9483a;
+  --color-red-600: #e83224;
+  --color-red-700: #c31f12;
+  --color-red-800: #a11d13;
+  --color-red-900: #851f17;
+  --color-red-950: #490b06;
+  --color-red: var(--color-red-600);
+
+  --color-instagram: #ff0069;
+  --color-discord: #5865f2;
+  --color-linkedin: #0072b1;
+
+  --default-transition-timing-function: linear;
+  --default-transition-duration: 100ms;
+
+  --font-sans: "Open Sans", sans-serif;
+  --font-display: "Montserrat", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+:any-link {
+  color: var(--text-red-500);
+}
+:any-link:hover {
+  @apply text-red-600;
+}
+:any-link:visited {
+  @apply text-red-700;
+}
+:any-link:visited:hover {
+  @apply text-red-600;
 }
