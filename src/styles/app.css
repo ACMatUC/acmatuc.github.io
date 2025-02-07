@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 @import "tailwindcss";
+/* TODO: update when tailwind typography upgrades to css plugin */
 @plugin "@tailwindcss/typography";
 
 @theme {
@@ -29,26 +30,32 @@
   --font-display: "Montserrat", sans-serif;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--font-display);
-  font-weight: 700;
-  text-transform: uppercase;
-}
+@layer base {
+  body {
+    overflow-x: hidden;
+  }
 
-:any-link {
-  color: var(--text-red-500);
-}
-:any-link:hover {
-  @apply text-red-600;
-}
-:any-link:visited {
-  @apply text-red-700;
-}
-:any-link:visited:hover {
-  @apply text-red-600;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-display;
+    @apply font-bold;
+    @apply uppercase;
+  }
+
+  :any-link {
+    @apply text-red-500;
+  }
+  :any-link:hover {
+    @apply text-red-600;
+  }
+  :any-link:visited {
+    @apply text-red-700;
+  }
+  :any-link:visited:hover {
+    @apply text-red-600;
+  }
 }

@@ -16,16 +16,16 @@ const links = [
 ];
 
 const socials = [
-  {icon: <InstagramOutlined className="text-2xl text-white" />, link: "https://instagram.com/acmuc", color: "hover:bg-instagram"},
-  {icon: <DiscordOutlined className="text-2xl text-white" />, link: "https://discord.gg/6aYBT6s", color: "hover:bg-discord"},
-  {icon: <XOutlined className="text-2xl text-white group-hover:text-black transition-colors" />, link: "https://x.com/ACMatUCorg", color: "hover:bg-white group"},
-  {icon: <LinkedinFilled className="text-2xl text-white" />, link: "https://linkedin.com/company/acm-uc", color: "hover:bg-linkedin"}
+  {icon: <InstagramOutlined className="text-2xl" />, link: "https://instagram.com/acmuc", color: "text-white hover:bg-instagram"},
+  {icon: <DiscordOutlined className="text-2xl" />, link: "https://discord.gg/6aYBT6s", color: "text-white hover:bg-discord"},
+  {icon: <XOutlined className="text-2xl transition-colors" />, link: "https://x.com/ACMatUCorg", color: "text-white hover:bg-white hover:text-black"},
+  {icon: <LinkedinFilled className="text-2xl" />, link: "https://linkedin.com/company/acm-uc", color: "text-white hover:bg-linkedin"}
 ];
 
 export default function MobileNavbar() {
   const [isOpen, setOpen] = useState(false);
 
-  return <><nav className="bg-neutral-800 w-screen flex justify-between h-16 px-2">
+  return <><nav className="bg-neutral-800 w-full flex justify-between h-16 px-2">
     <span className="flex">
       <a href="/" className="relative w-max flex items-center hover:bg-red transition-colors group">
         <img src={acmWideTransparent.src} alt="ACM Logo" className="h-6 px-4 w-auto group-hover:opacity-0 transition-opacity" />
@@ -42,7 +42,7 @@ export default function MobileNavbar() {
     <ul className="flex gap-1 max-sm:hidden">
       {socials.map(({icon, link, color}, i) => 
       (<li key={i}>
-        <a href={link} className={`h-16 w-16 flex justify-center items-center ${color} hover:bg-opacity-80 transition-colors`}>
+        <a href={link} className={`h-16 w-16 flex justify-center items-center ${color} text-white hover:bg-opacity-80 transition-colors`}>
           {icon}
         </a>
       </li>))}
@@ -56,14 +56,14 @@ export default function MobileNavbar() {
   </nav>
 
   {/* Mobile Navbar Dropdown */}
-  <div className={`${isOpen ? "h-[calc(100vh-4rem)]" : "h-0"} lg:hidden z-10 transition-[height] duration-300 absolute top-16 overflow-clip`}>
-    <menu className={`w-screen bg-neutral-900 h-[calc(100vh-4rem)] flex flex-col transition-transform duration-300 justify-between pb-4`}>
+  <div className={`${isOpen ? "h-full" : "h-0"} lg:hidden z-10 transition-[height] duration-300 absolute top-16 overflow-clip`}>
+    <menu className={`w-screen bg-neutral-800 h-fit flex flex-col transition-transform duration-300`}>
       <div className="flex flex-col">
         {links.map(([name, link], i) =>
-        (<li className="contents" key={i}><a href={link} className="font-bold h-16 w-full pl-8 flex items-center uppercase font-display hover:bg-red transition-colors !text-white">{name}</a></li>))}
+        (<li className="contents" key={i}><a href={link} className="font-bold h-16 w-full pl-6 flex items-center uppercase font-display hover:bg-red transition-colors !text-white">{name}</a></li>))}
       </div>
         <li className="contents sm:hidden">
-          <menu className="flex gap-4 w-full justify-start px-2">
+          <menu className="flex gap-4 w-full justify-start">
             {socials.map(({icon, link, color}, i) => 
             (<li key={i}>
               <a href={link} className={`h-16 w-16 flex items-center justify-center ${color} hover:bg-opacity-80 transition-colors`}>
