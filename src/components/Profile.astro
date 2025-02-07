@@ -20,10 +20,10 @@ const images = import.meta.glob<{ default: ImageMetadata }>("/src/assets/*.{jpeg
 const image = imageUrl ? images[imageUrl] : undefined;
 ---
 
-<div class="flex items-center gap-4">
+<div class="flex max-sm:flex-col max-sm:align-start sm:items-center gap-4">
   {
       <Image
-        class="size-40 rounded-full"
+        class="max-sm:size-24 sm:size-40 rounded-full"
         src={image()}
         alt={name}
       />
@@ -32,7 +32,7 @@ const image = imageUrl ? images[imageUrl] : undefined;
         src={imageUrl}
         alt={name}
         onerror="this.style.display='none'"
-        class="size-40 rounded-full"
+        class="max-sm:size-24 sm:size-40 rounded-full"
       />
     ) : (
       github && (
@@ -40,7 +40,7 @@ const image = imageUrl ? images[imageUrl] : undefined;
           src={`https://avatars.githubusercontent.com/${github}`}
           alt={name}
           onerror="this.style.display='none'"
-          class="size-40 rounded-full"
+          class="max-sm:size-24 sm:size-40 rounded-full"
         />
       )
     )
