@@ -1,11 +1,7 @@
-import acmWideTransparentSrc from "../assets/acm-wide-transparent.png"
-import acmWideTransparentBlackSrc from "../assets/acm-wide-transparent-black.png"
-import { getImage } from "astro:assets";
+import acmWideTransparent from "../assets/acm-wide-transparent.png";
+import acmWideTransparentBlack from "../assets/acm-wide-transparent-black.png";
 import { useState } from "react";
 import { DiscordOutlined, InstagramOutlined, MenuOutlined, XOutlined, CloseOutlined, LinkedinFilled } from "@ant-design/icons";
-
-const acmWideTransparent = await getImage({ src: acmWideTransparentSrc });
-const acmWideTransparentWhite = await getImage({ src: acmWideTransparentBlackSrc });
 
 const links = [
   ["Resources", "/resources"],
@@ -29,7 +25,7 @@ export default function MobileNavbar() {
     <span className="flex">
       <a href="/" className="relative w-max flex items-center hover:bg-red transition-colors group">
         <img src={acmWideTransparent.src} alt="ACM Logo" className="h-6 px-4 w-auto group-hover:opacity-0 transition-opacity" />
-        <img src={acmWideTransparentWhite.src} alt="ACM@UC Logo" className="absolute top-5 left-4 h-6 w-auto opacity-0 group-hover:opacity-100 transition-opacity" />
+        <img src={acmWideTransparentBlack.src} alt="ACM@UC Logo" className="absolute top-5 left-4 h-6 w-auto opacity-0 group-hover:opacity-100 transition-opacity" />
       </a>
     <menu className="flex gap-1 max-lg:hidden">
       {links.map(([name, link], i) =>
