@@ -2,17 +2,17 @@
 title:  API demystified
 date:   2021-04-27
 author: Bao Huynh
-imageURL: /assets/happy-people.jpg
+image: ./api-demystified.jpg
 tags: api web http
 synopsis: |
   Learn about what an API is, why they exist, and how you can use them to make
   your own applications.
 
-aboutAuthor:
+authorProfile:
   class: 2024
   github: bhuynhdev
-  website: https://bhuynh.me
-  bio: Hi! My name is Bao Huynh
+  website: https://bhuynh.me/
+  bio: Hi! My name is Bau Huynh
 ---
 
 ## What is an API
