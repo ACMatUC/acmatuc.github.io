@@ -43,6 +43,11 @@ const membersCollection = defineCollection({
 });
 const meetingsCollection = defineCollection({
   type: "content",
+  schema: z.object({
+    title: z.string(),
+    date: z.date(),
+    speaker: z.optional(z.string()),
+  })
 });
 const updatesCollection = defineCollection({
   type: "data",

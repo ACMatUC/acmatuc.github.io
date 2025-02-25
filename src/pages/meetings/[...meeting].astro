@@ -6,11 +6,9 @@ import Footer from "../../components/Footer.astro";
 
 export async function getStaticPaths() {
   const meetings = await getCollection("meetings");
-  console.log(meetings);
 
   return meetings.map((meeting) => {
-    const slug = `${meeting.slug.split("/")[0]}/${meeting.slug.split("/")[1].split("-")[0]}/${meeting.slug.split("-")[1]}`;
-    console.log(slug);
+    const slug = meeting.slug.split("/").pop();
     return {
       params: { meeting: slug },
       props: { meeting },
@@ -22,18 +20,19 @@ const { meeting } = Astro.props;
 const { Content } = await meeting.render();
 ---
 
-<html>
-  <head>
-    <Head
-      title={meeting.data.title}
-      description={meeting.data.description}
-    />
-  </head>
-  <body>
-    <Navbar />
-    <main>
+<Layout
+  title={meeting.data.title}
+  description={meeting.data.title}
+>
+  <main class="max-w-full md:max-w-4xl mx-auto mt-12 px-6 mb-20">
+    <h1 class="text-xl md:text-2xl font-bold text-red">{meeting.data.title}</h1>
+    <p class="text-lg">
+      Date: {new Date(meeting.data.date).toISOString().split("T")[0]}
+    </p>
+    {meeting.data.speaker && <p class="text-lg">Speaker: {meeting.data.speaker}</p>}
+    <hr class="my-4" />
+    <article class="">
       <Content />
-    </main>
-    <Footer />
-  </body>
-</html>
+    </article>
+  </main>
+</Layout>

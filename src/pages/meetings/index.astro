@@ -1,5 +1,23 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+
+const meetings = await getCollection("meetings");
+
+const meetingsByYear = meetings.reduce<Record<string, typeof meetings>>((acc, meeting) => {
+    const year = meeting.slug.split("/")[0];
+    if (!acc[year]) {
+        acc[year] = [];
+    }
+    acc[year].push(meeting);
+    return acc;
+}, {});
+
+Object.keys(meetingsByYear).forEach((year) => {
+    meetingsByYear[year].sort((a, b) => 
+        new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
+    );
+});
 
 ---
 
@@ -8,20 +26,36 @@ import Layout from "../../layouts/Layout.astro";
   description="ACM@UC Meetings Page"
 >
     <div class="mt-12 px-10 pb-10 space-y-4 max-w-full w-[800px] self-center">
-        <h1 class="text-2xl">Meetings</h1>
+        <h1 class="text-3xl">Meetings</h1>
         <div class="space-y-4 justify-self-center">
-            <div class="flex space-x-4 items-center">
+            <div class="flex flex-col md:flex-row gap-x-4 gap-y-2 md:items-center text-lg">
                 <p class="font-semibold">At a meeting right now? </p>
-                <a class="border border-r-2 border-red-500 p-2 rounded-xl bg-white bg-opacity-10 font-bold" href="/checkin">Check In</a>
+                <a class="border border-r-2 border-red-500 p-2 rounded-xl bg-white bg-opacity-10 font-bold w-fit" href="/checkin">Check In</a>
             </div>
             <p>
                 With a talented exec board, and great speakers from the local community we provide great tech talks and workshops to help the computing community at the University of Cincinnati grow.
-                See <a href="https://github.com/acmatuc/archive" class="underline">acmatuc/archive</a> on GitHub for links to slides and other resources from our meetings!
+                See <a href="https://github.com/acmatuc/archive" class="underline" target="_blank" rel="noopener noreferrer">acmatuc/archive</a> on GitHub for links to slides and other resources from our meetings!
             </p>
             <iframe src="https://calendar.google.com/calendar/embed?src=acmatcinci%40gmail.com&ctz=America%2FNew_York" class="max-w-full w-[800px] h-[600px] rounded-lg"></iframe>
         </div>
 
-        <h2 class="text-lg pt-10">Meeting Archive</h2>
+        <h2 class="text-xl md:text-2xl pt-10">Meeting Archive</h2>
 
+        <div class="space-y-6">
+            {Object.keys(meetingsByYear).map(Number).sort((a, b) => b - a).map(year => (
+                <details class="pb-2">
+                    <summary class="text-lg md:text-xl cursor-pointer pb-2">{year}</summary>
+                    <ul>
+                        {meetingsByYear[year].map(meeting => (
+                        <li>
+                            <a href={`/meetings/${meeting.slug.split("/").pop()}`} class="text-lg">
+                                {meeting.data.title} - {new Date(meeting.data.date).toISOString().split("T")[0]}
+                            </a>
+                        </li>
+                        ))}
+                    </ul>
+                </details>
+            ))}
+        </div>
     </div>
 </Layout>
