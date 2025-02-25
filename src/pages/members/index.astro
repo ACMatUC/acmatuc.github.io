@@ -3,8 +3,8 @@ import Layout from "../../layouts/Layout.astro";
 import { getCollection } from "astro:content";
 
 const classList = await getCollection("members");
-const currentClasses = classList.filter(({ id }) => !id.startsWith("alumni/"));
-const alumni = classList.filter(({ id }) => id.startsWith("alumni/")).sort(({ id }) => parseInt(id.split("/")[1]));
+const currentClasses = classList.filter(({ id }) => !id.startsWith("alumni/")).sort((a, b) => parseInt(a.id) - parseInt(b.id));
+const alumni = classList.filter(({ id }) => id.startsWith("alumni/")).sort((a, b) => parseInt(a.id.split("/")[1]) - parseInt(b.id.split("/")[1]));
 ---
 
 <Layout
@@ -13,7 +13,7 @@ const alumni = classList.filter(({ id }) => id.startsWith("alumni/")).sort(({ id
 >
   <h1 class="mt-12 mx-20 text-3xl">ACM@UC Member Directory</h1>
 
-  <div class="my-8 flex justify-center gap-2 bg-neutral-800">
+  <div class="my-8 flex flex-wrap justify-center gap-4 bg-neutral-800">
     {
       currentClasses.map((classItem) => (
         <a
