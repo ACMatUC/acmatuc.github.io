@@ -14,14 +14,14 @@ const slides = [
 
 const { dir } = Astro.props;
 ---
-<div class="pb-20" data-dir={dir} id="carousel">
-  <h1 class="text-xl pb-8 px-10 md:px-24">GALLERY</h1>
+<div class="pb-20 flex flex-col items-center" data-dir={dir} id="carousel">
+  <h1 class="text-xl lg:text-2xl lg:text-2xl pb-8 w-4/5 lg:w-3/4">GALLERY</h1>
   <section class="splide" role="group" aria-label="Simple Carousel">
     <div class="splide__track">
       <ul class="splide__list">
         {slides.map((slide) => (
           <li class="splide__slide">
-            <img src={slide} alt="Executive" class="w-auto h-60 rounded-lg"/>
+            <img src={slide} alt="Executive" class="w-auto h-60 lg:h-80 rounded-lg"/>
           </li>
         ))}
       </ul>
