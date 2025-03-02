@@ -1,0 +1,37 @@
+---
+import type { GetStaticPaths, Page } from "astro";
+import { getCollection, type CollectionEntry } from "astro:content";
+import Layout from "$layouts/Layout.astro";
+import Pagination from "$components/Pagination.astro";
+import BlogPostCard from "./_Post.astro";
+
+interface Props {
+  page: Page<CollectionEntry<"blog">>;
+}
+
+export const getStaticPaths: GetStaticPaths = async ({ paginate }) => {
+  const posts = await getCollection("blog");
+  posts.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+  return paginate(posts, { pageSize: 10 });
+};
+
+const { page } = Astro.props;
+---
+
+<Layout title={page.currentPage === 1 ? "Blog" : `Page ${page.currentPage} - Blog`}>
+  <main class="mx-12">
+    <h1 class="text-4xl mt-8 mb-4">ACM@UC Blog</h1>
+    {
+      page.data.length === 0 ? (
+        <p>No posts have been added yet.</p>
+      ) : (
+        <>
+          {page.data.map((post) => (
+            <BlogPostCard {post} />
+          ))}
+          <Pagination {page} className="mb-4"/>
+        </>
+      )
+    }
+  </main>
+</Layout>

@@ -1,33 +1,31 @@
 ---
-import { getCollection, getEntry } from "astro:content";
-import Layout from "../../layouts/Layout.astro";
-import BlogTag from "../../components/BlogTag.astro";
-import Profile from "../../components/Profile.astro";
-
-interface Props {
-  slug: string;
-}
+import { getCollection } from "astro:content";
+import Layout from "$layouts/Layout.astro";
+import BlogTag from "./_Tag.astro";
+import Profile from "$components/Profile.astro";
+import { render } from "astro:content";
+import { Image } from "astro:assets";
 
 export async function getStaticPaths() {
   const posts = await getCollection("blog");
-  return posts.map(({ slug }) => ({
-    params: { post: slug },
-    props: { slug },
+  return posts.map((post) => ({
+    params: { post: post.id },
+    props: { post },
   }));
 }
 
-const post = await getEntry("blog", Astro.props.slug);
-const { Content } = await post!.render();
+const { post } = Astro.props;
+const { Content } = await render(post);
 
-const aboutAuthor = post?.data.aboutAuthor;
+const authorProfile = post?.data.authorProfile;
 ---
 
 <Layout title={post!.data.title}>
   {
-    post!.data.imageURL && (
+    post!.data.image && (
       <div class="grid place-items-center w-full max-md:h-80 h-[40vh] overflow-clip">
-        <img
-          src={post!.data.imageURL}
+        <Image
+          src={post!.data.image}
           alt={post!.data.title}
           class="object-cover object-bottom min-h-full min-w-full"
         />
@@ -47,18 +45,18 @@ const aboutAuthor = post?.data.aboutAuthor;
     <Content />
   </article>
   {
-    aboutAuthor && (
+    authorProfile && (
       <aside class="ml-12 lg:ml-24 mb-8 max-w-4xl">
         <h2 class="text-2xl mb-2">About the Author</h2>
         <Profile
-          name={`${post?.data.author}`}
-          imageUrl={aboutAuthor.photo}
-          email={aboutAuthor.email}
-          website={aboutAuthor.website}
-          github={aboutAuthor.github}
-          linkedin={aboutAuthor.linkedin}
-          bio={aboutAuthor.bio}
-          classOf={aboutAuthor.class}
+          name={post?.data.author}
+          image={authorProfile.photo}
+          email={authorProfile.email}
+          website={authorProfile.website}
+          github={authorProfile.github}
+          linkedin={authorProfile.linkedin}
+          bio={authorProfile.bio}
+          classOf={authorProfile.class}
         />
       </aside>
     )

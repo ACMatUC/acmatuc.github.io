@@ -5,7 +5,8 @@ import { MailOutlined, LinkOutlined, GithubFilled, LinkedinFilled } from "@ant-d
 
 interface Props {
   name: string;
-  imageUrl?: string | undefined;
+  bio: string | undefined;
+  image: string | ImageMetadata | undefined;
   classOf?: string | undefined;
 
   email?: string | undefined;
@@ -14,35 +15,25 @@ interface Props {
   linkedin?: string | undefined;
 }
 
-const { name, imageUrl, bio, classOf, email, website, github, linkedin } = Astro.props;
-
-const images = import.meta.glob<{ default: ImageMetadata }>("/src/assets/*.{jpeg,jpg,png,gif}");
-const image = imageUrl ? images[imageUrl] : undefined;
+const { name, image, bio, classOf, email, website, github, linkedin } = Astro.props;
+const photo = image ?? `https://avatars.githubusercontent.com/${github}`;
 ---
 
 <div class="flex max-sm:flex-col max-sm:align-start sm:items-center gap-4">
   {
+    typeof photo == "string" ? (
       <Image
         class="max-sm:size-24 sm:size-40 rounded-full"
-        src={image()}
+        src={photo}
         alt={name}
-      />
-    ) : imageUrl ? (
-      <img
-        src={imageUrl}
-        alt={name}
-        onerror="this.style.display='none'"
-        class="max-sm:size-24 sm:size-40 rounded-full"
+        inferSize
       />
     ) : (
-      github && (
-        <img
-          src={`https://avatars.githubusercontent.com/${github}`}
-          alt={name}
-          onerror="this.style.display='none'"
-          class="max-sm:size-24 sm:size-40 rounded-full"
-        />
-      )
+      <Image
+        class="max-sm:size-24 sm:size-40 rounded-full"
+        src={photo}
+        alt={name}
+      />
     )
   }
   <div>
