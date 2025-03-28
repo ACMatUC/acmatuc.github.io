@@ -4,7 +4,7 @@ import { z } from "astro:schema";
 
 const members = defineCollection({
   loader: glob({
-    base: "./src/content/members",
+    base: "./src/members",
     pattern: ["*.(yml|yaml)", "alumni/*.(yml|yaml)"],
     generateId: ({ entry }) => entry.replace(/\.ya?ml/, ""),
   }),

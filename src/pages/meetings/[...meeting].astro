@@ -1,23 +1,19 @@
 ---
 import { getCollection } from "astro:content";
-import Head from "../../components/Head.astro";
-import Navbar from "../../components/Navbar.astro";
-import Footer from "../../components/Footer.astro";
+import Layout from "../../layouts/Layout.astro";
+import { render } from "astro:content";
 
 export async function getStaticPaths() {
   const meetings = await getCollection("meetings");
 
-  return meetings.map((meeting) => {
-    const slug = meeting.slug.split("/").pop();
-    return {
-      params: { meeting: slug },
-      props: { meeting },
-    };
-  });
+  return meetings.map((meeting) => ({
+    params: { meeting: meeting.id },
+    props: { meeting },
+  }));
 }
 
 const { meeting } = Astro.props;
-const { Content } = await meeting.render();
+const { Content } = await render(meeting);
 ---
 
 <Layout
