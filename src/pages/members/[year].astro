@@ -1,29 +1,26 @@
 ---
-import { getCollection } from "astro:content";
-import Head from "../../components/Head.astro";
-import Navbar from "../../components/Navbar.astro";
-import Footer from "../../components/Footer.astro";
-import { getEntry } from "astro:content";
-import Profile from "../../components/Profile.astro";
-import Layout from "../../layouts/Layout.astro";
+import { getCollection, type CollectionEntry } from "astro:content";
+import Profile from "$components/Profile.astro";
+import Layout from "$layouts/Layout.astro";
 
 interface Props {
-  year: string;
+  members: CollectionEntry<"members">;
 }
 
 export async function getStaticPaths() {
   const allClasses = await getCollection("members");
-  return allClasses.map(({ id }) => {
-    const year = id.startsWith("alumni/") ? id.split("/")[1] : id;
+  return allClasses.map((classData) => {
+    const id = classData.id;
+    const year = id.startsWith("alumni") ? id.split("/")[1] : id;
     return {
       params: { year },
-      props: { year },
+      props: { members: classData },
     };
   });
 }
 
-const { year } = Astro.props;
-const members = await getEntry("members", year);
+const { year } = Astro.params;
+const { data: members } = Astro.props.members ?? { data: undefined };
 ---
 
 <Layout
@@ -35,20 +32,20 @@ const members = await getEntry("members", year);
     class="block mt-4 ml-16 uppercase !text-red font-display font-semibold hover:underline hover:!text-red-600"
     >Back to Member List</a
   >
-  <h1 class="mt-4 mx-8 mb-3 text-2xl">Class of {year} Members</h1>
-  <div class="mx-12 max-w-6xl">
+  <h1 class="mt-4 mx-8 mb-4 text-2xl">Class of {year} Members</h1>
+  <div class="mx-12 max-w-6xl *:mb-8">
     {
-      members?.data?.map(({ name, short_bio, image_url, email, website, github, linkedin }) => (
+      members?.map(({ name, short_bio, image, email, website, github, linkedin }) => (
         <Profile
           name={name}
-          imageUrl={image_url}
+          image={image}
           email={email}
           website={website}
           github={github}
           linkedin={linkedin}
           bio={short_bio}
         />
-      ))
+      )) ?? <p>No members from this class. Add yourself here</p>
     }
   </div>
 </Layout>
