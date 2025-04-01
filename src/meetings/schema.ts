@@ -5,7 +5,7 @@ const meetings = defineCollection({
   loader: glob({
     base: "./src/meetings",
     pattern: ["**/!(README).md"],
-    generateId: ({ entry }) => entry.replace("-", "/").replace(/\.md/, ""),
+    generateId: ({ entry }) => entry.replace(/\.md/, ""),
   }),
   schema: ({ image }) =>
     z.object({

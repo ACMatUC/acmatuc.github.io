@@ -7,7 +7,7 @@ export async function getStaticPaths() {
   const meetings = await getCollection("meetings");
 
   return meetings.map((meeting) => ({
-    params: { meeting: meeting.id },
+    params: { meeting: meeting.id.split("/").pop() },
     props: { meeting },
   }));
 }

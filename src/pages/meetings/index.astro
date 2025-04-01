@@ -5,7 +5,7 @@ import { getCollection } from "astro:content";
 const meetings = await getCollection("meetings");
 
 const meetingsByYear = meetings.reduce<Record<string, typeof meetings>>((acc, meeting) => {
-    const year = meeting.slug.split("/")[0];
+    const year = meeting.id.split("/")[0];
     if (!acc[year]) {
         acc[year] = [];
     }
@@ -48,7 +48,7 @@ Object.keys(meetingsByYear).forEach((year) => {
                     <ul>
                         {meetingsByYear[year].map(meeting => (
                         <li>
-                            <a href={`/meetings/${meeting.slug.split("/").pop()}`} class="text-lg">
+                            <a href={`/meetings/${meeting.id.split("/").pop()}`} class="text-lg">
                                 {meeting.data.title} - {new Date(meeting.data.date).toISOString().split("T")[0]}
                             </a>
                         </li>
