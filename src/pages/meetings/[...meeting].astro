@@ -20,7 +20,7 @@ const { Content } = await render(meeting);
   title={meeting.data.title}
   description={meeting.data.title}
 >
-  <main class="max-w-full md:max-w-4xl mx-auto mt-12 px-6 mb-20">
+  <main class="max-w-full w-[800px] px-10 mx-auto mt-12 px-6 mb-20">
     <h1 class="text-xl md:text-2xl font-bold text-red">{meeting.data.title}</h1>
     <p class="text-lg">
       Date: {new Date(meeting.data.date).toISOString().split("T")[0]}
