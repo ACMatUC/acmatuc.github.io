@@ -1,0 +1,39 @@
+---
+import { getCollection } from "astro:content";
+import Head from "../../components/Head.astro";
+import Navbar from "../../components/Navbar.astro";
+import Footer from "../../components/Footer.astro";
+
+export async function getStaticPaths() {
+  const meetings = await getCollection("meetings");
+  console.log(meetings);
+
+  return meetings.map((meeting) => {
+    const slug = `${meeting.slug.split("/")[0]}/${meeting.slug.split("/")[1].split("-")[0]}/${meeting.slug.split("-")[1]}`;
+    console.log(slug);
+    return {
+      params: { meeting: slug },
+      props: { meeting },
+    };
+  });
+}
+
+const { meeting } = Astro.props;
+const { Content } = await meeting.render();
+---
+
+<html>
+  <head>
+    <Head
+      title={meeting.data.title}
+      description={meeting.data.description}
+    />
+  </head>
+  <body>
+    <Navbar />
+    <main>
+      <Content />
+    </main>
+    <Footer />
+  </body>
+</html>
