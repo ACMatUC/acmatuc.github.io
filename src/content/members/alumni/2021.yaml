@@ -1,0 +1,43 @@
+- name: Carisheila Cardano
+  github: cardanca
+- name: Chris Jantzen
+  image_url: https://scontent.fosu1-1.fna.fbcdn.net/v/t1.0-9/20767993_2029595040399658_9059016410200580882_n.jpg?oh=062160efc4619c761988477c99c0bb3f&oe=5A4EA353
+  github: jantzeca
+- name: Chris Messmer
+  short_bio: I'm a CS major at UC, and I am a member of ACM@UC and the Robotics team.
+  github: messmecp
+- name: Christopher Morrison
+  short_bio: Member of UC CubeCats. I've been called a 'digital wizard' by several, including myself.
+  image_url: https://avatars3.githubusercontent.com/u/25733046?s=460&v=4
+  github: ChristopherMorrison
+  website: https://ChristopherMorrison.Github.io
+- name: Korey Huskonen
+  short_bio: You can only see so far with your eyes open.
+  image_url: https://avatars1.githubusercontent.com/u/21250524?v=4&u=d3ee121b9c346bf75f91aac9d81219a537cdb841&s=400
+  github: koreyhuskonen
+  website: https://www.koreyhuskonen.com
+- name: Matthew Kavanagh
+  short_bio: I love coding, computers, and problem solving to help real people with technology.
+  image_url: https://avatars2.githubusercontent.com/u/31973380?v=4&u=40d50d624795dd58df5e7ba8647153fc3f5221c3&s=400
+  github: kavanamw
+- name: Nicholas Maltbie
+  short_bio: I'm a Computer Science student who enjoys python far too much for my own good.
+  image_url: https://avatars1.githubusercontent.com/u/3240136
+  github: nicholas-maltbie
+  website: nickmaltbie.com
+- name: Robert Bolgzds
+  short_bio: Second year computer science major.
+  image_url: https://avatars3.githubusercontent.com/u/31973394
+  github: Bolgzdrt
+- name: William Cupp
+  short_bio: I am a computer science major at UC.  My favorite language is C++.
+  image_url: https://willcpp.github.io/images/me.jpg
+  github: WillCPP
+- name: Evan Vujcec
+  short_bio: I'm a CS major. My primary languages are C++, Dart, and Go.
+  image_url: https://avatars1.githubusercontent.com/u/10468649
+  github: EvanVujcec
+- name: JT Salisbury
+  short_bio: I'm a Computer Engineering major at UC and have had co-op experience with BMW. I'm actively involved in ACM@UC and organizing RevolutionUC. Feel free to message me on Slack @JT
+  image_url: https://avatars2.githubusercontent.com/u/1310285?s=460&v=4
+  github: jtsalisbury

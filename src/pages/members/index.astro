@@ -1,0 +1,120 @@
+---
+import Head from "../../components/Head.astro";
+import Navbar from "../../components/Navbar.astro";
+import Footer from "../../components/Footer.astro";
+import { getCollection } from "astro:content";
+
+const classList = await getCollection("members");
+const currentClasses = classList.filter(({ id }) => !id.startsWith("alumni/"));
+const alumni = classList.filter(({ id }) => id.startsWith("alumni/")).sort(({ id }) => parseInt(id.split("/")[1]));
+---
+
+<html>
+  <head>
+    <Head
+      title="Member Directory"
+      description="Directiry of all members of ACM@UC"
+    />
+  </head>
+  <body>
+    <Navbar />
+    <h1>ACM@UC Member Directory</h1>
+
+    <div class="current">
+      {
+        currentClasses.map((classItem) => (
+          <a href={`/members/${classItem.id}`}>
+            <h2>
+              Class of
+              <br />
+              <span>{classItem.id}</span>
+            </h2>
+          </a>
+        ))
+      }
+    </div>
+    <h2 id="alumni">Alumni</h2>
+    <div class="alumni">
+      {
+        alumni.reverse().map(({ id }) => (
+          <h3>
+            <a href={`/members/${id.split("/")[1]}`}>{id.split("/")[1]}</a>
+          </h3>
+        ))
+      }
+    </div>
+    <Footer />
+  </body>
+</html>
+
+<style lang="scss">
+  @use "../../styles/theme.scss" as *;
+
+  h1 {
+    margin: 3rem 5rem 0;
+  }
+  .current {
+    margin: 2rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    background-color: $gray-800;
+    a {
+      padding: 2rem 2rem;
+      color: $red-500;
+      text-decoration: none;
+      transition:
+        color 100ms linear,
+        background 100ms linear;
+      h2 {
+        margin: 0;
+        display: flex;
+        text-align: center;
+        span {
+          color: $white;
+          display: contents;
+        }
+      }
+      &:hover {
+        background-color: $red-500;
+        color: $black;
+        span {
+          color: $white;
+        }
+      }
+    }
+  }
+
+  h2 {
+    margin: 2rem 5rem 0;
+  }
+  .alumni {
+    margin: 1rem 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(8rem, auto));
+    gap: 0.5rem;
+    h3 {
+      font-size: 1.5em;
+      display: contents;
+    }
+    a {
+      min-width: 5rem;
+      width: 100%;
+      display: block;
+      background-color: $gray-800;
+      color: $red-500;
+      text-decoration: none;
+      text-align: center;
+      padding: 2rem 0;
+      font-family: $font-display;
+      transition:
+        color 100ms linear,
+        background 100ms linear;
+
+      &:hover {
+        background-color: $red-500;
+        color: $white;
+      }
+    }
+  }
+</style>

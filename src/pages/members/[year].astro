@@ -1,0 +1,85 @@
+---
+import { getCollection } from "astro:content";
+import Head from "../../components/Head.astro";
+import Navbar from "../../components/Navbar.astro";
+import Footer from "../../components/Footer.astro";
+import { getEntry } from "astro:content";
+import Profile from "../../components/Profile.astro";
+
+interface Props {
+  year: string;
+}
+
+export async function getStaticPaths() {
+  const allClasses = await getCollection("members");
+  return allClasses.map(({ id }) => {
+    const year = id.startsWith("alumni/") ? id.split("/")[1] : id;
+    return {
+      params: { year },
+      props: { year },
+    };
+  });
+}
+
+const { year } = Astro.props;
+const members = await getEntry("members", year);
+---
+
+<html>
+  <head>
+    <Head
+      title={`Class of ${year}`}
+      description={`Members of ACM@UC from the class of ${year}`}
+    />
+  </head>
+  <body>
+    <Navbar />
+    <a
+      href="/members"
+      class="back"
+      >Back to Member List</a
+    >
+    <h1>Class of {year} members</h1>
+    <div class="list">
+      {
+        members?.data?.map(({ name, short_bio, image_url, email, website, github, linkedin }) => (
+          <Profile
+            {name}
+            imageUrl={image_url}
+            {email}
+            {website}
+            {github}
+            {linkedin}
+            bio={short_bio}
+          />
+        ))
+      }
+    </div>
+    <Footer />
+  </body>
+</html>
+
+<style lang="scss">
+  @use "../../styles/theme.scss" as theme;
+
+  .back {
+    display: block;
+    margin: 2rem 0 0 4rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: theme.$red-500 !important;
+    font-family: theme.$font-display;
+    font-weight: 600;
+    &:hover {
+      text-decoration: underline;
+      color: theme.$red-600 !important;
+    }
+  }
+  h1 {
+    margin: 1rem 2rem 0.5rem;
+  }
+  .list {
+    margin: 0 3rem;
+    max-width: 75rem;
+  }
+</style>

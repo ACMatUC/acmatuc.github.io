@@ -3,7 +3,6 @@ import { Image } from "astro:assets";
 
 interface Props {
   name: string;
-  bio: string;
   imageUrl?: string | undefined;
 
   email?: string | undefined;
@@ -18,9 +17,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>("/src/assets/*.{jpeg
 const image = imageUrl ? images[imageUrl] : undefined;
 ---
 
-<div class="container">
   {
-    image && (
       <Image
         src={image()}
         alt={name}
@@ -56,7 +53,6 @@ const image = imageUrl ? images[imageUrl] : undefined;
         github && (
           <li>
             <img src="/assets/github.svg" />
-            <a href={github}>{github}</a>
           </li>
         )
       }
@@ -64,7 +60,6 @@ const image = imageUrl ? images[imageUrl] : undefined;
         linkedin && (
           <li>
             <img src="/assets/linkedin.svg" />
-            <a href={linkedin}>{name}</a>
           </li>
         )
       }
@@ -74,7 +69,6 @@ const image = imageUrl ? images[imageUrl] : undefined;
 </div>
 
 <style lang="scss">
-  @use "../../styles/index.scss" as *;
 
   .container {
     display: flex;

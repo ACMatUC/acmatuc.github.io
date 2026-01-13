@@ -1,0 +1,13 @@
+# ACM@UC Members
+# To add yourself to the members list, use the below format:
+
+- name: Daniel Budke
+  github: dabudke
+  email: budkedp@mail.uc.edu
+  website: https://dabudke.github.io/
+  linkedin: daniel-budke
+  short_bio: >
+    Hi! I'm Daniel Budke, a Computer Science major here at University of
+    Cincinnati. I'm interested in software engineering, web development, user
+    interface/user experience, and cybersecurity. Currently, I'm working on
+    streetrelay.me, a social media service for the 3DS's StreetPass feature.
