@@ -97,7 +97,7 @@
     </ul>
   </div>
   <div class="category">
-    <h4>Friends</h4>
+    <h4>Besties 😍❤️</h4>
     <ul>
       <li>
         <a
@@ -123,16 +123,19 @@
           >MakeUC</a
         >
       </li>
+      <li>
+        <a>IEEE</a>
+      </li>
     </ul>
   </div>
 
   <style lang="scss">
-    @use "../styles/index.scss" as *;
+    @use "../styles/theme.scss" as theme;
 
     footer {
       margin-top: auto;
       display: flex;
-      background: $gray-800;
+      background: theme.$gray-800;
       width: 100%;
       height: 20rem;
       justify-content: space-evenly;
@@ -185,18 +188,18 @@
           padding: 0;
           padding-left: 0.5rem;
           li {
-            color: $gray-300;
+            color: theme.$gray-300;
             margin-bottom: 0.2rem;
             * {
               color: inherit;
               text-decoration: none;
             }
-          }
-          li:hover {
-            color: $gray-100;
-          }
-          li::marker {
-            content: none;
+            &:hover {
+              color: theme.$gray-100;
+            }
+            &::marker {
+              content: none;
+            }
           }
         }
       }

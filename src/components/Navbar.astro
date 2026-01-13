@@ -1,6 +1,5 @@
 ---
 import { getCollection } from "astro:content";
-import "../styles/index.scss";
 
 const allClasses = await getCollection("members");
 ---
@@ -55,7 +54,7 @@ const allClasses = await getCollection("members");
                 </li>
               ))
           }
-          <li><a href="/members/alumni">Alumni</a></li>
+          <li><a href="/members/#alumni">Alumni</a></li>
         </menu>
       </div>
       <li><a href="/blog">Blog</a></li>
@@ -110,14 +109,14 @@ const allClasses = await getCollection("members");
 </nav>
 
 <style lang="scss">
-  @use "../styles/index.scss" as *;
+  @use "../styles/theme.scss" as theme;
 
   a {
-    font-family: $font-display;
+    font-family: theme.$font-display;
   }
 
   nav {
-    background-color: $gray-850;
+    background-color: theme.$gray-850;
     display: flex;
     justify-content: space-between;
     height: 4rem;
@@ -143,7 +142,7 @@ const allClasses = await getCollection("members");
         transition: background 100ms linear;
       }
       > a:hover {
-        background-color: $red-500;
+        background-color: theme.$red-500;
 
         img {
           opacity: 100;
@@ -163,7 +162,7 @@ const allClasses = await getCollection("members");
       display: flex;
       justify-content: center;
       align-items: center;
-      color: $gray-100 !important;
+      color: theme.$gray-100 !important;
       transition: background 100ms linear;
 
       a {
@@ -183,7 +182,7 @@ const allClasses = await getCollection("members");
     }
     > li:hover,
     > *:hover > li {
-      background-color: $red-500;
+      background-color: theme.$red-500;
     }
 
     li::marker {
@@ -202,12 +201,12 @@ const allClasses = await getCollection("members");
         padding: 0.5rem 0;
         margin: 0;
         flex-direction: column;
-        background-color: $red-500;
+        background-color: theme.$red-500;
         transition: opacity 100ms linear;
 
         li {
-          color: $white;
-          font-family: $font-display;
+          color: theme.$white;
+          font-family: theme.$font-display;
           text-transform: uppercase;
           font-weight: 700;
           text-wrap: nowrap;
@@ -217,8 +216,8 @@ const allClasses = await getCollection("members");
             color 100ms linear;
         }
         li:hover {
-          background-color: $red-100;
-          color: $red-500;
+          background-color: theme.$red-100;
+          color: theme.$red-500;
         }
         a {
           color: inherit;
@@ -246,12 +245,8 @@ const allClasses = await getCollection("members");
       transition: background 100ms linear;
       margin: 0;
     }
-    a:hover.revolutionuc {
-      background-color: #f75c03;
-    }
     a:hover.instagram {
       background-color: #ff0069;
-      fill: black;
     }
     a:hover.discord {
       background-color: #5865f2;
