@@ -1,0 +1,47 @@
+---
+import type { CollectionEntry } from "astro:content";
+import BlogTag from "./BlogTag.astro";
+import { ExportOutlined } from "@ant-design/icons";
+
+interface Props {
+  post: CollectionEntry<"blog">;
+}
+
+const { post } = Astro.props;
+---
+
+<div class="bg-neutral-800 max-w-screen-lg flex items-start mb-4 p-4 rounded-xl gap-4">
+  {
+    post.data.imageURL && (
+      <div class="w-72 h-48 overflow-clip rounded-lg">
+        <img
+          src={post.data.imageURL}
+          alt={post.data.title}
+          class="object-cover min-h-full min-w-full"
+        />
+      </div>
+    )
+  }
+  <div class:list={["flex flex-col items-start", post.data.imageURL && "mt-4 w-2/3"]}>
+    <a
+      class="group"
+      href={`/blog/${post.slug}`}
+      ><h2 class="text-red-500 group-hover:text-white underline decoration-transparent hover:decoration-red transition-colors text-xl">
+        {post.data.title}
+      </h2></a
+    >
+    <span class="text-neutral-400 font-display uppercase mb-1">
+      {post.data.author} &bull; {post.data.date.toLocaleDateString("en-US", { timeZone: "UTC" })}
+    </span>
+    <p>
+      {post.data.synopsis}<a
+        class="flex-nowrap inline-flex items-center gap-2 !text-red hover:!text-red-400 transition-colors"
+        href={`/blog/${post.slug}`}
+        >Read full post <ExportOutlined className="block" />
+      </a>
+    </p>
+    <span class="flex gap-1 mt-2">
+      {post.data.tags.map((tag: string) => <BlogTag tag={tag} />)}
+    </span>
+  </div>
+</div>
