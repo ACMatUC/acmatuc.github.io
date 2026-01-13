@@ -1,0 +1,23 @@
+---
+import Head from "../components/Head.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+
+import "../styles/index.scss";
+
+const { frontmatter } = Astro.props;
+---
+
+<html>
+  <head>
+    <Head
+      title={frontmatter.title}
+      description={"hello"}
+    />
+  </head>
+  <body>
+    <Navbar />
+    <slot />
+    <Footer />
+  </body>
+</html>
