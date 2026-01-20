@@ -39,6 +39,21 @@ general format is:
 * **LinkedIn** - You can put your LinkedIn here and connect others to your
   professional profile!
 
+Copy and paste the below format to the correct file, replacing anything in
+`<angle brackets>`:
+
+```yml
+- name: <Your name here>
+  # Not required, but optional:
+  github: <Your github username here>
+  email: <your email address here>
+  website: <your website URL here>
+  linkedin: <your linkedin username here>
+  short_bio: <your bio here>
+  # if needed, you can add a link to a photo here:
+  image: <image URL here>
+```
+
 ## Opening a pull request with your change
 
 If you followed the guide to cloning the repository, you should have a fork of
