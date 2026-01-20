@@ -10,9 +10,11 @@
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	"forwardPorts": [ 4321 ],
+	"forwardPorts": [
+		4321
+	],
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "yarn dev",
+	"postCreateCommand": "yarn",
 	// Configure tool-specific properties.
 	"customizations": {
 		"vscode": {
