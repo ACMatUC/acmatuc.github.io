@@ -1,0 +1,13 @@
+# Member format:
+# Copy and paste below text at the bottom of this file, then you
+# can usally press Control/Command + / to uncomment everything
+#
+# - name: <Your name here>
+#   # Not required, but optional:
+#   github: <Your github username here>
+#   email: <your email address here>
+#   website: <your website URL here>
+#   linkedin: <your linkedin username here>
+#   short_bio: <your bio here>
+#   # if needed, you can add a link to a photo here:
+#   image: <image URL here>
