@@ -6,7 +6,7 @@ import { getCollection } from "astro:content";
 const images = await getCollection("heroImages");
 ---
 
-<div class="grid place-items-center w-full max-md:h-dvh min-md:max-h-128 min-md:h-svh overflow-clip mb-12">
+<div class="grid place-items-center w-full max-md:h-[calc(100svh-4rem)] min-md:max-h-128 min-md:h-lvh overflow-clip mb-12">
   <Image
     src={images[0].data.landscape}
     alt={images[0].data.alt}
