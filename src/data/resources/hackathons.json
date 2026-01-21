@@ -1,0 +1,25 @@
+{
+  "$schema": "./schema.json",
+  "name": "Hackathons",
+  "description": "Events to showcase and build your technical skills - brainstorm and build a project in a limited amount of time with friends!",
+  "links": [
+    {
+      "image": "./hackathons/revuc.jpg",
+      "link": "https://revolutionuc.com",
+      "name": "RevolutionUC",
+      "description": "RevolutionUC, the hackathon hosted by us at ACM@UC"
+    },
+    {
+      "image": "./hackathons/mlh.jpg",
+      "link": "https://mlh.io",
+      "name": "Major League Hacking",
+      "description": "MLH is an organization that helps host hackathons all across the country"
+    },
+    {
+      "image": "./hackathons/devpost.jpg",
+      "link": "https://devpost.com",
+      "name": "Devpost",
+      "description": "Devpost is a platform for discovering hackathons and publishing your own hackathon projects"
+    }
+  ]
+}

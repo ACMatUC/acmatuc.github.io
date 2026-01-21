@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["name", "description", "links"],
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Name of the resource section"
+    },
+    "description": {
+      "type": "string",
+      "description": "Description of the resources in the section"
+    },
+    "links": {
+      "type": "array",
+      "description": "List of links contained in the section",
+      "items": {
+        "type": "object",
+        "required": ["image", "link", "name", "description"],
+        "properties": {
+          "image": {
+            "type": "string",
+            "description": "URL to the image to use. Can be relative to the folder"
+          },
+          "link": {
+            "type": "string",
+            "description": "URL to lead to when clicking the image."
+          },
+          "name": {
+            "type": "string",
+            "description": "Name of the resource"
+          },
+          "description": {
+            "type": "string",
+            "description": "Description of the resource"
+          }
+        }
+      }
+    }
+  }
+}
