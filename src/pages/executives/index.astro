@@ -1,7 +1,9 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import MemberInfo from "../../components/Profile.astro";
-import { members } from "./_board.json";
+import { getCollection } from "astro:content";
+
+const board = await getCollection("executiveBoard");
 ---
 
 <Layout title="Executive Board | ACM@UC">
@@ -9,15 +11,16 @@ import { members } from "./_board.json";
     <h1 class="m-8 text-3xl">ACM@UC Executive Board</h1>
     <div class="mx-20 mb-14">
       {
-        members.map(async ({ role, name, bio, imageUrl, email, github, linkedin }) => {
+        board.map(async ({ data: { role, name, bio, imageUrl, email, website, github, linkedin } }) => {
           // todo - if an executive adds a website, add it to the Profile component
           return (
             <>
               <h2 class="mt-6 mb-4 text-xl">{role}</h2>
               <MemberInfo
                 {name}
-                {imageUrl}
+                image={imageUrl}
                 {email}
+                {website}
                 {github}
                 {linkedin}
                 {bio}
