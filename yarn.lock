@@ -1307,6 +1307,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@splidejs/react-splide@npm:^0.7.12":
+  version: 0.7.12
+  resolution: "@splidejs/react-splide@npm:0.7.12"
+  dependencies:
+    "@splidejs/splide": "npm:^4.1.3"
+  checksum: 10c0/95e061ae899b4e96ce695c99fd86981d2a79ad605e0b72d05016a5eabedb4a38be7c6c7ec6cce3f5d85992b4f051b5e89ea0e7e35a87989776988d65ee8a6441
+  languageName: node
+  linkType: hard
+
 "@splidejs/splide-extension-auto-scroll@npm:^0.5.3":
   version: 0.5.3
   resolution: "@splidejs/splide-extension-auto-scroll@npm:0.5.3"
@@ -1314,7 +1323,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@splidejs/splide@npm:^4.1.4":
+"@splidejs/splide@npm:^4.1.3, @splidejs/splide@npm:^4.1.4":
   version: 4.1.4
   resolution: "@splidejs/splide@npm:4.1.4"
   checksum: 10c0/2dc36e0ce13d049b6ff6e2dcd02cf100ad5df014cd7e751e34f941d54f73a9af948b0912f977aaf896a05ac4f0388fc0a2404cf79d970ac632d207f9dbe03044
@@ -1713,6 +1722,7 @@ __metadata:
   dependencies:
     "@ant-design/icons": "npm:^5.5.1"
     "@astrojs/react": "npm:4.3.1"
+    "@splidejs/react-splide": "npm:^0.7.12"
     "@splidejs/splide": "npm:^4.1.4"
     "@splidejs/splide-extension-auto-scroll": "npm:^0.5.3"
     "@tailwindcss/typography": "npm:^0.5.15"

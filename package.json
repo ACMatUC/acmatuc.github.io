@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "repository": "https://github.com/dabudke/acmatuc.github.io.git",
-  "author": "Daniel Budke <40306561+dabudke@users.noreply.github.com>",
+  "author": "Daniel Budke <dabudke@dabudke.net>",
   "license": "MIT",
   "scripts": {
     "dev": "astro dev",
@@ -14,6 +14,7 @@
   "dependencies": {
     "@ant-design/icons": "^5.5.1",
     "@astrojs/react": "4.3.1",
+    "@splidejs/react-splide": "^0.7.12",
     "@splidejs/splide": "^4.1.4",
     "@splidejs/splide-extension-auto-scroll": "^0.5.3",
     "@tailwindcss/typography": "^0.5.15",
