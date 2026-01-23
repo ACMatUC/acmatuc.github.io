@@ -2,6 +2,10 @@
 import { Image } from "astro:assets";
 import logo from "../assets/acm-wide-transparent.png";
 
+import { getCollection } from "astro:content";
+const meetings = await getCollection("meetings");
+const latestMeeting = meetings.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())[0];
+
 import { InstagramOutlined, DiscordOutlined, XOutlined, LinkedinFilled, GithubFilled, YoutubeFilled, MailOutlined } from "@ant-design/icons";
 ---
 
@@ -85,13 +89,6 @@ import { InstagramOutlined, DiscordOutlined, XOutlined, LinkedinFilled, GithubFi
     <ul class="pl-1 mb-1">
       <li>
         <a
-          href="/about"
-          class="mb-2 !text-neutral-400 hover:!text-neutral-100"
-          >About ACM@UC</a
-        >
-      </li>
-      <li>
-        <a
           href="/executives"
           class="mb-2 !text-neutral-400 hover:!text-neutral-100"
           >Executives</a
@@ -99,16 +96,16 @@ import { InstagramOutlined, DiscordOutlined, XOutlined, LinkedinFilled, GithubFi
       </li>
       <li>
         <a
-          href="/code-of-conduct"
+          href="/constitution"
           class="mb-2 !text-neutral-400 hover:!text-neutral-100"
-          >Code of Conduct</a
+          >Constitution</a
         >
       </li>
       <li>
         <a
-          href="/constitution"
+          href="/code-of-conduct"
           class="mb-2 !text-neutral-400 hover:!text-neutral-100"
-          >Constitution</a
+          >Code of Conduct</a
         >
       </li>
       <li>
@@ -123,13 +120,18 @@ import { InstagramOutlined, DiscordOutlined, XOutlined, LinkedinFilled, GithubFi
   <div class="mt-8">
     <h4>Meetings</h4>
     <ul class="pl-1 mb-1">
-      <li>
-        <a
-          href="/meetings/[[TODO]]"
-          class="mb-2 !text-neutral-400 hover:!text-neutral-100"
-          >Last Meeting</a
-        >
-      </li>
+      {
+        latestMeeting && (
+          <li>
+            <a
+              href={`/meetings/${latestMeeting.id}`}
+              class="mb-2 !text-neutral-400 hover:!text-neutral-100"
+            >
+              Last Meeting
+            </a>
+          </li>
+        )
+      }
       <li>
         <a
           href="/meetings"

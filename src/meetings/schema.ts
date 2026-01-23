@@ -1,11 +1,11 @@
 import { glob } from "astro/loaders";
-import { defineCollection, z } from "astro:content";
+import { defineCollection, z, reference } from "astro:content";
 
 const meetings = defineCollection({
   loader: glob({
     base: "./src/meetings",
     pattern: ["**/!(README).md"],
-    generateId: ({ entry }) => entry.replace(/\.md/, ""),
+    generateId: ({ entry }) => entry.replace(/\.md/, "").replaceAll(/-/g, "/"),
   }),
   schema: ({ image }) =>
     z.object({
@@ -14,6 +14,7 @@ const meetings = defineCollection({
       description: z.string(),
       speaker: z.optional(z.string()),
       // TODO
+      // gallery: z.optional(reference("gallery")),
     }),
 });
 
