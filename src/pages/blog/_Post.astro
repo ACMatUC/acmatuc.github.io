@@ -12,7 +12,7 @@ const post = Astro.props.post;
 const { title, image, author, date, tags, synopsis } = post.data;
 ---
 
-<div class="bg-neutral-800 max-w-screen-lg flex items-start mb-4 p-4 rounded-xl gap-4">
+<div class="bg-neutral-800 max-w-screen-lg flex max-sm:flex-col max-sm:mx-4 items-start mb-4 p-4 rounded-xl gap-4">
   {
     image && (
       <div class="w-72 h-48 overflow-clip rounded-lg">
@@ -24,7 +24,7 @@ const { title, image, author, date, tags, synopsis } = post.data;
       </div>
     )
   }
-  <div class:list={["flex flex-col items-start", image && "mt-4 w-2/3"]}>
+  <div class:list={["flex flex-col items-start", image && "min-sm:mt-4 min-sm:w-2/3"]}>
     <a
       class="group"
       href={`/blog/${post.id}`}
