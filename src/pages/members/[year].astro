@@ -2,9 +2,11 @@
 import { getCollection, type CollectionEntry } from "astro:content";
 import Profile from "$components/Profile.astro";
 import Layout from "$layouts/Layout.astro";
+import { ArrowLeftOutlined } from "@ant-design/icons";
 
 interface Props {
   members: CollectionEntry<"members">;
+  isAlumni: boolean;
 }
 
 export async function getStaticPaths() {
@@ -14,13 +16,14 @@ export async function getStaticPaths() {
     const year = id.startsWith("alumni") ? id.split("/")[1] : id;
     return {
       params: { year },
-      props: { members: classData },
+      props: { members: classData, isAlumni: id.startsWith("alumni") },
     };
   });
 }
 
 const { year } = Astro.params;
 const { data: members } = Astro.props.members ?? { data: undefined };
+const { isAlumni } = Astro.props;
 ---
 
 <Layout
@@ -30,7 +33,7 @@ const { data: members } = Astro.props.members ?? { data: undefined };
   <a
     href="/members"
     class="block mt-4 ml-16 uppercase !text-red font-display font-semibold hover:underline hover:!text-red-600"
-    >Back to Member List</a
+    ><ArrowLeftOutlined className="mr-1" />Back to Member List</a
   >
   <h1 class="mt-4 mx-8 mb-4 text-2xl">Class of {year} Members</h1>
   <div class="mx-12 max-w-6xl *:mb-8">
@@ -45,7 +48,12 @@ const { data: members } = Astro.props.members ?? { data: undefined };
           linkedin={linkedin}
           bio={short_bio}
         />
-      )) ?? <p>No members from this class. Add yourself here</p>
+      )) ?? (
+        <p>
+          Nobody's added themselves to the member directory for this class yet. You can add yourself{" "}
+          <a href={`https://github.com/ACMatUC/acmatuc.github.io/tree/main/src/members/${isAlumni ? `alumni/${year}` : year}.yaml`}>here!</a>
+        </p>
+      )
     }
   </div>
 </Layout>
