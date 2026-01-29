@@ -7,9 +7,9 @@ const board = await getCollection("executiveBoard");
 ---
 
 <Layout title="Executive Board | ACM@UC">
-  <main class="mx-12 max-w-screen-lg">
+  <main class="min-lg:mx-12 max-w-screen-lg">
     <h1 class="m-8 text-3xl">ACM@UC Executive Board</h1>
-    <div class="mx-20 mb-14">
+    <div class="min-sm:mx-20 max-sm:mx-12 mb-14">
       {
         board.map(async ({ data: { role, name, bio, imageUrl, email, website, github, linkedin } }) => {
           // todo - if an executive adds a website, add it to the Profile component
