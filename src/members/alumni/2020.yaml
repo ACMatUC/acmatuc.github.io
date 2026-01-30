@@ -1,0 +1,29 @@
+- name: Alex Perkins
+  short_bio: I'm a 3rd year computer science student. I enjoy web development and learning low level languages. In my free time I enjoy playing video games and watching sports. Go FCC!
+  image_url: https://avatars2.githubusercontent.com/u/17663986?
+  github: aperks7
+  website: https://www.linkedin.com/in/aperks/
+- name: Kristian Snyder
+  short_bio: I'm a third-year CS major working in Go, C#, and Python, currently co-oping at Great American Insurance. I'm into learning more about network security and crypto.
+  image_url: https://avatars2.githubusercontent.com/u/14251689
+  github: snyderks
+  website: https://kristiansnyder.com
+- name: Rishabh Ravindra
+  short_bio: Pre-Junior majoring in Computer Science. I am interested in full-stack web and Amazon Alexa skill development. Interned at TIBCO Software and Intelligrated.
+  image_url: https://avatars0.githubusercontent.com/u/4620159
+  github: rishabhravindra
+  website: http://rishravi.me
+- name: Noah Bass
+  image_url: https://avatars2.githubusercontent.com/u/3453188
+  github: noahbass
+  website: http://noahbass.com
+- name: Samuel Buzas
+  image_url: https://avatars0.githubusercontent.com/u/16690404
+  github: samwisebuze
+  short_bio: Gainfully employeed @ Kroger Technology, reachout if you'd like to learn more more about cloud computing or back-end development!
+  website: https://samuelbuzas.com
+- name: Will Schweitzer
+  image_url: https://avatars3.githubusercontent.com/u/21173745
+  github: williamschweitzer
+  short_bio: I'm a computer science major that enjoys making things with code. Current interests include Cyber Defense, Python, and Linux.
+  website: https://willschweitzer.io

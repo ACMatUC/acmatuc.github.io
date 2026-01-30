@@ -1,0 +1,30 @@
+- name: Devin McPherson
+  short_bio: I am currently a 4th year CS major here at UC. I love programming and I have a lot experience with .NET web applications as well as experience with other technologies such as React, Angular, Mongo, and more. In my free time I love to stay active!
+  image_url: https://avatars3.githubusercontent.com/u/18093745
+  github: devinmcpherson
+  website: https://devinmcpherson.github.io
+- name: Kurt Lewis
+  short_bio: I was the president of ACM@UC from 2016-2018. I love tech and tech communities, and coding in my free time! My go-to language is Python.
+  image_url: https://avatars1.githubusercontent.com/u/4043087
+  github: kurtlewis
+  website: https://kurtjlewis.com
+- name: Zachary Sang
+  short_bio: I am a 4th year CS major here at UC with a background mainly in Web. In my co-ops, I've worked a lot with Java and a little with Python. Although, in my free time, I usually use NodeJS!
+  image_url: https://avatars1.githubusercontent.com/u/17336621
+  github: zacharysang
+  website: https://zacharysang.com/
+- name: Laura Tebben
+  short_bio: I'm a CS student at UC with a focus on backend and application development. My primary languages are Python and C++. I love hackathons, cats, and tacos.
+  image_url: https://avatars0.githubusercontent.com/u/18502524
+  github: ltebben
+  website: http://lauratebben.com
+- name: Andrew Brooke
+  short_bio: I am a 4th year Computer Science major at UC mainly focused with web and mobile development, particularly with NodeJS and surrounding technologies.
+  image_url: https://avatars3.githubusercontent.com/u/12235969
+  github: andrewbrooke
+  website: https://andrewbrooke.github.io
+- name: Zachary Collins
+  short_bio: I am a 4th year Computer Engineering student at UC. I have worked in both software and hardware, and am planning on a career in the semiconductor industry.
+  image_url: https://avatars1.githubusercontent.com/u/18502503
+  github: zcollins0
+  website: http://zachscollins.com

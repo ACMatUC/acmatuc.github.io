@@ -1,0 +1,55 @@
+[
+  {
+    "role": "President",
+    "name": "Maite Peña",
+    "imageUrl": "./executives/president.jpg",
+    "email": "penams@mail.uc.edu",
+    "bio": "Hello! I'm Maite, a third-year international student from Peru majoring in IT. My interests range from machine learning to artificial intelligence, but I'm always eager to explore different areas within the field of computer science. Outside of school, I enjoy playing tennis, going to the gym, and learning interesting things about neuroscience."
+  },
+  {
+    "role": "Vice President",
+    "name": "Chau Nguyen",
+    "bio": "Hi! I'm Chau! I'm a fourth-year CS student with a minor in Math. I love exploring new coffee shops, soaking in their cozy atmosphere, and making matcha!",
+    "email": "nguye2cu@mail.uc.edu",
+    "github": "chaung844",
+    "linkedin": "chaunguyen844",
+    "website": "https://chaung844.github.io/chau_portfolio/",
+    "imageUrl": "./executives/vice-president.jpg"
+  },
+  {
+    "role": "Treasurer",
+    "name": "Ruksha Khadka",
+    "imageUrl": "./executives/treasurer.jpeg",
+    "email": "khadkara@mail.uc.edu",
+    "linkedin": "rukshakhadka",
+    "github": "kiq2908",
+    "bio": "Hello! My name is Ruksha, and I am a third-year student majoring in cybersecurity with a secondary track in data technology. I have a strong interest in technology, community engagement, and exploring new opportunities. I enjoy working on coding projects, organizing events, taking on student leadership roles, and, like many students, figuring things out one semester at a time."
+  },
+  {
+    "role": "Secretary",
+    "name": "Krish Kalathiya",
+    "bio": "Hey! I'm Krish and I'm a Junior studying Computer Science. I grew up in Mumbai, India. I'm passionate about cool tech, gaming and Formula 1.",
+    "email": "kalathkj@mail.uc.edu",
+    "github": "KrishKalathiya",
+    "linkedin": "krish-kalathiya",
+    "website": "https://www.krishkalathiya.me/",
+    "imageUrl": "./executives/secretary.webp"
+  },
+  {
+    "role": "Webmaster",
+    "name": "Daniel Budke",
+    "email": "budkedp@mail.uc.edu",
+    "website": "https://dabudke.net/",
+    "linkedin": "daniel-budke",
+    "github": "dabudke",
+    "bio": "Hi! I'm Daniel Budke, a second year Computer Science major. I love software engineering, obscure technology, user experience design, and cybersecurity. I'm currently working on various projects, check out my website to see some of them!"
+  },
+  {
+    "role": "Media and Branding Chair",
+    "name": "Catherine Warm",
+    "email": "warmce@mail.uc.edu",
+    "bio": "Hi, I'm Catherine! I'm a second year student majoring in computer science. I grew up here in Cincinnati, and I love making art!  I'm interesting in web design and software development.",
+    "linkedin": "catherine-warm",
+    "imageUrl": "./executives/media-and-branding.jpg"
+  }
+]

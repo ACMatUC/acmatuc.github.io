@@ -1,0 +1,36 @@
+- name: Brandon Starcheus
+  short_bio: I'm a third year CS student currently completeing my second co-op at Northrop Grumman Xetron.
+  image_url: https://pbs.twimg.com/profile_images/1054942223819833344/eCEHJ6bE_400x400.jpg
+  github: BStarcheus
+  website: https://brandonstarcheus.weebly.com
+
+- name: Dev Agrawal
+  short_bio: I am Dev Agrawal, an IT student, research assistant, movie nerd and metalhead. I'm also a former freelance app developer and a javascript ninja, so I love talking about the latest tools and interesting ideas. I'm a big advocate for bots and automation, so catch me on Slack if you like to talk about the future of AI.
+  image_url: https://devagrawal09.github.io/portfolio/img/dp.jpg
+  github: devagrawal09
+  website: https://devagrawal09.github.io/portfolio/
+
+- name: Mahesh Gowda
+  short_bio: Hello! I'm a creative IT student with considerable experience and motivation. I really like to experiment with APIs and open data.
+  image_url: https://ca.slack-edge.com/T09GUV7AB-UMP7C9MUY-eaa6f5a4cba9-512
+  github: MSG17
+  website: https://gowdam.com
+
+- name: Lina Kaval
+  short_bio: I am Lina Kaval, a CS student also minoring in Business Analytics. I enjoy working with data, singing, badly dancing, and occassionally doubting whether I like coding.
+  image_url: https://www.linakaval.com/uploads/1/2/4/4/124474097/img-8630_1_orig.jpg
+  github: linakaval
+  website: https://www.linakaval.com/
+
+- name: Piyush Sahu
+  short_bio: I'm a third year CS student.
+
+- name: Daniel Hackney
+  short_bio: Hey there! I'm Daniel, and I'm a CS student also working on a minor in mathematics.  I love to rollerblade, dance, play Dungeons and Dragons, and code!
+  github: corncob567
+  image_url: https://twitter.com/DanielNHackney/photo
+
+- name: Liz Tremblay
+  short_bio: Hey-o! My name is Liz and I am a CS student getting a minor in BANA. I love being involved on campus and enjoy watching anime, shopping, and traveling in my free time. I'm currently pursuing roles in UX design and engineering! uwu
+  image_url: https://avatars.githubusercontent.com/u/48833213?v=4
+  github: lizisawizard

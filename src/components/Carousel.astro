@@ -1,0 +1,48 @@
+---
+import '@splidejs/splide/css';
+
+const slides = [
+  '/src/assets/president.jpg',
+  '/src/assets/vice-president.jpg',
+  '/src/assets/education-chair.jpg',
+  '/src/assets/secretary.jpg',
+  '/src/assets/treasurer.jpg',
+  '/src/assets/webmaster.jpg',
+  '/src/assets/outreach-chair.jpg',
+  '/src/assets/membership-chair.jpg',
+];
+
+const { dir } = Astro.props;
+---
+<div class="pb-20 flex flex-col items-center" data-dir={dir} id="carousel">
+  <p class="text-3xl pb-8 w-4/5 max-w-4xl font-semibold">Gallery</p>
+  <section class="splide" role="group" aria-label="Simple Carousel">
+    <div class="splide__track">
+      <ul class="splide__list">
+        {slides.map((slide) => (
+          <li class="splide__slide">
+            <img src={slide} alt="Executive" class="w-auto h-60 rounded-lg"/>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+</div>
+
+<script>
+  import Splide from '@splidejs/splide';
+  import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
+
+  let dir = document.getElementById('carousel')?.dataset.dir;
+  dir = (dir === "ltr" || dir === "rtl") ? dir : "ltr";
+
+  new Splide( '.splide', {
+    type: "loop",
+    autoWidth: true,
+    direction: dir as "rtl" | "ltr",
+    pagination: false,
+    arrows: false,
+    gap: 15,
+  } ).mount( { AutoScroll } );
+
+</script>

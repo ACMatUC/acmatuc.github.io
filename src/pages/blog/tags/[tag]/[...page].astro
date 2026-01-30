@@ -1,0 +1,51 @@
+---
+import Layout from "$layouts/Layout.astro";
+import Pagination from "$components/Pagination.astro";
+import BlogPostCard from "../../_Post.astro";
+import { getCollection } from "astro:content";
+import { LeftOutlined } from "@ant-design/icons";
+import type { GetStaticPaths, Page } from "astro";
+
+interface Props {
+  page: Page;
+}
+
+export const getStaticPaths: GetStaticPaths = async function ({ paginate }) {
+  const posts = await getCollection("blog");
+
+  // gather all tags used in posts
+  const tags: string[] = [];
+  for (const post of posts) {
+    const { tags: postTags } = post.data;
+    for (const tag of postTags) {
+      if (tags.indexOf(tag) === -1)
+        tags.push(tag);
+    }
+  };
+
+  return tags.flatMap((tag) =>
+    paginate(posts.filter((post) => post.data.tags.indexOf(tag) != -1).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf()), {
+      params: { tag },
+      pageSize: 10,
+    })
+  );
+}
+
+const page = Astro.props.page;
+const { tag } = Astro.params;
+---
+
+<Layout title={`Blog - ${tag} posts`}>
+  <main class="mx-12">
+    <a
+      class="flex items-center uppercase transition-colors !text-red hover:!text-white mt-8 ml-2"
+      href="/blog"
+    >
+      <LeftOutlined className="mr-1" />
+      All posts
+    </a>
+    <h1 class="text-4xl mt-2 mb-4">Posts tagged "{tag}"</h1>
+    {page.data.map((post) => <BlogPostCard post={post} />)}
+    <Pagination {page} />
+  </main>
+</Layout>

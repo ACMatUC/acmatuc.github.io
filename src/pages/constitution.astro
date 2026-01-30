@@ -1,0 +1,29 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { marked } from "marked";
+const constitution = await fetch("https://raw.githubusercontent.com/ACMatUC/constitution/refs/heads/master/constitution.md");
+const data = await constitution.text();
+const content = marked.parse(data);
+
+const commitRequest = await fetch("https://api.github.com/repos/acmatuc/constitution/commits/master");
+const commitData = await commitRequest.json();
+const commitDateString = commitData["commit"]["author"]["date"] ?? commitData["commit"]["committer"]["date"];
+
+const commitDate = commitDateString ? new Date(commitDateString) : new Date();
+---
+
+<Layout title="Constitution">
+  <h1>ACM@UC Constitution</h1>
+  <p>Last changed: {commitDate.toDateString()}</p>
+  <a
+    href="https://github.com/ACMatUC/constitution"
+    target="_blank"
+    rel="noopener"
+    >View Repository</a
+  >
+  <hr />
+  <article
+    class="prose prose-invert prose-neutral"
+    set:html={content}
+  />
+</Layout>

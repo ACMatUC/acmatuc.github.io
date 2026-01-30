@@ -1,0 +1,95 @@
+---
+import { Image } from "astro:assets";
+
+import { MailOutlined, LinkOutlined, GithubFilled, LinkedinFilled } from "@ant-design/icons";
+
+interface Props {
+  name: string;
+  bio: string | undefined;
+  image: string | ImageMetadata | undefined;
+  classOf?: string | undefined;
+
+  email?: string | undefined;
+  website?: string | undefined;
+  github?: string | undefined;
+  linkedin?: string | undefined;
+}
+
+const { name, image, bio, classOf, email, website, github, linkedin } = Astro.props;
+const photo = image ?? `https://avatars.githubusercontent.com/${github}`;
+---
+
+<div class="flex max-sm:flex-col max-sm:align-start sm:items-center gap-4">
+  {
+    typeof photo == "string" ? (
+      <Image
+        class="max-sm:size-24 sm:size-40 rounded-full"
+        src={photo}
+        alt={name}
+        inferSize
+      />
+    ) : (
+      <Image
+        class="max-sm:size-24 sm:size-40 rounded-full"
+        src={photo}
+        alt={name}
+      />
+    )
+  }
+  <div>
+    <h3 class="mb-2.5">{name}{classOf && ` • Class of ${classOf}`}</h3>
+    <ul class="flex flex-row gap-2 mb-2.5 flex-wrap">
+      {
+        email && (
+          <li class="flex items-center gap-2 after:content-['•'] after:mr-1 last:after:content-none">
+            <MailOutlined />
+            <a href={`mailto:${email}`}>{email}</a>
+          </li>
+        )
+      }
+      {
+        website && (
+          <li class="flex items-center gap-2 after:content-['•'] after:mr-1 last:after:content-none">
+            <LinkOutlined />
+            <a
+              href={website}
+              target="_blank"
+              rel="noopener"
+            >
+              {website}
+            </a>
+          </li>
+        )
+      }
+      {
+        github && (
+          <li class="flex items-center gap-2 after:content-['•'] after:mr-1 last:after:content-none">
+            <GithubFilled className="text-lg" />
+            <a
+              href={`https://github.com/${github}`}
+              target="_blank"
+              rel="noopener"
+            >
+              {github}
+            </a>
+          </li>
+        )
+      }
+      {
+        linkedin && (
+          <li class="flex items-center gap-2 after:content-['•'] after:mr-1 last:after:content-none">
+            <LinkedinFilled className="text-lg" />
+            <a
+              href={`https://linkedin.com/in/${linkedin}`}
+              target="_blank"
+              rel="noopener"
+            >
+              {name}
+            </a>
+          </li>
+        )
+      }
+    </ul>
+    <p>{bio}</p>
+  </div>
+</div>

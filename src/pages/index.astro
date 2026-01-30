@@ -1,0 +1,19 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero.astro";
+import AboutACM from "../components/AboutACM.astro";
+import MainInfoBoxes from "../components/MainInfoBoxes.astro";
+import Carousel from "../components/Carousel.astro";
+---
+
+<Layout
+  title="Home"
+  description="ACM@UC Home Page"
+>
+  <Hero />
+  <div class="flex flex-col gap-y-30 pb-12">
+    <AboutACM />
+    <MainInfoBoxes />
+    <!-- <Carousel dir="ltr" /> -->
+  </div>
+</Layout>

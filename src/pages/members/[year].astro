@@ -1,0 +1,59 @@
+---
+import { getCollection, type CollectionEntry } from "astro:content";
+import Profile from "$components/Profile.astro";
+import Layout from "$layouts/Layout.astro";
+import { ArrowLeftOutlined } from "@ant-design/icons";
+
+interface Props {
+  members: CollectionEntry<"members">;
+  isAlumni: boolean;
+}
+
+export async function getStaticPaths() {
+  const allClasses = await getCollection("members");
+  return allClasses.map((classData) => {
+    const id = classData.id;
+    const year = id.startsWith("alumni") ? id.split("/")[1] : id;
+    return {
+      params: { year },
+      props: { members: classData, isAlumni: id.startsWith("alumni") },
+    };
+  });
+}
+
+const { year } = Astro.params;
+const { data: members } = Astro.props.members ?? { data: undefined };
+const { isAlumni } = Astro.props;
+---
+
+<Layout
+  title={`Class of ${year}`}
+  description={`Members of ACM@UC from the class of ${year}`}
+>
+  <a
+    href="/members"
+    class="block mt-4 ml-16 uppercase !text-red font-display font-semibold hover:underline hover:!text-red-600"
+    ><ArrowLeftOutlined className="mr-1" />Back to Member List</a
+  >
+  <h1 class="mt-4 mx-8 mb-4 text-2xl">Class of {year} Members</h1>
+  <div class="mx-12 max-w-6xl *:mb-8">
+    {
+      members?.map(({ name, short_bio, image, email, website, github, linkedin }) => (
+        <Profile
+          name={name}
+          image={image}
+          email={email}
+          website={website}
+          github={github}
+          linkedin={linkedin}
+          bio={short_bio}
+        />
+      )) ?? (
+        <p>
+          Nobody's added themselves to the member directory for this class yet. You can add yourself{" "}
+          <a href={`https://github.com/ACMatUC/acmatuc.github.io/tree/main/src/members/${isAlumni ? `alumni/${year}` : year}.yaml`}>here!</a>
+        </p>
+      )
+    }
+  </div>
+</Layout>

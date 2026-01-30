@@ -1,0 +1,27 @@
+---
+import { LeftOutlined, RightOutlined, VerticalRightOutlined, VerticalLeftOutlined } from "@ant-design/icons";
+import type { Page } from "astro";
+
+interface Props {
+  page: Page;
+  className: string;
+}
+
+const { className } = Astro.props;
+const { lastPage, url, currentPage } = Astro.props.page;
+---
+
+{
+  lastPage > 1 ? (
+  <div class=`flex items-center h-10 mb-4 ${className}`>
+  <a href={currentPage == 1 ? null : url.first} data-disabled={currentPage == 1} class="rounded-l-xl rounded-r-sm not-data-disabled:bg-neutral-800 hover:not-data-disabled:bg-red text-red data-disabled:text-neutral-400 hover:not-data-disabled:text-white transition-colors h-10 w-10 grid place-items-center mr-1 pl-1" title="First Page"><VerticalRightOutlined /></a>
+  <a href={currentPage == 1 ? null : url.prev} data-disabled={currentPage == 1} class="rounded-l-sm rounded-r-xl not-data-disabled:bg-neutral-800 hover:not-data-disabled:bg-red text-red data-disabled:text-neutral-400 hover:not-data-disabled:text-white transition-colors h-10 w-10 grid place-items-center mr-4 pr-1" title="Previous Page"><LeftOutlined /></a>
+      <p class="font-display uppercase font-bold">Page {currentPage}</p>
+  <a href={currentPage == lastPage ? null : url.next} data-disabled={currentPage == lastPage} class="rounded-l-xl rounded-r-sm not-data-disabled:bg-neutral-800 hover:not-data-disabled:bg-red text-red data-disabled:text-neutral-400 hover:not-data-disabled:text-white transition-colors h-10 w-10 grid place-items-center ml-4 pl-1" title="Next Page">
+        <RightOutlined />
+      </a>
+  <a href={currentPage == lastPage ? null : url.last} data-disabled={currentPage == lastPage} class="rounded-l-xm rounded-r-xl not-data-disabled:bg-neutral-800 hover:not-data-disabled:bg-red text-red data-disabled:text-neutral-400 hover:not-data-disabled:text-white transition-colors h-10 w-10 grid place-items-center ml-1 pr-1" title="Last Page"><VerticalLeftOutlined /></a>
+    </div>
+  ) : null
+}
+

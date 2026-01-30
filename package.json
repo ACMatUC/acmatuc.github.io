@@ -1,0 +1,36 @@
+{
+  "name": "acmatuc.github.io",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/dabudke/acmatuc.github.io.git",
+  "author": "Daniel Budke <dabudke@dabudke.net>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "@ant-design/icons": "^5.5.1",
+    "@astrojs/react": "4.3.1",
+    "@splidejs/react-splide": "^0.7.12",
+    "@splidejs/splide": "^4.1.4",
+    "@splidejs/splide-extension-auto-scroll": "^0.5.3",
+    "@tailwindcss/typography": "^0.5.15",
+    "@tailwindcss/vite": "^4.1.11",
+    "astro": "5.13.7",
+    "marked": "^14.1.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "sass": "^1.78.0",
+    "tailwindcss": "^4.0.3",
+    "typescript": "^5.6.2",
+    "vite": "^7.0.5"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1"
+  },
+  "packageManager": "yarn@4.9.4"
+}

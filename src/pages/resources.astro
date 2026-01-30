@@ -1,0 +1,24 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+import Resource from "$components/Resource";
+
+const resources = await getCollection("resources");
+---
+
+<Layout
+  title="ACM@UC - Resources"
+  description="ACM@UC Resources Page"
+>
+  <div class="mt-12 px-10 md:px-24">
+    <h1 class="text-2xl pb-6">Resources</h1>
+    {
+      resources.map((resource) => (
+        <Resource
+          client:load
+          {...resource}
+        />
+      ))
+    }
+  </div>
+</Layout>
