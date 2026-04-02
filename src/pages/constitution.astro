@@ -13,17 +13,17 @@ const commitDate = commitDateString ? new Date(commitDateString) : new Date();
 ---
 
 <Layout title="Constitution">
-  <h1>ACM@UC Constitution</h1>
-  <p>Last changed: {commitDate.toDateString()}</p>
+  <p class="mt-8 ml-12">Last changed: {commitDate.toDateString()}</p>
   <a
     href="https://github.com/ACMatUC/constitution"
     target="_blank"
     rel="noopener"
+    class="ml-12 mb-8"
     >View Repository</a
   >
   <hr />
   <article
-    class="prose prose-invert prose-neutral"
+    class="prose prose-invert prose-neutral mx-8 mb-8 mt-12 lg:mx-20"
     set:html={content}
   />
 </Layout>
