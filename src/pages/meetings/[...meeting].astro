@@ -23,11 +23,12 @@ const { Content } = await render(meeting);
   <main class="max-w-full w-[800px] mx-auto mt-12 px-6 mb-20">
     <h1 class="text-xl md:text-2xl font-bold text-red">{meeting.data.title}</h1>
     <p class="text-lg">
-      Date: {new Date(meeting.data.date).toISOString().split("T")[0]}
+      Date: {new Date(meeting.data.date).toLocaleDateString()}
     </p>
     {meeting.data.speaker && <p class="text-lg">Speaker: {meeting.data.speaker}</p>}
     <hr class="my-4" />
     <article>
+      <p class="mb-4">{meeting.data.description}</p>
       <Content />
     </article>
   </main>
