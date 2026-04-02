@@ -1,6 +1,6 @@
 import { file } from "astro/loaders";
 import { defineCollection } from "astro:content";
-import { z } from "astro:schema";
+import { z } from "astro/zod";
 
 const executiveBoard = defineCollection({
   loader: file("./src/data/executives.json", {
@@ -17,8 +17,8 @@ const executiveBoard = defineCollection({
       bio: z.string(),
       imageUrl: z.optional(image()),
 
-      email: z.optional(z.string().email()),
-      website: z.optional(z.string().url()),
+      email: z.optional(z.email()),
+      website: z.optional(z.url()),
       github: z.optional(z.string()),
       linkedin: z.optional(z.string()),
     }),

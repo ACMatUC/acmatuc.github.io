@@ -1,6 +1,6 @@
 import { glob } from "astro/loaders";
 import { defineCollection } from "astro:content";
-import { z } from "astro:schema";
+import { z } from "astro/zod";
 
 // index of 0 marks the base image (e.g. ACM@UC banner)
 // typically 1080x1920, portrait and landscape

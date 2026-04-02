@@ -1,6 +1,6 @@
 import { glob } from "astro/loaders";
 import { defineCollection } from "astro:content";
-import { z } from "astro:schema";
+import { z } from "astro/zod";
 
 const blog = defineCollection({
   loader: glob({
@@ -20,12 +20,12 @@ const blog = defineCollection({
         z.object({
           class: z.number().transform((val) => val.toString()),
           photo: z.optional(image()),
-          email: z.optional(z.string().email()),
-          website: z.optional(z.string().url()),
+          email: z.optional(z.email()),
+          website: z.optional(z.url()),
           github: z.optional(z.string()),
           linkedin: z.optional(z.string()),
           bio: z.string(),
-        })
+        }),
       ),
     }),
 });

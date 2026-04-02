@@ -8,5 +8,8 @@ export default defineConfig({
   integrations: [react()],
   vite: {
     plugins: [tailwind()],
+  },
+  image: {
+    domains: ["avatars.githubusercontent.com"]
   }
 });

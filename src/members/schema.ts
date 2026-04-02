@@ -1,6 +1,6 @@
 import { glob } from "astro/loaders";
 import { defineCollection } from "astro:content";
-import { z } from "astro:schema";
+import { z } from "astro/zod";
 
 const members = defineCollection({
   loader: glob({
@@ -16,12 +16,12 @@ const members = defineCollection({
           short_bio: z.optional(z.string()),
           image: z.optional(image()),
 
-          email: z.optional(z.string().email()),
-          website: z.optional(z.string().url()),
+          email: z.optional(z.email()),
+          website: z.optional(z.url()),
           github: z.optional(z.string()),
           linkedin: z.optional(z.string()),
-        })
-      )
+        }),
+      ),
     ),
 });
 export default members;

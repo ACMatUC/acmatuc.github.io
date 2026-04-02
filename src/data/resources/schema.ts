@@ -1,6 +1,6 @@
 import { glob } from "astro/loaders";
 import { defineCollection } from "astro:content";
-import { z } from "astro:schema";
+import { z } from "astro/zod";
 
 const resources = defineCollection({
   loader: glob({ base: "./src/data/resources", pattern: "!(schema).(yml|yaml|json)" }),
@@ -11,7 +11,7 @@ const resources = defineCollection({
       links: z.array(
         z.object({
           image: image(),
-          link: z.string().url(),
+          link: z.url(),
           name: z.string(),
           description: z.string(),
         }),
