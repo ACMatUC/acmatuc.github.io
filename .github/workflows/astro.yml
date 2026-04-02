@@ -73,11 +73,13 @@ jobs:
             --base "${{ steps.pages.outputs.base_path }}"
         working-directory: ${{ env.BUILD_PATH }}
       - name: Upload artifact
+        if: github.repository_owner == 'ACMatUC'
         uses: actions/upload-pages-artifact@v3
         with:
           path: ${{ env.BUILD_PATH }}/dist
 
   deploy:
+    if: github.repository_owner == 'ACMatUC'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
