@@ -1,55 +1,53 @@
 [
   {
     "role": "President",
-    "name": "Maite Peña",
-    "imageUrl": "./executives/president.jpg",
-    "email": "penams@mail.uc.edu",
-    "bio": "Hello! I'm Maite, a second-year international student from Peru majoring in IT. My interests range from machine learning to artificial intelligence, but I'm always eager to explore different areas within the field of computer science. Outside of school, I enjoy playing tennis, going to the gym, and learning interesting things about neuroscience."
-  },
-  {
-    "role": "Vice President",
-    "name": "Chau Nguyen",
-    "bio": "Hi! I'm Chau! I'm a fourth-year CS student with a minor in Math. I love exploring new coffee shops, soaking in their cozy atmosphere, and making matcha!",
-    "email": "nguye2cu@mail.uc.edu",
-    "github": "chaung844",
-    "linkedin": "chaunguyen844",
-    "website": "https://chaung844.github.io/chau_portfolio/",
-    "imageUrl": "./executives/vice-president.jpg"
-  },
-  {
-    "role": "Treasurer",
-    "name": "Ruksha Khadka",
-    "imageUrl": "./executives/treasurer.jpeg",
-    "email": "khadkara@mail.uc.edu",
-    "linkedin": "rukshakhadka",
-    "github": "kiq2908",
-    "bio": "Hello! My name is Ruksha, and I am a third-year student majoring in cybersecurity with a secondary track in data technology. I have a strong interest in technology, community engagement, and exploring new opportunities. I enjoy working on coding projects, organizing events, taking on student leadership roles, and, like many students, figuring things out one semester at a time."
-  },
-  {
-    "role": "Secretary",
     "name": "Krish Kalathiya",
-    "bio": "Hey! I'm Krish and I'm a Junior studying Computer Science. I grew up in Mumbai, India. I'm passionate about cool tech, gaming and Formula 1.",
-    "email": "kalathkj@mail.uc.edu",
+    "imageUrl": "./executives/president.jpg",
     "github": "KrishKalathiya",
     "linkedin": "krish-kalathiya",
     "website": "https://www.krishkalathiya.me/",
-    "imageUrl": "./executives/secretary.webp"
-  },
+    "discord": "theotherkk",
+    "email": "kalathkj@mail.uc.edu",
+    "bio": "Hey! I'm Krish and I'm a Senior majoring in Computer Science. I grew up in Mumbai, India. I'm passionate about cool tech, gaming and Formula 1 - and before you ask, yes, my favorite driver is Max Verstappen." 
+  },  
+  {
+    "role": "Vice President",
+    "name": "Samarth Edlabadkar",
+    "imageUrl": "./executives/vice-president.jpg",
+    "github": "SamarthEdlabadkar",
+    "linkedin": "samarth-edlabadkar",
+    "discord": "samarthedlabadkar",
+    "email": "edlabash@mail.uc.edu",
+    "bio": "Hi! I'm Samarth, and I'm a fourth-year student studying computer science. I grew up in Chennai, India and am passionate about what I do — building in hackathons, attending events, and yapping. Fun fact: I watched over 2600 anime episodes in a single summer — my sleep schedule has never forgiven me, but my watchlist has never looked better. I firmly believe that if watching anime were a sport, I'd have a scholarship." 
+  }, 
+  {
+    "role": "Treasurer",
+    "name": "Avaneesh Kad",
+    "imageUrl": "./executives/treasurer.jpg",
+    "github": "AvaneeshKad",
+    "linkedin": "avaneesh-kad",
+    "discord": "avaneesh_disco_05481",
+    "email": "kadah@mail.uc.edu",
+    "bio": "What's up! I am Avaneesh, a second year computer science major from Pune, India. My interest lies in data. Beyond academics and work I like to play sports and go in the wild for birding!" 
+  }, 
+  {
+    "role": "Secretary",
+    "name": "Atharv Singh",
+    "imageUrl": "./executives/secretary.jpg",
+    "github": "SpectralGT",
+    "linkedin": "atharvsingh1396",
+    "discord": "atharvsingh001",
+    "email": "singh7av@mail.uc.edu",
+    "bio": "Hi! I'm Atharv, and I'm a student studying Computer Engineering. I'm interested in software development, AI, and robotics, and I enjoy building projects that combine hardware and software.I enjoy exploring new technologies and learning through hands-on projects. In my free time, I like coding, playing games, watching movies, and keeping up with the latest tech trends." 
+  }, 
   {
     "role": "Webmaster",
-    "name": "Daniel Budke",
-    "email": "budkedp@mail.uc.edu",
-    "website": "https://dabudke.net/",
-    "linkedin": "daniel-budke",
-    "github": "dabudke",
-    "bio": "Hi! I'm Daniel Budke, a second year Computer Science major. I love software engineering, obscure technology, user experience design, and cybersecurity. I'm currently working on various projects, check out my website to see some of them!"
-  },
-  {
-    "role": "Media and Branding Chair",
-    "name": "Catherine Warm",
-    "email": "warmce@mail.uc.edu",
-    "bio": "Hi, I'm Catherine! I'm a second year student majoring in computer science. I grew up here in Cincinnati, and I love making art!  I'm interesting in web design and software development.",
-    "linkedin": "catherine-warm",
-    "imageUrl": "./executives/media-and-branding.jpg"
+    "name": "Suhani Garg",
+    "imageUrl": "./executives/webmaster.jpg",
+    "github": "suhani-2307",
+    "linkedin": "suhani-garg23",
+    "discord": "suhani0800",
+    "email": "gargs3@mail.uc.edu",
+    "bio": "Hi! I'm Suhani Garg. I am a senior majoring in Computer Science with a certificate in Software Engineering. I love to explore modern day language models and agents. I am interested in research as well. Apart from that, I am a big bookworm and I love to dance and explore new places." 
   }
 ]
