@@ -23,14 +23,14 @@ const photo = image ?? `https://avatars.githubusercontent.com/${github}`;
   {
     typeof photo == "string" ? (
       <Image
-        class="max-sm:size-24 sm:size-40 rounded-full"
+        class="max-sm:size-24 sm:size-40 rounded-full object-cover"
         src={photo}
         alt={name}
         inferSize
       />
     ) : (
       <Image
-        class="max-sm:size-24 sm:size-40 rounded-full"
+        class="max-sm:size-24 sm:size-40 rounded-full object-cover"
         src={photo}
         alt={name}
       />
