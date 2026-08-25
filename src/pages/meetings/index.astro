@@ -16,6 +16,17 @@ const meetingsByYear = meetings.reduce<Record<string, typeof meetings>>((acc, me
 Object.keys(meetingsByYear).forEach((year) => {
   meetingsByYear[year].sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
 });
+
+const upcomingMeetings = [
+  { date: "2026-09-08", time: "6:30 PM – 7:30 PM EDT", title: "Intro to ACM@UC", speaker: null, location: "CRC 3220" },
+  { date: "2026-09-14", time: "TBD", title: "Resume Review (TBD)", speaker: null, location: "CRC 3220 (TBD)" },
+  { date: "2026-09-22", time: "6:30 PM – 7:30 PM EDT", title: "TBD", speaker: null, location: "CRC 3220 (TBD)" },
+  { date: "2026-10-08", time: "6:30 PM – 7:30 PM EDT", title: "Guest Speaker", speaker: "Vanchhit Khare", location: "CRC 3220" },
+  { date: "2026-10-20", time: "6:30 PM – 7:30 PM EDT", title: "TBD", speaker: null, location: "CRC 3220 (TBD)" },
+  { date: "2026-11-03", time: "6:30 PM – 7:30 PM EDT", title: "TBD", speaker: null, location: "CRC 3220 (TBD)" },
+  { date: "2026-11-17", time: "6:30 PM – 7:30 PM EDT", title: "TBD", speaker: null, location: "CRC 3220 (TBD)" },
+  { date: "2026-12-01", time: "6:30 PM – 7:30 PM EDT", title: "TBD", speaker: null, location: "CRC 3220 (TBD)" },
+];
 ---
 
 <Layout
@@ -28,7 +39,7 @@ Object.keys(meetingsByYear).forEach((year) => {
       <div class="flex flex-col md:flex-row gap-x-4 gap-y-2 md:items-center text-lg">
         <p class="font-semibold">At a meeting right now?</p>
         <a
-          class="border border-r-2 border-red-500 p-2 rounded-xl bg-white bg-opacity-10 font-bold w-fit"
+          class="border border-r-2 border-red-500 p-2 rounded-xl bg-white/10 font-bold w-fit"
           href="/checkin"
           >Check In</a
         >
@@ -43,6 +54,33 @@ Object.keys(meetingsByYear).forEach((year) => {
           >acmatuc/archive</a
         > on GitHub for links to slides and other resources from our meetings!
       </p>
+    </div>
+
+    <h2 class="text-xl md:text-2xl pt-10">Upcoming Meetings</h2>
+
+    <div class="relative pl-10">
+      <div class="absolute left-[7px] top-2 bottom-2 w-0.5 bg-red-500/30" />
+      {
+        upcomingMeetings.map((meeting) => (
+          <div class="relative pb-10 last:pb-0">
+            <div class="absolute -left-10 top-1 w-4 h-4 rounded-full bg-neutral-900 border-[3px] border-red-500" />
+            <div class="grid grid-cols-[12rem_1fr] gap-x-4 gap-y-1 items-start">
+              <p class="font-display font-bold text-sm sm:text-base uppercase text-red-500 tracking-wide pt-1">
+                {new Date(`${meeting.date}T00:00:00`).toLocaleDateString("en-US", {
+                  weekday: "short",
+                  month: "short",
+                  day: "numeric",
+                })}
+              </p>
+              <p class="text-sm sm:text-base font-semibold pt-1">{meeting.title}</p>
+              <p class="text-sm text-white/30 whitespace-nowrap">{meeting.time}</p>
+              <p class="text-sm text-white/60">
+                {meeting.speaker && <>{meeting.speaker} <span class="text-white/30"> · </span></>}{meeting.location}
+              </p>
+            </div>
+          </div>
+        ))
+      }
     </div>
 
     <h2 class="text-xl md:text-2xl pt-10">Meeting Archive</h2>
