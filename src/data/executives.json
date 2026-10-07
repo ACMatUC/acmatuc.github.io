@@ -49,5 +49,25 @@
     "discord": "suhani0800",
     "email": "gargs3@mail.uc.edu",
     "bio": "Hi! I'm Suhani Garg. I am a senior majoring in Computer Science with a certificate in Software Engineering. I love to explore modern day language models and agents. I am interested in research as well. Apart from that, I am a big bookworm and I love to dance and explore new places." 
+  }, 
+  {
+    "role": "Outreach Chair",
+    "name": "Derek Corniello",
+    "imageUrl": "./executives/outreach-chair.jpg",
+    "github": "DerekCorniello",
+    "linkedin": "derek-corniello",
+    "discord": "DCoolMan#3924",
+    "email": "corniedj@mail.uc.edu",
+    "bio": "Yo! I'm Derek, a fifth-year student studying CS and SWE (via ACCEND). I'm from the Cleveland area, and enjoy programming... a lot. Outside of that, I am into sports, social media, and biking/hiking parks (i.e. touching grass)."
+  },
+  {
+    "role": "Media & Branding Chair",
+    "name": "Aniket Singh",
+    "imageUrl": "./executives/branding-chair.png",
+    "github": "aniuwho",
+    "linkedin": "singhaniket49",
+    "discord": "tekinaa._",
+    "email": "singh7ag@mail.uc.edu",
+    "bio": "Hi! I'm Aniket, a sophomore studying Computer Science. I'm from Nepal and I'm into art, graphic design, web dev, and pretty much anything where I get to make something cool. I'm also a huge ORV fan."
   }
 ]
