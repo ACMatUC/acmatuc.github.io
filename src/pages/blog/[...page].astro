@@ -19,22 +19,22 @@ const { page } = Astro.props;
 ---
 
 <Layout title={page.currentPage === 1 ? "Blog" : `Page ${page.currentPage} - Blog`}>
-  <main class="min-sm:mx-12">
-    <h1 class="text-4xl mt-8 m-4 max-sm:mx-8 min-md:mx-8">ACM@UC Blog</h1>
-    {
-      page.data.length === 0 ? (
-        <p>No posts have been added yet.</p>
-      ) : (
-        <>
-          {page.data.map((post) => (
-            <BlogPostCard {post} />
-          ))}
-          <Pagination
-            {page}
-            className="mb-4"
-          />
-        </>
-      )
-    }
+  <main class="blog-index">
+    <header class="blog-intro">
+      <h1>Ideas from the ACM<span class="brand-accent"><span class="brand-at">@</span>UC</span> community</h1>
+      <p class="blog-deck">Stories, tutorials, and perspectives from across our computing community.</p>
+    </header>
+
+    {page.data.length === 0 ? (
+      <p class="blog-empty">No posts yet. Check back soon for stories from the ACM@UC community.</p>
+    ) : (
+      <section aria-label="Blog posts" class="blog-posts">
+        <div class="blog-section-heading">
+          <h2>{page.currentPage === 1 ? "Recent posts" : `More posts · Page ${page.currentPage}`}</h2>
+        </div>
+        {page.data.map((post) => <BlogPostCard post={post} />)}
+        <Pagination {page} className="blog-pagination" />
+      </section>
+    )}
   </main>
 </Layout>

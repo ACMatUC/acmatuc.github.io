@@ -32,22 +32,23 @@ const authorProfile = post?.data.authorProfile;
       </div>
     )
   }
-  <header class="ml-8 lg:ml-32 mb-8 mt-8">
-    <h1 class="mt-2 text-3xl text-red">{post!.data.title}</h1>
-    <p class="text-lg my-1 font-display uppercase">
-      {post!.data.date.toLocaleDateString("en-US", { timeZone: "UTC" })} &bull; BY {post!.data.author}
+  <header class="article-header">
+    <a class="article-back" href="/blog">← All stories</a>
+    <h1>{post!.data.title}</h1>
+    <p class="article-meta">
+      {post!.data.date.toLocaleDateString("en-US", { timeZone: "UTC", month: "long", day: "numeric", year: "numeric" })} <span>/</span> By {post!.data.author}
     </p>
-    <span>
+    <div class="article-tags">
       {post!.data.tags.map((tag: string) => <BlogTag tag={tag} />)}
-    </span>
+    </div>
   </header>
-  <article class="mb-8 max-lg:md:ml-20 lg:ml-48 mx-8 prose !prose-invert prose-neutral prose-p:indent-8 prose-li:marker:text-neutral-400">
+  <article class="article-body prose !prose-invert prose-neutral prose-li:marker:text-neutral-400 max-w-none">
     <Content />
   </article>
   {
     authorProfile && (
-      <aside class="ml-12 lg:ml-24 mb-8 max-w-4xl">
-        <h2 class="text-2xl mb-2">About the Author</h2>
+      <aside class="author-card">
+        <h2 class="author-card-title">About the author</h2>
         <Profile
           name={post?.data.author}
           image={authorProfile.photo}

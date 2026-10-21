@@ -2,7 +2,7 @@
 title:  API demystified
 date:   2021-04-27
 author: Bao Huynh
-image: ./api-demystified.jpg
+image: ./images/api-demystified.jpg
 tags: api web http
 synopsis: |
   Learn about what an API is, why they exist, and how you can use them to make
