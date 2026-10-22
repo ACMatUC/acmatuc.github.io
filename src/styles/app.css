@@ -59,3 +59,127 @@
     @apply text-red-600;
   }
 }
+
+@layer components {
+  .blog-index {
+    width: min(100% - 3rem, 64rem);
+    margin: 0 auto;
+    padding: 3rem 0 5rem;
+  }
+  .blog-intro { margin-bottom: 2rem; }
+  .blog-intro h1 {
+    margin: 2rem 0 .75rem;
+    font-size: 2.25rem;
+    line-height: 1.25;
+  }
+  .brand-accent {
+    color: var(--color-red);
+    display: inline;
+    vertical-align: baseline;
+    font-size: inherit;
+    line-height: inherit;
+  }
+  .brand-at { position: relative; top: -.07em; }
+  .blog-deck { max-width: none; margin: 0; font-size: 1rem; line-height: 1.7; }
+  .blog-section-heading {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+    border-bottom: 1px solid #454545;
+    padding-bottom: .85rem;
+    margin-bottom: 1.5rem;
+  }
+  .blog-section-heading h2 { margin: 0; font-size: 1.15rem; letter-spacing: .01em; }
+  .blog-posts { display: flex; flex-direction: column; gap: 1.25rem; }
+  .blog-empty { max-width: 42rem; padding: 2rem; border-left: 3px solid #e83224; background: #222; color: #ddd; }
+  .blog-pagination { margin-top: 1.5rem; }
+
+  .blog-card {
+    display: grid;
+    grid-template-columns: minmax(15rem, .95fr) minmax(0, 1.05fr);
+    overflow: hidden;
+    background: #202020;
+    border: 1px solid #383838;
+    border-radius: .8rem;
+    transition: border-color 160ms ease;
+  }
+  .blog-card:hover { border-color: #7b302b; }
+  .blog-card-image { display: block; min-height: 19rem; overflow: hidden; background: #303030; }
+  .blog-card-photo { display: block; width: 100%; height: 100%; min-height: 19rem; object-fit: cover; transition: transform 350ms ease; }
+  .blog-card:hover .blog-card-photo { transform: scale(1.025); }
+  .blog-card-copy { display: flex; flex-direction: column; align-items: flex-start; padding: clamp(1.5rem, 3.5vw, 2.75rem); }
+  .blog-card-meta { display: flex; flex-wrap: wrap; gap: .55rem; margin: 0 0 1.2rem; color: #aaa; font: 600 .73rem/1.4 "Montserrat", sans-serif; }
+  .blog-card-meta span[aria-hidden="true"] { color: #e83224; }
+  .blog-card h3 { margin: 0; font-size: clamp(1.45rem, 3vw, 2rem); line-height: 1.2; text-transform: none; }
+  .blog-card h3 a { color: #fff; text-decoration: none; text-decoration-color: #e83224; text-decoration-thickness: 2px; text-underline-offset: .22em; transition: color 140ms ease; }
+  .blog-card h3 a:hover { color: #ff7469; text-decoration: underline; }
+  .blog-card-synopsis { margin: 1rem 0 2rem; color: #c7c7c7; line-height: 1.7; }
+  .blog-card-bottom { width: 100%; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1.25rem; margin-top: auto; }
+  .blog-card-tags { display: flex; flex-wrap: wrap; gap: .5rem; }
+  .blog-read-link { display: inline-flex; align-items: center; gap: .5rem; color: #ff7469; font: 700 .8rem "Montserrat", sans-serif; text-decoration: none; white-space: nowrap; }
+  .blog-read-link:hover { color: #fff; }
+  .blog-tag { text-decoration: none; }
+  .blog-tag:hover { color: white; }
+  .blog-tag:focus-visible { outline: 2px solid #ff7469; outline-offset: 3px; }
+
+  .article-header { width: min(100% - 3rem, 58rem); margin: 3.5rem auto 2.5rem; }
+  .article-back { display: inline-block; margin-bottom: 1.75rem; color: #ff7469; font: 700 .8rem "Montserrat", sans-serif; text-decoration: none; }
+  .article-back:hover { color: white; }
+  .article-back:focus-visible { outline: 2px solid #ff7469; outline-offset: 4px; border-radius: 2px; }
+  .article-header h1 { margin: 0; color: white; font-size: clamp(2.2rem, 5vw, 4rem); line-height: 1.08; text-transform: none; letter-spacing: -.04em; }
+  .article-meta { margin: 1rem 0; color: #b5b5b5; font: 600 .82rem "Montserrat", sans-serif; }
+  .article-meta span { color: #e83224; padding: 0 .35rem; }
+  .article-tags { display: flex; flex-wrap: wrap; gap: .5rem; }
+  .article-body {
+    width: min(100% - 3rem, 58rem);
+    max-width: 58rem;
+    margin: 0 auto 5rem;
+    padding-inline: clamp(0rem, 2vw, 1.25rem);
+    font-size: 1.05rem;
+    line-height: 1.85;
+  }
+  .article-body h2 { margin-top: 2.5rem; color: white; font-size: 1.65rem; line-height: 1.3; text-transform: none; }
+  .article-body h2:first-child { margin-top: 0; }
+  .article-body h3 { margin-top: 2rem; color: white; font-size: 1.25rem; line-height: 1.35; text-transform: none; }
+  .article-body p { margin-block: 1.2rem; color: #d0d0d0; }
+  .article-body ul, .article-body ol { padding-left: 1.5rem; }
+  .article-body a { color: #ff7469; text-decoration-color: #e83224; text-underline-offset: .2em; }
+  .article-body a:hover { color: white; }
+  .article-body pre { overflow-x: auto; border: 1px solid #383838; border-radius: .6rem; background: #202020; }
+  .article-body pre code { background: transparent; padding: 0; }
+  .article-body :not(pre) > code { padding: .12em .35em; border-radius: .25rem; background: #292929; color: #ff9c93; }
+  .article-body li { padding-inline-start: .25rem; }
+  .article-body blockquote { border-left-color: #e83224; color: #c8c8c8; }
+  .article-body img { max-width: 100%; height: auto; border-radius: .6rem; }
+  .article-body table { display: block; max-width: 100%; overflow-x: auto; border-collapse: collapse; }
+  .article-body th, .article-body td { border-bottom: 1px solid #454545; padding: .65rem .85rem; }
+  .author-card {
+    width: min(100% - 3rem, 58rem);
+    margin: 0 auto 5rem;
+    padding: clamp(1.25rem, 3vw, 2rem);
+    border: 1px solid #383838;
+    border-radius: .8rem;
+    background: #202020;
+  }
+  .author-card-title { margin: 0 0 1.25rem; font-size: 1.2rem; text-transform: none; }
+
+  @media (max-width: 700px) {
+    .blog-card { grid-template-columns: 1fr; }
+    .blog-card-image, .blog-card-photo { min-height: 0; height: auto; aspect-ratio: 16 / 9; }
+    .blog-card-copy { padding: 1.4rem; }
+    .blog-card-synopsis { margin-bottom: 1.5rem; }
+  }
+  @media (max-width: 640px) {
+    .blog-index { width: min(100% - 2rem, 64rem); }
+    .blog-intro h1 { margin-inline: 0; font-size: 2rem; }
+    .blog-deck { margin-inline: 0; }
+    .blog-section-heading h2 { font-size: 1rem; }
+    .article-header { width: min(100% - 2rem, 58rem); margin-top: 2.5rem; }
+    .article-body { width: min(100% - 2rem, 58rem); }
+    .author-card { width: min(100% - 2rem, 58rem); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .blog-card, .blog-card-photo, .blog-read-link, .blog-card h3 a { transition: none; }
+  }
+}

@@ -10,40 +10,28 @@ interface Props {
 
 const post = Astro.props.post;
 const { title, image, author, date, tags, synopsis } = post.data;
+const href = `/blog/${post.id}`;
 ---
 
-<div class="bg-neutral-800 max-w-screen-lg flex max-sm:flex-col max-sm:mx-4 items-start mb-4 p-4 rounded-xl gap-4">
-  {
-    image && (
-      <div class="w-72 h-48 overflow-clip rounded-lg">
-        <Image
-          src={image}
-          alt={title}
-          class="object-cover min-h-full min-w-full"
-        />
-      </div>
-    )
-  }
-  <div class:list={["flex flex-col items-start", image && "min-sm:mt-4 min-sm:w-2/3"]}>
-    <a
-      class="group"
-      href={`/blog/${post.id}`}
-      ><h2 class="text-red-500 group-hover:text-white underline decoration-transparent hover:decoration-red transition-colors text-xl">
-        {title}
-      </h2></a
-    >
-    <span class="text-neutral-400 font-display uppercase mb-1">
-      {author} &bull; {date.toLocaleDateString("en-US", { timeZone: "UTC" })}
-    </span>
-    <p>
-      {synopsis}<a
-        class="flex-nowrap inline-flex items-center gap-2 !text-red hover:!text-red-400 transition-colors"
-        href={`/blog/${post.id}`}
-        >Read full post <ExportOutlined className="block" />
-      </a>
+<article class="blog-card">
+  {image && (
+    <a class="blog-card-image" href={href} aria-label={`Read ${title}`}>
+      <Image src={image} alt={title} class="blog-card-photo" />
+    </a>
+  )}
+  <div class="blog-card-copy">
+    <p class="blog-card-meta">
+      <time datetime={date.toISOString()}>{date.toLocaleDateString("en-US", { timeZone: "UTC", month: "long", day: "numeric", year: "numeric" })}</time>
+      <span aria-hidden="true">/</span>
+      <span>{author}</span>
     </p>
-    <span class="flex gap-1 mt-2">
-      {tags.map((tag: string) => <BlogTag tag={tag} />)}
-    </span>
+    <h3><a href={href}>{title}</a></h3>
+    <p class="blog-card-synopsis">{synopsis}</p>
+    <div class="blog-card-bottom">
+      <div class="blog-card-tags" aria-label="Topics">
+        {tags.map((tag: string) => <BlogTag tag={tag} />)}
+      </div>
+      <a class="blog-read-link" href={href}>Read story <ExportOutlined /></a>
+    </div>
   </div>
-</div>
+</article>
