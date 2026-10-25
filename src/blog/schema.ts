@@ -17,7 +17,7 @@ const blog = defineCollection({
       image: z.optional(image()),
       authorProfile: z.optional(
         z.object({
-          class: z.optional(z.number().transform((val) => val.toString())),
+          class: z.number().transform((val) => val.toString()),
           photo: z.optional(image()),
           email: z.optional(z.email()),
           website: z.optional(z.url()),

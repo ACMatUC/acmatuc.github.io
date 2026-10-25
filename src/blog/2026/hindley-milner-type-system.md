@@ -8,6 +8,7 @@ synopsis: >-
   How Mux handles type inference differently from Hindley-Milner, with explicit
   generics, local inference, and a discussion of where compilers should infer types.
 authorProfile:
+  class: 2027
   photo: ./images/derek-corniello.jpg
   email: corniedj@mail.uc.edu
   website: https://derekcorn.dev
