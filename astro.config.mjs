@@ -6,6 +6,12 @@ import react from "@astrojs/react";
 // https://astro.build/config
 export default defineConfig({
   integrations: [react()],
+  markdown: {
+    shikiConfig: {
+      theme: "dark-plus",
+      langAlias: { hm: "plaintext", mux: "plaintext" },
+    },
+  },
   vite: {
     plugins: [tailwind()],
   },
