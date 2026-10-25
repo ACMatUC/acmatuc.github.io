@@ -2,6 +2,7 @@ import { defineConfig } from 'astro/config';
 
 import tailwind from '@tailwindcss/vite';
 import react from "@astrojs/react";
+import muxGrammar from "./src/shiki/mux.json";
 
 // https://astro.build/config
 export default defineConfig({
@@ -9,7 +10,8 @@ export default defineConfig({
   markdown: {
     shikiConfig: {
       theme: "dark-plus",
-      langAlias: { hm: "plaintext", mux: "plaintext" },
+      langs: [{ ...muxGrammar, name: "mux" }],
+      langAlias: { hm: "plaintext" },
     },
   },
   vite: {
