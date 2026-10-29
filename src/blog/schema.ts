@@ -15,7 +15,6 @@ const blog = defineCollection({
       synopsis: z.string(),
       tags: z.string().transform((val) => val.split(/[ ,]+/)),
       image: z.optional(image()),
-
       authorProfile: z.optional(
         z.object({
           class: z.number().transform((val) => val.toString()),

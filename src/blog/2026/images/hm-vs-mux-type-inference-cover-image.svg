@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="600" viewBox="0 0 1600 600">
+<defs><filter id="shadow" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#000000" flood-opacity=".8"/></filter></defs>
+<rect width="1600" height="600" fill="#000000"/>
+<rect x="480" y="55" width="640" height="195" rx="16" fill="#000000" stroke="#3c3c3c" stroke-width="3" filter="url(#shadow)"/>
+<path d="M481 100H1119" stroke="#3c3c3c" stroke-width="2"/>
+<circle cx="515" cy="78" r="7" fill="#f14c4c"/><circle cx="539" cy="78" r="7" fill="#ffcc02"/><circle cx="563" cy="78" r="7" fill="#23d18b"/>
+<text x="598" y="85" fill="#cccccc" font-family="CodeNewRoman Nerd Font Mono, monospace" font-size="18">Hindley–Milner</text>
+<text x="510" y="183" xml:space="preserve" font-family="CodeNewRoman Nerd Font Mono, monospace" font-size="30" font-weight="500"><tspan fill="#569CD6">let</tspan><tspan fill="#D4D4D4"> </tspan><tspan fill="#DCDCAA">identity</tspan><tspan fill="#D4D4D4"> = </tspan><tspan fill="#569CD6">fun</tspan><tspan fill="#D4D4D4"> </tspan><tspan fill="#9CDCFE">x</tspan><tspan fill="#D4D4D4"> -&gt; </tspan><tspan fill="#9CDCFE">x</tspan></text>
+<rect x="480" y="285" width="640" height="260" rx="16" fill="#000000" stroke="#3c3c3c" stroke-width="3" filter="url(#shadow)"/>
+<path d="M481 330H1119" stroke="#3c3c3c" stroke-width="2"/>
+<circle cx="515" cy="308" r="7" fill="#f14c4c"/><circle cx="539" cy="308" r="7" fill="#ffcc02"/><circle cx="563" cy="308" r="7" fill="#23d18b"/>
+<text x="598" y="315" fill="#cccccc" font-family="CodeNewRoman Nerd Font Mono, monospace" font-size="18">Mux</text>
+<text x="510" y="395" xml:space="preserve" font-family="CodeNewRoman Nerd Font Mono, monospace" font-size="21" font-weight="500"><tspan fill="#569CD6">func</tspan><tspan fill="#D4D4D4"> </tspan><tspan fill="#DCDCAA">identity</tspan><tspan fill="#D4D4D4">&lt;</tspan><tspan fill="#569CD6">T</tspan><tspan fill="#D4D4D4">&gt;(</tspan><tspan fill="#569CD6">T</tspan><tspan fill="#D4D4D4"> </tspan><tspan fill="#9CDCFE">value</tspan><tspan fill="#D4D4D4">) </tspan><tspan fill="#569CD6">returns</tspan><tspan fill="#D4D4D4"> </tspan><tspan fill="#569CD6">T</tspan><tspan fill="#D4D4D4"> {</tspan></text>
+<text x="510" y="435" xml:space="preserve" font-family="CodeNewRoman Nerd Font Mono, monospace" font-size="21" font-weight="500"><tspan fill="#D4D4D4">    </tspan><tspan fill="#569CD6">return</tspan><tspan fill="#D4D4D4"> </tspan><tspan fill="#9CDCFE">value</tspan></text>
+<text x="510" y="475" xml:space="preserve" font-family="CodeNewRoman Nerd Font Mono, monospace" font-size="21" font-weight="500"><tspan fill="#D4D4D4">}</tspan></text>
+</svg>
